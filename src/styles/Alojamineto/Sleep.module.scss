@@ -6,13 +6,18 @@
     background-position: center;
     width: 100%;
     height: $cabeceraHeight;
-    padding: 0 1.5rem;
+    /*padding: 0 1.5rem;*/
     @include breakpoint(md) {
       padding: 0 3rem;
     }
   
     &_banner {
-      padding: 5rem 21rem;;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: $cabeceraHeight;
+      margin: 0 auto;
+      /*padding: 5rem 21rem;;
       @media screen and (max-width: 1724px) {
         padding: 5rem 20rem
       }
@@ -27,12 +32,11 @@
       }
       @media screen and (max-width: 692px) {
         padding: 1.9rem 1.5rem
-      }
+      }*/
       
       &_titulo {
         color: $light;
-        margin-bottom: 10px;
-  
+        /*margin-bottom: 10px;*/
         h3 {
           font-size: 1.6rem;
           margin-bottom: 10px;
