@@ -11,13 +11,13 @@ function Select({count, text, handle})
     }
 
     return <div className="select">
-        <div className="buttonCount" onClick={minus}>
+        <div className="btn buttonCount" onClick={minus}>
             -
         </div>
         <div>
             {`${count} ${text}`}
         </div>
-        <div className="buttonCount" onClick={plus}>
+        <div className="btn buttonCount" onClick={plus}>
             +
         </div>
         </div>

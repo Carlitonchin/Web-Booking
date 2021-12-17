@@ -17,7 +17,6 @@ export default ({date, handleChange})=>
                value={dateToString}
                class="form-control"
                aria-describedby="basic-addon1"
-               style={{ height: "40px" }}
                onChange={handleChange}
             />
     </>

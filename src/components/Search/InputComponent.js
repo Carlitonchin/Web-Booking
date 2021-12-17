@@ -8,7 +8,7 @@ export default ({placeholder})=>
                         placeholder={placeholder}
                         aria-label="Username"
                         aria-describedby="basic-addon1"
-                        style={{ height: "40px" }}
+                        
                     />
                     </>
 

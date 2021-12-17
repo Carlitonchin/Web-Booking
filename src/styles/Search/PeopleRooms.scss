@@ -17,6 +17,7 @@
 
 .buttonCount
 {
+    box-shadow: none;
     color: cyan;
     border: 1px solid cyan;
     width: 15%;
@@ -28,5 +29,6 @@
 
 .buttonCount:hover
 {
+    box-shadow: none;
     background: rgba(121, 223, 223, 0.486);
 }
