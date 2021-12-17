@@ -1,0 +1,82 @@
+@import "../variables.scss";
+
+.cabecera {
+    background-image: url("../../images/header.jpg");;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: $cabeceraHeight;
+    padding: 0 1.5rem;
+    @include breakpoint(md) {
+      padding: 0 3rem;
+    }
+  
+    &_banner {
+      padding: 5rem 21rem;;
+      @media screen and (max-width: 1724px) {
+        padding: 5rem 20rem
+      }
+      @media screen and (max-width: 1724px) {
+        padding: 5rem 15rem
+      }
+      @media screen and (max-width: 1300px) {
+        padding: 5rem 10rem
+      }
+      @media screen and (max-width: 1300px) {
+        padding: 1.9rem 5rem
+      }
+      @media screen and (max-width: 692px) {
+        padding: 1.9rem 1.5rem
+      }
+      
+      &_titulo {
+        color: $light;
+        margin-bottom: 10px;
+  
+        h3 {
+          font-size: 1.6rem;
+          margin-bottom: 10px;
+          @media screen and (max-width: 692px) {
+            font-size: 1.5rem;
+          }
+        }
+        h1 {
+          font-size: 2.8rem;
+          margin-bottom: 10px;
+          font-weight: bold;
+          @media screen and (max-width: 692px) {
+            font-size: 1.7rem;
+          }
+        }
+        p {
+          line-height: 1.7rem;
+          margin-bottom: 20px;
+          
+        }
+        button {
+          cursor: pointer;
+          outline: none;
+          padding: 0.75rem 1.25rem;
+          border-radius: $borderRadius;
+          font-size: 1rem;
+          font-family: inherit;
+          background: $primary;
+          color: $light;
+          border: 1px solid transparent;
+          transition: 0.3s ease all;
+  
+          &:hover {
+            border-color: $primary;
+            background: linear-gradient(rgba($primary, 0.2), rgba($primary, 0.3));
+            color: $primary;
+          }
+  
+          &:active {
+            border-color: $primary;
+            background: rgba($primary, 0.1);
+            color: $primary;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+}
+
+.page-container {
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 170vh;
+    .content-wrap{
+        flex: 1;
+    }
+
+
+
+}
+ 
+#root {
+    height: 100%;
+}
+
+

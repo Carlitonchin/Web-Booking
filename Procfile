@@ -1,0 +1,1 @@
+web: serve -l $PORT build

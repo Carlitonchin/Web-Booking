@@ -1,0 +1,81 @@
+.course {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 800px;
+  height: 200px;
+  position: relative;
+  //transform: translate(-50%, -50%);
+  h6 {
+    opacity: 0.6;
+    letter-spacing: 1px;
+    //text-transform: uppercase;
+    color: #047cdf;
+  }
+  h2 {
+    letter-spacing: 1px;
+    margin: 10px 0;
+  }
+  .preview {
+    //background: #e40046;
+    //color: #fff;
+    padding: 30px;
+    width: 250px;
+    position: relative;
+    a {
+      color: #fff;
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 30px;
+      text-decoration: none;
+    }
+  }
+  .info {
+    padding: 30px;
+    position: relative;
+    width: 100%;
+    .progress-wrapper {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      text-align: right;
+      width: 150px;
+      /*.progress {
+          background: #fff;
+          border-radius: 3px;
+          height: 5px;
+          width: 100%;
+          text-align: right;
+          
+        }
+        .progress-text {
+          font-size: 10px;
+          opacity: .6;
+          letter-spacing: 1px;
+        }*/
+    }
+    p {
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .btn {
+      background: #309af2;
+      border: 1px solid transparent;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 16px;
+      padding: 10px 20px;
+      position: absolute;
+      bottom: 15px;
+      right: 36px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      font-weight: bold;
+      border-radius: 20px;
+    }
+  }
+}

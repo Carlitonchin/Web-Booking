@@ -1,0 +1,16 @@
+.grid-location {
+    display: flex;
+    align-self: auto;
+    
+}
+
+.grid-ofers {
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    margin: 0 auto;
+    //width: 70%;
+    margin-top: 20px;
+
+}

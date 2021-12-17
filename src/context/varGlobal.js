@@ -1,0 +1,8 @@
+export const nombre = 'nombre'
+export const costo = 'costo'
+export const departamento = 'departamento'
+export const categoria = 'categoria'
+export const id = 'id'
+export const get_departamento = 'get_departamento'
+export const get_categoria = 'get_categoria'
+export const get_products = 'get_products'

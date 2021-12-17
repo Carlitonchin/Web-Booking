@@ -1,0 +1,243 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none; 
+}
+
+.boton {
+    color: white;
+    background-color: #879baf;
+    width: 120px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #a8d1fa;
+    color: black;
+    transition: .5s;
+}
+
+.cabecera {
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)), url(./images/travel.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: white;
+}
+
+.logo > img {
+    height: 60px;
+}
+
+label .hamburguesa {
+    font-size: 30px;
+    background-color: #585c60;
+    padding: 7px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+#menu:checked + .menu {
+    display: block;
+}
+
+.menu {
+    display: none;
+}
+
+.menu > ul {
+    background-color:  #585c60 ;
+}
+
+.menu a {
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+.menu a:hover {
+    background-color: #a8d1fa;
+    color: black;
+    transition: .5s;
+}
+
+.banner {
+    padding: 40px;
+
+}
+
+.titulo {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.titulo > * {
+    margin-bottom: 15px;
+}
+
+.titulo > h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.titulo > h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.titulo > p {
+    line-height: 1.3rem;
+}
+
+.cont_formulario {
+    background-color: #c8cbcf;
+    border-radius: 10px;
+    
+}
+
+::placeholder {
+    color: black;
+}
+
+.cont_formulario > h3 {
+    font-weight: 400;
+    padding: 20px 20px 0px 20px;
+    font-size: 2rem;
+}
+
+.formulario {
+    padding: 20px;
+}
+
+.formulario > * {
+    margin-bottom: 10px;
+   
+}
+
+.formulario input[name], textarea {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;  
+}
+
+.telefono {
+    color: white;
+    background-color: 
+    #1c1f21 ;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+/*------------------RESPONSIVE-----------------------------------------------------*/
+
+@media screen and (min-width:640px) {
+    .banner {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        flex: 1 0 300px;
+        margin-right: 20px;
+        /*margin-bottom: initial;*/
+    }
+
+    .formulario {
+        flex: 1 0 300px;
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .logo {
+        height: initial;
+        /*display: flex;
+        justify-content: space-between;
+        align-items: center;*/
+        padding: 40px;
+        background-color: transparent;
+    }
+    
+    .logo > img {
+        display: none;
+    }
+    
+    label .hamburguesa {
+        display: none;
+    }
+
+    .contenedor_flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .menu {
+        display: initial;
+    }
+    
+    .menu > ul {
+        background-color:  initial;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .menu a {
+        color: white;
+        display: initial;
+        font-size: 1.2rem;
+        border-bottom: none;
+        font-weight: bold;
+    }
+    
+    .menu a:hover {
+        background-color: initial;
+        color: white;
+        transition: .5s;
+    }
+
+    .titulo {
+        margin-bottom: initial;
+    }
+    
+    .titulo > * {
+        margin-bottom: 20px;
+    }
+    
+    .titulo > h3 {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    
+    .titulo > h1 {
+        font-size: 6rem;
+        
+    }
+    
+    .titulo > p {
+        line-height: 1.3rem;
+    }
+    
+}

@@ -1,0 +1,26 @@
+.grid-eur {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    //margin: 0 auto;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.grid-america {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    //margin: 0 auto;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.grid-asia {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    //margin: 0 auto;
+    width: 20%;
+    margin-top: 20px;
+}

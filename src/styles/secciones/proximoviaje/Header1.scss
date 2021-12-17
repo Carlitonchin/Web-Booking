@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.head {
+    background-image: url("https://cf.bstatic.com/xdata/images/xphoto/2048x1536/122580880.webp?k=67893e63f75b7794a6d9fbf3d951ce9e821954bc62d9d79796e90eaaccc701be&o=");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    padding: 0 1.5rem;
+    @include breakpoint(md) {
+      padding: 0 3rem;
+    }
+}
+

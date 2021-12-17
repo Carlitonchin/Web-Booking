@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.container {
+    margin-top: 10px;
+}
+
+.titulo{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5c5c5c;
+    @media screen and (max-width: 647px){
+         font-size: 12px;
+    }
+}
+
+
