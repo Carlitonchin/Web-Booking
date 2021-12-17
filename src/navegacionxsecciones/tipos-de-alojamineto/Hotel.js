@@ -4,7 +4,7 @@ import HeaderHotel from '../../components/secciones/tipos-de-alojamiento/HeaderH
 
 const Hotel = () => {
     return (
-        <HeaderHotel />
+        {/*<HeaderHotel />*/}
     )
 }
 

@@ -4,11 +4,59 @@ import '../styles/Aside/aside.scss'
 import { Container, Row, Col } from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import InputComponent from '../components/Search/InputComponent';
+import DateComponent from '../components/Search/DateComponent';
+import PeopleRoomsComponent from '../components/Search/PeopleRoomsComponent';
 const Aside = () => {
 
     const [startDate, setStartDate] = useState(new Date());
+    const [endDate, setEndDate] = useState(new Date());
+    const [adults, setAdults] = useState(1);
+    const [rooms, setRooms] = useState(1);
+    const [childs, setChilds] = useState(0)
 
+    function handleAdults(factor)
+    {
+        if(adults === 1 && factor === -1)
+            return;
+
+        setAdults(adults + 1*factor);
+    }
+
+    function handleChilds(factor)
+    {
+        if(childs === 0 && factor === -1)
+            return;
+
+        setChilds(childs + 1*factor);
+    }
+
+    function handleRooms(factor)
+    {
+        if(rooms === 1 && factor === -1)
+            return;
+
+        setRooms(rooms + 1*factor);
+    }
+
+    function handleDate(set, date)
+    {
+        let newDateArray = date.split('-').map(e=>Number(e));
+        console.log(newDateArray[2], newDateArray[1], newDateArray[0])
+        set(new Date(newDateArray[0], newDateArray[1] - 1, newDateArray[2]))
+    }
+
+    function handleStartDate(event)
+    {
+        event.preventDefault()
+        return handleDate(setStartDate, event.target.value);
+    }
+
+    function handleEndDate(event)
+    {
+        event.preventDefault()
+        return handleDate(setEndDate, event.target.value);
+    }
     return (
         <>
             <aside className="as1">
@@ -20,7 +68,7 @@ const Aside = () => {
                     </div>
                 </div>
                 <div className="form">
-                    <label for="exampleForm2">
+                    {/*<label for="exampleForm2">
                         <p class="h6" style={{ fontSize: "0.9rem" }}>
                             Destino/Nombre del alojamiento:
                         </p>{" "}
@@ -33,29 +81,41 @@ const Aside = () => {
                         aria-label="Username"
                         aria-describedby="basic-addon1"
                         style={{ height: "40px" }}
-                    />
-
+                    />*/}
+                    <label for="exampleForm2">
+                        <p class="h6">
+                            Destino/Nombre del alojamiento:
+                        </p>{" "}
+                    </label>
+                    
+                    <InputComponent placeholder = "Cuba"/>
                     <label for="exampleForm2">
                         <p class="h6" style={{ fontSize: "0.9rem" }}>
                             Fecha de Entrada:
                         </p>{" "}
                     </label>
-                    <DatePicker
+                    {/*<DatePicker
                         selected={startDate}
                         onChange={(date) => setStartDate(date)}
-                    />
+                    />*/}
+                    <DateComponent
+                    date={startDate}
+                    handleChange={handleStartDate}/>
+
                     <label for="exampleForm2">
                         <p class="h6" style={{ fontSize: "0.9rem" }}>
                             Fecha de Salida:
                         </p>{" "}
                     </label>
-                    <DatePicker
+                    {/*<DatePicker
                         selected={startDate}
                         onChange={(date) => setStartDate(date)}
+                    />*/}
+                    <DateComponent
+                        date={endDate}
+                        handleChange={handleEndDate}
                     />
-                    <br />
-                    <br />
-                    <select
+                   {/*<select
                         class="form-select form-select-sm"
                         aria-label=".form-select-sm example"
                     >
@@ -66,7 +126,20 @@ const Aside = () => {
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
-                    </select>
+                    </select>*/ } 
+                    <label for="exampleForm2">
+                        <p class="h6" style={{ fontSize: "0.9rem" }}>
+                            Personas y habitaciones:
+                        </p>{" "}
+                    </label>
+                    <PeopleRoomsComponent
+                    adults={adults}
+                    handleAdults = {handleAdults}
+                    childs = {childs}
+                    handleChilds = {handleChilds}
+                    rooms = {rooms}
+                    handleRooms = {handleRooms}
+                    />
                     <br />
                     <div class="form-check">
                         <input

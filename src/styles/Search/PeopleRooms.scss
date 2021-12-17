@@ -1,0 +1,32 @@
+
+.containerSelects
+{
+    background: white;
+    padding: 1rem;
+}
+
+.select
+{
+    display: flex;
+    justify-content: space-between;
+    
+    margin:0 auto;
+    padding: 0.3rem;
+    
+}
+
+.buttonCount
+{
+    color: cyan;
+    border: 1px solid cyan;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.buttonCount:hover
+{
+    background: rgba(121, 223, 223, 0.486);
+}
