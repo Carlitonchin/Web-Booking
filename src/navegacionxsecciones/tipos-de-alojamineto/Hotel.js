@@ -4,63 +4,11 @@ import SearchHotelsComponent from '../../components/Hotel/SearchHotelsComponent'
 import FilterComponent from '../../components/Search/FilterComponent'
 import ListHotels from '../../components/Search/ListHotels'
 import style from '../../styles/Search/SearchHotel.module.scss'
+import {d, list} from './testingForHotels.js'
 
 const Hotel = () => {
     
-    let d = {
-        "Estrellas:":
-        {
-            "1 estrella":{
-                "count":100,
-                "boolean":false
-            },
-            "2 estrellas":{
-                "count":20,
-                "boolean":false
-            },
-        }
-        ,
-
-        "Camas:":
-        {
-            "1 cama":{
-                "count":5,
-                "boolean":false
-            },
-            "2 camas":{
-                "count":10,
-                "boolean":false
-            },
-        }
-    
-    }
-
-    let list = 
-    [
-        {
-           name:"Hotel Moderno",
-           stars:5,
-           location:"Varadero",
-           imgUrl:"../../images/cancun.jpg",
-           info:"La mejor comida de la region",
-           bad:"Quedan pocos cupos",
-           good:"15% de descuento",
-            price:500,
-            points:7.4,
-            nigths:3,
-            adults:2,
-            childs:1,
-            rooms:1
-        }
-    ]
-
-    list.push(list[0])
-    list.push(list[0])
-    list.push(list[0])
-    list.push(list[0])
-    list.push(list[0])
-    list.push(list[0])
-    list.push(list[0])
+   
 
     return <div className={style.containerSearch}>
         <div className={style.aside}>

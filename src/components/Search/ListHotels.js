@@ -26,7 +26,10 @@ export default ({list})=>
                 let textNights = (nigths === 1) ? "noche" : "noches";
 
                 return <div className={style.singleHotel}>
+                    <div className={style.containerImag}>
                     <div className={style.backHotel} style={{backgroundImage:'url(/img/cancun.jpg)'}}></div>
+                    </div>
+
                     <div className={style.centerPosition}>
                     <div>
                     <div className={style.nameAndStars}>
