@@ -1,0 +1,29 @@
+.containerHotels
+{
+    width: 80%;
+}
+
+.singleHotel
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.nameAndStars
+{
+    display: flex;
+    font-weight: bold;
+}
+
+.name>a
+{
+    text-decoration: none;
+}
+
+.location
+{
+    margin-bottom: 15px;
+}
