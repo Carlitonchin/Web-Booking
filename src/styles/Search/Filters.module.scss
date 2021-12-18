@@ -1,0 +1,27 @@
+.container_category
+{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.titleCategory
+{
+    margin-top: 25px;
+    margin-left: 10%;
+    
+}
+
+.titleCategory>h6
+{
+    margin-bottom: 3px;
+}
+
+.light_sub
+{
+    height: 1px;
+    background: rgb(29, 28, 28);
+
+}
+
+
