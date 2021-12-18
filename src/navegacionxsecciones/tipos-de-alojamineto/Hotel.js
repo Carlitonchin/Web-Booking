@@ -41,13 +41,26 @@ const Hotel = () => {
            name:"Hotel Moderno",
            stars:5,
            location:"Varadero",
-           imgUrl:"",
+           imgUrl:"../../images/cancun.jpg",
            info:"La mejor comida de la region",
            bad:"Quedan pocos cupos",
-           good:"15% de descuento"
-
+           good:"15% de descuento",
+            price:500,
+            points:7.4,
+            nigths:3,
+            adults:2,
+            childs:1,
+            rooms:1
         }
     ]
+
+    list.push(list[0])
+    list.push(list[0])
+    list.push(list[0])
+    list.push(list[0])
+    list.push(list[0])
+    list.push(list[0])
+    list.push(list[0])
 
     return <div className={style.containerSearch}>
         <div className={style.aside}>

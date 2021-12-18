@@ -112,6 +112,6 @@ export default ()=>
             rooms = {rooms}
             handleRooms = {handleRooms}
          />
-        <BlueButton />
+        <BlueButton text="Buscar"/>
     </div>
 }
