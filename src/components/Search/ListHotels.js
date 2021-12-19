@@ -15,7 +15,7 @@ function createArrayOfLength(length)
 
 export default ({list})=>
 {
-    return <><h3>{list.length + " hoteles encontrados"}</h3>
+    return <><h3 className={style.hotelsFinded}>{list.length + " hoteles encontrados"}</h3>
     <div className={style.containerHotels}>
         {list.map(hotel=>
             {

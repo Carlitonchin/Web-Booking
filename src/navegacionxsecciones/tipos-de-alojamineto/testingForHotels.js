@@ -21,7 +21,32 @@ var d = {
         "2 camas":{
             "count":10,
             "boolean":false
+        }
+        
+    },
+    "Cercania de la playa:":
+    {
+        "menos de 1km":{
+            "count":5,
+            "boolean":false
         },
+        "menos de 5 km":{
+            "count":10,
+            "boolean":false
+        }
+        
+    },
+    "Rascacielos:":
+    {
+        "200+ pisos":{
+            "count":5,
+            "boolean":false
+        },
+        "100-199 pisos":{
+            "count":10,
+            "boolean":false
+        }
+        
     }
 
 }

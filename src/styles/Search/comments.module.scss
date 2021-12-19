@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.containerComments
+{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.containerSingleComment
+{
+    width: 32%;
+    padding: 25px;
+    border-radius: 3px;
+    border: 1px solid rgb(170, 167, 167);
+}
+
+.profilePicture
+{
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.headerComment
+{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    margin:0
+}
+
+h4{
+    margin: 0;
+}
+
+.name_country
+{
+    margin-left: 15px;
+}
+
+.country
+{
+    color:$borderColor;
+    margin-left: 2px;
+}
+
+.text{
+    margin-top: 25px;
+}
