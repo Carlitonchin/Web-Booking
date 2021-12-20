@@ -1,5 +1,7 @@
 import { useState } from "react"
 import style from '../../styles/Search/comments.module.scss'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function createArrayFrom(startIndex)
 {
@@ -13,18 +15,38 @@ function createArrayFrom(startIndex)
     return result;
 }
 
+
 export default ({comments})=>
 {
     const [startIndex, setStartIndex] = useState(0);
     let indexes = createArrayFrom(startIndex);
 
-    return <div className={style.containerComments}>
-        {indexes.map(i=>
-            {
-                if(i > comments.length - 1)
-                    return <></>;
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
 
-                let {userName, imgUrl, country, text} = comments[i];
+    return <div className={style.containerComments}>
+
+        <Carousel responsive={responsive}>
+        {comments.map(c=>
+            {
+                let {userName, imgUrl, country, text} = c;
                 return <div className={style.containerSingleComment}>
                     <div className={style.comment}>
                         <div className={style.headerComment}>
@@ -40,5 +62,6 @@ export default ({comments})=>
                     </div>
                 </div>
             })}
+            </Carousel>
     </div>
 }
