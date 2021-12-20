@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import CardSection from '../../components/secciones/casasclientes/CardSection';
 import Aside from '../../layout/Aside';
 import CommentsComponent from '../../components/Search/CommentsComponent';
+import SingleHotel from '../tipos-de-alojamineto/SingleHotel';
 
 const House1 = () => {
 
@@ -33,7 +34,7 @@ const House1 = () => {
       imgUrl:"./favicon.ico",
       text:"Me parece un excelente hotel, tiene excelentes vistas, el servicio es es muy bueno, la comida exquisita, 5 estrellas (literalmente)"
     }
-    ,
+    /*,
     {
       userName:"Carlos",
       country:"Cuba",
@@ -57,7 +58,7 @@ const House1 = () => {
       country:"Cuba",
       imgUrl:"./favicon.ico",
       text:"Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio es es muy bueno, la comida exquisita, 5 estrellas (literalmente)"
-    }
+    }*/
   ];
 
   return (
