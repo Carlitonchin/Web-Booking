@@ -45,6 +45,18 @@ const House1 = () => {
       country:"Cuba",
       imgUrl:"./favicon.ico",
       text:"Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio es es muy bueno, la comida exquisita, 5 estrellas (literalmente)"
+    },
+    {
+      userName:"Carlos",
+      country:"Cuba",
+      imgUrl:"./favicon.ico",
+      text:"Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio es es muy bueno, la comida exquisita, 5 estrellas (literalmente)"
+    },
+    {
+      userName:"Carlos",
+      country:"Cuba",
+      imgUrl:"./favicon.ico",
+      text:"Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio Me parece un excelente hotel, tiene excelentes vistas, el servicio es es muy bueno, la comida exquisita, 5 estrellas (literalmente)"
     }
   ];
 

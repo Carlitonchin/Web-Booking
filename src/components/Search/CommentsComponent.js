@@ -3,23 +3,20 @@ import style from '../../styles/Search/comments.module.scss'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-function createArrayFrom(startIndex)
-{
-    let result = [];
-
-    for(let i = startIndex; i < startIndex + 3; i++)
-    {
-        result.push(i);
-    }
-
-    return result;
-}
-
-
 export default ({comments})=>
 {
-    const [startIndex, setStartIndex] = useState(0);
-    let indexes = createArrayFrom(startIndex);
+    const [readMore, setReadMore] = useState(null);
+
+    function readMoreHandler(comment)
+    {
+        if(comment == readMore)
+        {
+            setReadMore(null);
+            return;
+        }
+
+        setReadMore(comment);
+    }
 
     const responsive = {
         superLargeDesktop: {
@@ -47,7 +44,10 @@ export default ({comments})=>
         {comments.map(c=>
             {
                 let {userName, imgUrl, country, text} = c;
-                return <div className={style.containerSingleComment}>
+                let containerSingleComment = style.containerSingleComment;
+                if(readMore != null)
+                    containerSingleComment += " " + style.containerSingleCommentExpanded;
+                return <div className={containerSingleComment}>
                     <div className={style.comment}>
                         <div className={style.headerComment}>
                             <div className={style.profilePicture} style={{backgroundImage:`url(${imgUrl})`}}></div>
@@ -57,8 +57,20 @@ export default ({comments})=>
                             </div>
                         </div>
                         <div className={style.text}>
-                            {text}
+                            {
+                            ((readMore == c) ? text : text.slice(0,150) )
+                            + 
+                            ((readMore == c) ? "" : ((text.length>150) ? " ..." : ""))
+                            }
                         </div>
+                        <p onClick={readMoreHandler.bind(this, c)} className={"link-primary " + style.readMore}>
+                            {
+                                ((readMore != c && text.length > 150)?"Leer más":"")
+                                +
+                                ((readMore == c) ? "Leer menos" : "")
+
+                            }
+                        </p>
                     </div>
                 </div>
             })}

@@ -2,16 +2,26 @@
 
 .containerComments
 {
-    width: 80%;
-    height: 100px;
+    width: 90%;
+    height: min-content;
+    margin: 0 auto;
+    margin-bottom: 140px;
+
 }
 
 .containerSingleComment
 {
-    width: 32%;
+    margin: 0 auto;
+    width: 95%;
+    height: 40vh;
     padding: 25px;
     border-radius: 3px;
     border: 1px solid rgb(170, 167, 167);
+}
+
+.containerSingleCommentExpanded
+{
+    height: min-content;
 }
 
 .profilePicture
@@ -50,4 +60,10 @@ h4{
 
 .text{
     margin-top: 25px;
+}
+
+.readMore
+{
+    cursor: pointer;
+    margin-top: 15px;
 }
