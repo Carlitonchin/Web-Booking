@@ -64,7 +64,7 @@ const House1 = () => {
   return (
     <>
     <br/>
-    <CommentsComponent comments={comments}/>
+    <SingleHotel/>
       <Container>
         <Row>
           <Col>
