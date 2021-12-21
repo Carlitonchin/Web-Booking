@@ -1,5 +1,28 @@
-.cotainer
+@import "../variables.scss";
+
+.container
 {
-    width: 80%;
-    height: 200px;
+    width: 100%;
+    height: 100vh - $headerHeight;
+}
+
+.containerHeader
+{
+    height: 10%;
+}
+
+.containerGallery
+{
+    margin:0 auto;
+    width: 90%;
+    height: 85%;
+    display: flex;
+}
+
+.img
+{
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    width: 800px;
 }

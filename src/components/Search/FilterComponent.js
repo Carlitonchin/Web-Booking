@@ -19,11 +19,11 @@ export default ({filters})=>
                     </h6>
                 {Object.keys(filters[category]).map(filter=>
                     {
-                        return <div class="filter">
-                        <input class="form-check-input" id="a" type="checkbox" 
+                        return <div class="form-check">
+                        <input type="checkbox"  class="form-check-input" id={category+filter} 
                          onChange={changeHandler.bind(this, category, filter)}
                          checked={filters[category][filter]["boolean"]}/>
-                        <label className={style.filter} for="a">
+                        <label className={ "form-check-label" + " " + style.filter} for={category+filter}>
                             {filter}
                             <span class="badge rounded-pill" style={{color:"gray"}}>{`(${filters[category][filter]["count"]})`}</span>
                         </label>

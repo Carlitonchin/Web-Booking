@@ -1,0 +1,29 @@
+.container
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.containerLeft
+{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgLeft
+{
+    height: 49.5%;
+    width: 100%;
+}
+
+.imgRight
+{
+    width: 69%;
+    height: 100%;
+    
+}
