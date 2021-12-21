@@ -1,17 +1,7 @@
 import { Container } from 'react-bootstrap';
 import BlueButton from '../Utils/BlueButton';
 import style from '../../styles/Search/listHotels.module.scss'
-
-function createArrayOfLength(length)
-{
-    let result = [];
-    for(let i = 0; i < length; i++)
-    {
-        result.push(true);
-    }
-
-    return result;
-}
+import createArrayOfLength from '../Utils/Functions/createArrayOfLength';
 
 export default ({list})=>
 {
@@ -37,7 +27,6 @@ export default ({list})=>
                     <div className={style.stars}>
                         {createArrayOfLength(stars).map(_=>
                             {
-                                console.log("hola")
                                 return <><i class="bi bi-star-fill"></i></>;
                             })}
                        

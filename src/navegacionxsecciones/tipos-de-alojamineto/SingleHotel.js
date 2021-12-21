@@ -20,7 +20,10 @@ export default () =>
           <div className={style.nameStarsLocation}>
             <HeaderHotel name={name} location={location} stars={stars}/>
           </div>
-        <BlueButton/>
+
+        <div className={style.containerBooking}>
+        <BlueButton text="reservar"/>
+        </div>
         </div>
         <div className={style.containerGallery}>
           <ContainerImages pictures={pictures}/>

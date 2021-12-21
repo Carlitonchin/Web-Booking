@@ -1,22 +1,15 @@
 .container
 {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
-}
-
-.containerDuo
-{
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 45%;
+    width: 100%;
     height: 100%;
+    flex-direction: column;
+    text-align: end;
 }
 
-.img
+.morePictures
 {
-    width: 100%;
-    height: 49.5%;
+    cursor: pointer;
+    margin-right: 20px;
 }

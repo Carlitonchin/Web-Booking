@@ -1,6 +1,16 @@
+@import '../../variables.scss';
+
 .img
 {
     background-position: center;
     background-size: cover;
     border-radius: 10px;
+    cursor: pointer;
+    transition: 50ms ease-in-out;
+    border: 0px $goldenColor solid;
+}
+
+.img:hover
+{
+    border: 2px $goldenColor solid;
 }
