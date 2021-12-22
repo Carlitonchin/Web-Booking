@@ -21,9 +21,12 @@
 .containerBooking
 {
     width: 45%;
+    height: 100%;
     margin-right: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
 }
 
 .booking
