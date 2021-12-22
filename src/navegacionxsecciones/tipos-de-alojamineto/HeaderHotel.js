@@ -1,11 +1,12 @@
 
 import createArrayOfLength from '../../components/Utils/Functions/createArrayOfLength';
-import style from '../../styles/Alojamineto/headerSingleHotel.scss';
+import style from '../../styles/Alojamineto/headerSingleHotel.module.scss';
 
 export default ({name, stars, location})=>
 {
     return  <div className={style.container}>
-    <div><h1>{name}</h1></div>
+    <div className={style.nameAndStars}>
+        <h1 className={style.name}>{name}</h1>
     <div className={style.stars}>
         {createArrayOfLength(stars).map(_=>
             {
@@ -13,6 +14,7 @@ export default ({name, stars, location})=>
             })}
        
         </div>
-    <div>{location}</div>
+        </div>
+    <a href="#" className={style.location}>{location}</a>
     </div>
 }

@@ -45,7 +45,7 @@ export default ({comments})=>
             {
                 let {userName, imgUrl, country, text} = c;
                 let containerSingleComment = style.containerSingleComment;
-                if(readMore != null)
+                if(readMore == c)
                     containerSingleComment += " " + style.containerSingleCommentExpanded;
                 return <div className={containerSingleComment}>
                     <div className={style.comment}>

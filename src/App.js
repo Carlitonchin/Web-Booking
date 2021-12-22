@@ -11,7 +11,7 @@ function App() {
           <NavHeader />
           <Routing />
         </div>
-        {/*<Footer />*/}
+        <Footer />
       </div>
     </>
   );

@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+
+.container
+{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.iconText
+{
+    display: flex;
+    margin-right: 20px;
+    color:$grayColor;
+    align-items: center;
+}
+
+.icon
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 2px;
+}

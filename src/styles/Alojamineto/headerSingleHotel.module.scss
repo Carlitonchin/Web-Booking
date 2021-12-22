@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+
+.stars
+{
+    margin-left: 10px;
+}
+
+.stars>i
+{
+    color:$goldenColor;
+    font-size: 2rem;
+    margin-right: 3px;
+}
+
+.nameAndStars
+{
+    display: flex;
+    align-items: center;
+ }
+
+ .name
+ {
+     margin:0;
+ }
+
+ .location
+ {
+     margin-left: 10px;
+ }
