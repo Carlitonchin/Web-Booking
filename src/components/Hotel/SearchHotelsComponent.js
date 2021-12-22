@@ -112,6 +112,8 @@ export default ()=>
             rooms = {rooms}
             handleRooms = {handleRooms}
          />
+         <div className={style.containerBlueButton}>
         <BlueButton text="Buscar"/>
+        </div>
     </div>
 }
