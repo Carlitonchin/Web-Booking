@@ -98,3 +98,66 @@ export var comments = [
     }
    
   ];
+
+  export var listInfo=
+  [
+    {
+      title:"Para cancelar debes pagar",
+      text: "20 dolares"
+    },
+    {
+      title:"Forma de pago",
+      text: "Tarjeta de credito o bitcoin"
+    },
+    {
+      title:"Oferta especial",
+      text: "Si se queda mas de 3 noches le ofrecemos 2 almuerzos gratis"
+    },
+  ];
+
+  export var room=
+  {
+    details:
+    [
+      {
+        icon:"/favicon.ico",
+        text:"Colchon de la Nasa"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"Limpieza extrema"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"Atencion 24 horas"
+      }
+    ],
+
+    good:
+    [
+      {
+        icon:"/favicon.ico",
+        text:"25 m2"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"Vistas a la ciudad"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"Patio"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"2 banhos"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"100Mbps de internet"
+      },
+      {
+        icon:"/favicon.ico",
+        text:"Minibar"
+      }
+    ]
+  }

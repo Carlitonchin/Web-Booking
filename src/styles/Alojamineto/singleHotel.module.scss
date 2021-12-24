@@ -59,7 +59,27 @@
 {
     margin-top: 50px;
     
-    width: 80%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+}
+
+.containerFinalInfo
+{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+
+.finalBookingContainer
+{
+    width: 70%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finalBooking
+{
+    width: 45%;
 }

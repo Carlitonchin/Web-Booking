@@ -6,9 +6,10 @@ import BlueButton from '../../components/Utils/BlueButton';
 import ContainerImages from '../../components/Utils/ContainerImages';
 import GrayButton from '../../components/Utils/GrayButton';
 import CommentsComponent from '../../components/Search/CommentsComponent';
-import {comments, bestServices, blackServices} from './testing/commentsTest'; // borrar luego
+import {comments, bestServices, blackServices, room, listInfo} from './testing/commentsTest'; // borrar luego
 import BestServices from './Services/BestServices';
 import BlackServices from './Services/BlackServices';
+import FinalInfo from '../../components/Search/FinalInfo';
 
 export default () =>
 {
@@ -49,5 +50,17 @@ export default () =>
         <div className={style.containerBlackServices}>
           <BlackServices services={blackServices}/>
         </div>
+        <div className={style.containerFinalInfo}>
+              <FinalInfo listInfo={listInfo} room = {room}/>
+        </div>
+        <div className={style.finalBookingContainer}>
+        <div className={style.finalBooking}>
+        <GrayButton text="Buscar otro hotel"/>
+        </div>
+        <div className={style.finalBooking}>
+        <BlueButton text="Reservar"/>
+        </div>
+        </div>
+        
         </div>
 }

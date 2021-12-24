@@ -1,0 +1,79 @@
+@import '../variables.scss';
+
+.detail
+{
+    display: flex;
+    align-items: center;
+}
+
+.icon
+{
+   margin-right: 5px;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.containerGood
+{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.good
+{
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding:5px;
+    border-radius: 5px;
+    border: 1px #16c513 solid;
+    color: #16c513;
+    align-items: center;
+    background:#f2ffe9;
+}
+
+.left
+{
+    width: 25%;
+    justify-content: space-between;
+}
+
+.containerInfo
+{
+    padding:15px;
+    border: 1px solid $borderColor;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    
+}
+
+.containerInfo>p
+{
+    color: $grayColor;
+}
+
+.textDetail
+{
+    color: $grayColor;
+}
+
+.roomInfo
+{
+    background:#bbe4f08f;
+    width: 70%;
+    padding:20px;
+    border-radius: 10px;
+    border: 1px solid #98bae7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerInfo:last-child
+{
+    margin-bottom: 0;
+}

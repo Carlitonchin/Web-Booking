@@ -41,8 +41,8 @@ const Routing = () => {
             <Route path="/page4" element={<Page4/>}/>
             <Route path="/page5" element={<Page5/>}/>
             <Route path="/maqueta" element={<House1/>}/>
-            <Route path="/hotel" element={<Hotel/>}/>
-            <Route path="/hotel/reservar" element={<SingleHotel/>}/>
+            <Route path="/buscar" element={<Hotel/>}/>
+            <Route path="/buscar/hotel" element={<SingleHotel/>}/>
           </Routes>
     )
 }
