@@ -9,38 +9,39 @@ import Card from '../../components/Alojamiento/Card'
 import CardCountry from '../../components/Alojamiento/CardCountry';
 import HeaderSleep from '../../components/Alojamiento/HeaderSleep';
 import Layout from "../../layout/Layout"
+import ImageCarousel from '../../components/Utils/ImageCarousel';
 /*--------------------------------------------------------------*/
 
 const dataTop = [
   {
-    url: "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_guest_house/70618d86d515349ce56296a56d2eaaf283fd1542.jpg",
+    imgUrl: "/img/cancun.jpg",
     link: "hotel", 
-    descripcion: "Hoteles", 
-    cantidad: "824.347 hoteles" 
+    type: "Hoteles (824.347)", 
+    count: "824.347" 
   },
   {
-    url: "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_hostels/cd5489c0d29025a9ca9daa602ac1581ba042bc69.jpg",
+    imgUrl: "/img/playa.jpg",
     link: "", 
-    descripcion: "Apartamentos", 
-    cantidad: "733.052 apartamentos" 
+    type: "Apartamentos (733.052)", 
+    count: "733.052" 
   },
   {
-    url: "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_motels/9673cd1b55cbc1e1cdaeae09d87d16aa9d84d5f7.jpg",
+    imgUrl: "/img/cook.jpg",
     link: "house1", 
-    descripcion: "Resorts", 
-    cantidad: "17.335 resorts" 
+    type: "Resorts (17.335)", 
+    count: "17.335" 
   },
   {
-    url: "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_bed_and_breakfast/a6a4a3f904284337c187771d94a4bb6169b168d7.jpg",
+    imgUrl: "/img/España.jpg",
     link: "", 
-    descripcion: "Villas", 
-    cantidad: "378.607 villas" 
+    type: "Villas (378.607)", 
+    count: "378.607" 
   },
   {
-    url: "https://cf.bstatic.com/static/img/theme-index/carousel_320x240/bg_bed_and_breakfast/a6a4a3f904284337c187771d94a4bb6169b168d7.jpg",
+    imgUrl: "/img/unnamed.jpg",
     link: "", 
-    descripcion: "Chalets de montaña", 
-    cantidad: "31.159 chalets de montaña" 
+    type: "Chalets de montaña (31.159)", 
+    count: "31.159" 
   }
 ];  
 
@@ -92,31 +93,27 @@ const Home = () => {
           <HeaderSleep />
         </Layout>
         {/*------------------Alert--------------------------------------------*/}
-        <Container className="container">
-          <Row>
-            <Col>
-              <Alert variant="danger">
-                Consigue la información que necesitas. Consulta las últimas
-                restricciones por la COVID-19 antes de viajar.
-              </Alert>
-            </Col>
-          </Row>
-        </Container>
+        
         {/*------------------Alojaminetos SLicks--------------------------------------------*/}
-        <Container>
-          <Row>
-            <Col>
+        
+              <div className="listHome">
+              <h5>Buscar por tipo de alojamiento</h5>
+              
+              <ImageCarousel list={dataTop}/>
+              
               <br />
-              <Card title="Buscar por tipo de alojamiento" data={dataTop} />
+              <br />
+              <h5>Descubre Cuba</h5>
+              <ImageCarousel list={dataTop} />
               <br />
               <br />
-              <Card title="Descubre Cuba" data={dataForBackPacking} />
-            </Col>
-          </Row>
-        </Container>
+              <h5>Casas que le encantan a los clientes</h5>
+              <ImageCarousel list={dataTop} />
+              </div>
+          
         {/*------------------Cards Grids--------------------------------------------*/}
         <br /> <br />
-        <Container>
+       {/* <Container>
           <Row>
             
             <Col>
@@ -214,15 +211,9 @@ const Home = () => {
               </Link>
             </Col>
           </Row>
-        </Container>
-        <br />
-        <Container>
-          <Row>
-            <Col>
-              <Card title="Casas que encantan a los clientes " data={casas} />
-            </Col>
-          </Row>
-        </Container>
+        </Container>*/}
+      
+       
       </>
     );
 }

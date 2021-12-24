@@ -1,5 +1,7 @@
-export default ({placeholder})=>
+export default ({placeholder, value, handlerChange})=>
 {
+    
+
     return <> 
 
                     <input
@@ -8,7 +10,8 @@ export default ({placeholder})=>
                         placeholder={placeholder}
                         aria-label="Username"
                         aria-describedby="basic-addon1"
-                        
+                        value={value}
+                        onChange={handlerChange}
                     />
                     </>
 
