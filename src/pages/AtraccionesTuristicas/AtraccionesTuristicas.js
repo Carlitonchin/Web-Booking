@@ -14,6 +14,8 @@ import CardsAmericaN from '../../components/AtraccionesTuristicas/CardsAmericaN'
 import img1 from '../../images/fortuna-24.png'
 import img2 from '../../images/calendario-24.png'
 import img3 from '../../images/línea-32.png'
+import ImageCarousel from '../../components/Utils/ImageCarousel';
+
 
 const AtraccionesTuristicas = () => {
 
@@ -135,21 +137,56 @@ const AtraccionesTuristicas = () => {
       
     ]);
 
+    const dataTop = [
+      {
+        imgUrl: "/img/cancun.jpg",
+        link: "hotel", 
+        type: `Londres`, 
+        toDo: "347 cosas para hacer" 
+      },
+      {
+        imgUrl: "/img/playa.jpg",
+        link: "", 
+        type: "Los Angeles", 
+        toDo: "347 cosas para hacer"       },
+      {
+        imgUrl: "/img/cook.jpg",
+        link: "house1", 
+        type: "Buenos Aires", 
+        toDo: "347 cosas para hacer"       },
+      {
+        imgUrl: "/img/España.jpg",
+        link: "", 
+        type: "Barcelona", 
+        toDo: "347 cosas para hacer"       },
+      {
+        imgUrl: "/img/unnamed.jpg",
+        link: "", 
+        type: "New York", 
+        toDo: "347 cosas para hacer"       }
+    ];  
+    
+
     return (
       <div>
+        
         <Header
         h1="Donde quieres ir"
         h5="Visita los lugares mas hermosos del mundo"
-        placeholder="Destinos, museos, tours, ..."
+        placeholder="Destinos, museos, tours ..."
         />
         <div className={headerStyle.cabecera} style={{backgroundImage:'url(img/Hawaii.jpg)'}}></div>
-        <Container className="text-center1">
+        <div className="containerInfo">
+        <h4 className="top">Destinos Top</h4>
+        <ImageCarousel list={dataTop}/>
+        </div>
+        {/*<Container className="text-center1">
           <Row>
             <Col>
               <h3 style={{ fontWeight: "bold" }}>Destinos top</h3>
             </Col>
           </Row>
-        </Container>
+    </Container>
         <div className="grid-top">
           {destinos.map((dest) => {
             return (
@@ -160,7 +197,8 @@ const AtraccionesTuristicas = () => {
               />
             );
           })}
-        </div>
+        </div>*/}
+       
         <Container className="text-center2">
           <Row>
             <Col>

@@ -29,9 +29,11 @@ export default ({list})=>
       return <Carousel responsive={responsive}>
           {list.map(element=>
             {
-                let {type, imgUrl} = element;
+                let {type, imgUrl, toDo} = element;
                 return <CardStay type={type}
-                                 imgUrl={imgUrl}   />
+                                 imgUrl={imgUrl}  
+                                 toDo={toDo}
+                                 />
             })}                 
       </Carousel>
       
