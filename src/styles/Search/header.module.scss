@@ -1,0 +1,35 @@
+@import '../variables.scss';
+
+.containerSearch
+  {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 100vh - ($headerHeight + $cabeceraHeight);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(230, 226, 226);
+    
+  }
+
+  .containerSearchBar
+  {
+    margin-top: 10px;
+    width: 40%;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    background:orange;
+    border-radius: 5px;
+   
+  }
+
+  .textPresentation
+  {
+    color:$grayColor;
+  }

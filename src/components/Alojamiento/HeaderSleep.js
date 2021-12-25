@@ -1,10 +1,14 @@
 import React from 'react'
 import classes from "../../styles/Alojamineto/Sleep.module.scss"
 import SearchBar from '../Search/SearchBar'
+import Header from '../Search/Header'
 
 const HeaderSleep = () => {
     return <>
-      <div className={classes.cabecera}>
+      <Header h1="Donde quieres hospedarte"
+              h5="Encuentra los mejores alojamientos alrededor del mundo" 
+              placeholder="Paises, ciudades, hoteles y mucho mas"         />
+      <div className={classes.cabecera} style={{backgroundImage:'url(img/reserva.jpg)'}}>
         <div className={classes.cabecera_banner}>
           <div className={classes.cabecera_banner_titulo}>
             <h3>Las ofertas terminan YA</h3>
@@ -18,17 +22,7 @@ const HeaderSleep = () => {
         </div>
        
       </div>
-       <div className={classes.containerSearch}>
-         
-         <div>
-         <h4>Donde quieres hospedarte</h4>
-         <p>Encuentra los mejores alojamientos alrededor del mundo</p>
-         </div>
-         <div className={classes.containerSearchBar}>
-       <SearchBar placeholder="Paises, ciudades, hoteles"/>
-       </div>
-       
-     </div>
+      
     </>
 }
 

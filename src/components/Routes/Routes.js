@@ -27,8 +27,8 @@ const Routing = () => {
             <Route path="/" element={<Home />} />
             <Route path="/vuelos" element={<Fly />} />
             <Route path="/coches" element={<RentarCoches />} />
-            <Route path="/taxi" element={<AtraccionesTuristicas />} />
-            <Route path="/turismo" element={<Taxi/>}/>
+            <Route path="/turismo" element={<AtraccionesTuristicas />} />
+            <Route path="/taxi" element={<Taxi/>}/>
             <Route path="/house1" element={<House1/>}/>
             <Route path="/house2" element={<House2/>}/>
             <Route path="/house3" element={<House3/>}/>

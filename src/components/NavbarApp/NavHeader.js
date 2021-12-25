@@ -48,19 +48,19 @@ const NavHeader = () => {
             >
               <ul>
                 <li>
-                  <Link to="/">Dormir</Link>
+                  <Link to="/">Alojamiento</Link>
                 </li>
                 <li>
                   <Link to="/vuelos">Vuelos</Link>
                 </li>
                 <li>
-                  <Link to="/coches">ALquiler de Coches</Link>
+                  <Link to="/coches">Alquiler de Coches</Link>
                 </li>
                 <li>
-                  <Link to="/taxi">Atracciones Turisticas</Link>
+                  <Link to="/turismo">Atracciones Turisticas</Link>
                 </li>
                 <li>
-                  <Link to="/turismo">Taxi al Aereopuerto</Link>
+                  <Link to="/taxi">Taxi al Aereopuerto</Link>
                 </li>
               </ul>
             </nav>

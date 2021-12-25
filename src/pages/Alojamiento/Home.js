@@ -97,17 +97,15 @@ const Home = () => {
         {/*------------------Alojaminetos SLicks--------------------------------------------*/}
         
               <div className="listHome">
-              <h5>Buscar por tipo de alojamiento</h5>
+              <h5 className="title">Buscar por tipo de alojamiento</h5>
               
               <ImageCarousel list={dataTop}/>
               
-              <br />
-              <br />
-              <h5>Descubre Cuba</h5>
+              
+              <h5 className="title">Descubre Cuba</h5>
               <ImageCarousel list={dataTop} />
-              <br />
-              <br />
-              <h5>Casas que le encantan a los clientes</h5>
+              
+              <h5 className="title">Casas que le encantan a los clientes</h5>
               <ImageCarousel list={dataTop} />
               </div>
           

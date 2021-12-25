@@ -2,9 +2,11 @@
 import React, {useState} from 'react'
 import Layout from '../../layout/Layout'
 import Aturisticas from '../../components/AtraccionesTuristicas/Aturisticas'
+
+import headerStyle from "../../styles/Alojamineto/Sleep.module.scss"
 import { Container, Row, Col, Card  } from 'react-bootstrap';
 import '../../styles/AtraccionesTuristicas/AT.scss'
-
+import Header from '../../components/Search/Header';
 import CardTop from '../../components/AtraccionesTuristicas/CardTop';
 import CardsEuropa from '../../components/AtraccionesTuristicas/CardsEuropa';
 import CardAsia from '../../components/AtraccionesTuristicas/CardAsia';
@@ -135,9 +137,12 @@ const AtraccionesTuristicas = () => {
 
     return (
       <div>
-        <Layout>
-          <Aturisticas />
-        </Layout>
+        <Header
+        h1="Donde quieres ir"
+        h5="Visita los lugares mas hermosos del mundo"
+        placeholder="Destinos, museos, tours, ..."
+        />
+        <div className={headerStyle.cabecera} style={{backgroundImage:'url(img/Hawaii.jpg)'}}></div>
         <Container className="text-center1">
           <Row>
             <Col>
