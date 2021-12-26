@@ -1,0 +1,63 @@
+@import '../variables.scss';
+
+.container
+{
+    margin: 0 auto;
+    width: 90%;
+    
+}
+
+.header
+{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header>*
+{
+    margin:0;
+}
+
+
+.containerGallery
+{
+    height: 100vh - (15vh + $headerHeight);
+    
+}
+
+.infoAndPrice
+{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.infoAndPrice>*
+{
+    width: 33%;
+}
+
+.time
+{
+    color: $grayColor;
+    font-size: smaller;
+}
+
+.price
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.peopleAndPrice
+{
+    margin-top: 15px;
+    border-radius: 5px;
+    background:#bbe4f08f;
+    border: 1px solid #98bae7;
+    padding:10px;
+}

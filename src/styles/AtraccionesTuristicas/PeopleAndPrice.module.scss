@@ -1,0 +1,66 @@
+@import '../variables.scss';
+
+.container>div
+{
+    margin-bottom: 25px;
+}
+
+.container>div:last-child
+{
+    margin-bottom: 0;
+}
+
+.containerItem
+{
+    display: flex;
+    align-items: center;
+    color: $grayColor;
+}
+
+.icon
+{
+    width: 1rem;
+    height: 1rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+.select
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.select>div
+{
+    margin-bottom: 10px;
+}
+
+.plusMinus
+{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plusMinus>div
+{
+    box-shadow: none;
+    color: #98bae7;
+    border: 1px solid #98bae7;
+    background: white;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.totalPriceContainer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

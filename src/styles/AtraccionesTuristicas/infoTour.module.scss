@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.title
+{
+    margin-bottom: 1px;
+}
+
+.icon
+{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+    
+}
+
+.containerItems
+{
+    margin-bottom: 20px;
+}
+
+.containerItems:last-child
+{
+    margin-bottom: 0;
+}
+
+.item
+{
+    display: flex;
+    align-items: center;
+    color: $grayColor;
+}
