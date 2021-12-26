@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .container_category
 {
     display: flex;
@@ -8,7 +10,7 @@
 .titleCategory
 {
     padding: 15px;
-    border: rgb(133, 131, 131) 1px solid;
+    border: $borderColor 1px solid;
     border-bottom: none;
 }
 

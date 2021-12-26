@@ -20,6 +20,7 @@ import Page4 from '../../navegacionxsecciones/proximoviaje/page4';
 import Page5 from '../../navegacionxsecciones/proximoviaje/page5';
 import Hotel from '../../navegacionxsecciones/tipos-de-alojamineto/Hotel';
 import SingleHotel from '../../navegacionxsecciones/tipos-de-alojamineto/SingleHotel';
+import SearchTurism from '../../pages/AtraccionesTuristicas/SearchTurism';
 
 const Routing = () => {
     return (
@@ -43,6 +44,7 @@ const Routing = () => {
             <Route path="/maqueta" element={<House1/>}/>
             <Route path="/buscar" element={<Hotel/>}/>
             <Route path="/buscar/hotel" element={<SingleHotel/>}/>
+            <Route path="/turismo/buscar" element={<SearchTurism/>}/>
           </Routes>
     )
 }
