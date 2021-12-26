@@ -6,10 +6,12 @@ export default ({type, imgUrl, toDo}) =>
         <div className={style.containerImage} style={{backgroundImage:`url(${imgUrl})`}}>
        
         </div>
-        <div className={style.containerText}>
+        <div className={style.backTransparent + " " + (toDo?"":style.center)}>
+            <div className={style.containerText}>
             <h6>{type}</h6>
             
-           {(toDo)?<h6>{toDo}</h6>:""} 
+           {(toDo)?<p>{toDo}</p>:""} 
+           </div>
         </div>
     </div>
 }

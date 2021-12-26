@@ -17,7 +17,6 @@
 {
     width: 100%;
     height: 100%;
-    transition: 0.3s ease-in-out;
     background-position: center;
     background-size: cover;
     transition: 0.3s ease-in-out;
@@ -29,20 +28,41 @@
     scale: 1.1;
 }
 
-.containerText
+.backTransparent
 {
     color: white;
     font-weight: bolder;
     width: 100%;
-    text-align: center;
+    display: flex;
     background:rgba(128, 128, 128, 0.658);
     padding-top: 5px;
     padding-bottom: 5px;
     position: absolute;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent , black);
+    align-items: flex-end;
+    padding-left: 20px;
+}
+
+.center
+{
+    padding-left: 0;
+    justify-content: center;
 }
 
 .containerText>*
 {
-    margin: 0;
+margin: 0;
+}
+
+.containerText>p
+{
+    font-size: smaller;
+}
+
+.blur
+{
+   
+    position: absolute;
 }

@@ -1,0 +1,105 @@
+@import '../variables.scss';
+
+.tabContainer
+{
+    display: flex;
+    width: 99.5%;
+    overflow-x: scroll;
+}
+
+.tab
+{
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px $borderColor solid;
+    cursor: pointer;
+}
+
+.tab:hover
+{
+    background: $borderColor;
+}
+
+.tab>*
+{
+    margin: 0;
+}
+
+.tabSelected
+{
+    background: white;
+}
+
+.tabSelected:hover
+{
+    background: white;
+}
+
+.containerImages
+{
+    display: none;
+    transition: 0.3s ease-in-out;
+}
+
+.containerImg
+{
+    border-radius: 5px;
+    margin-bottom: 1vw;
+    width: 96%;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.containerImg:hover>.img
+{
+    scale: 1.1;
+}
+
+.img
+{
+    width: 100%;
+    height: 100%;
+   background-position: center;
+   background-size: cover;
+   transition: 0.3s ease-in-out;
+   
+}
+
+.containerImages
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.containerText
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 5px;
+    justify-content: flex-end;
+    color: white;
+    padding-left: 20px;
+    background: linear-gradient(to bottom, transparent , black);
+}
+
+.containerText>*
+{
+    margin: 0;
+    font-weight: bold;
+}
+
+.containerText>p
+{
+    font-size: smaller;
+}
