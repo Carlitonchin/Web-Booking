@@ -3,6 +3,8 @@ import ContainerImages from '../../components/Utils/ContainerImages';
 import InfoTour from './InfoTour'
 import DateComponent from '../../components/Search/DateComponent';
 import PeopleAndPrice from './PeopleAndPrice';
+import {useState} from 'react';
+import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
 
 let name = "Tour por Lima"
 let pictures=["../img/playa.jpg","../img/playa.jpg","../img/cancun.jpg","../img/cancun.jpg"]
@@ -39,6 +41,16 @@ let infoTour=
 ]
 export default ()=>
 {
+
+  let [adultCount, setAdult] = useState(1);
+  let [childCount, setChild] = useState(0);
+  let [date, setDate] = useState(new Date());
+
+  function handleDate(e) {
+    e.preventDefault()
+    setDate(getDateFromString(e.target.value))
+  }
+
     return <div className={style.container}>
         <div className={style.header}>
         <h1>Delfinario de Lima</h1>
@@ -57,7 +69,10 @@ export default ()=>
               Tickets y Precios
             </h5>
             <h6>Cuando quieres ir</h6>
-            <DateComponent/>
+            <DateComponent
+            date={date}
+            handleChange={handleDate}
+            />
             
             <p className={style.time}>Empieza a las 8AM</p>
             </div>
@@ -68,7 +83,12 @@ export default ()=>
               adultPrice={100}
               childPrice={50}
               rangeAdult="15-99"
-              rangeChild="0-14"                    
+              rangeChild="0-14"
+              adultCount={adultCount}
+              childCount={childCount}
+              setAdult={setAdult}
+              setChild={setChild}
+              date={date}                 
                     />
                     </div>
           </div>

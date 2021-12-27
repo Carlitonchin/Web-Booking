@@ -5,15 +5,10 @@ import PeopleRoomsComponent from '../Search/PeopleRoomsComponent'
 import BlueButton from '../Utils/BlueButton'
 import { useState } from 'react'
 
-export default ()=>
+export default ({startDate, setStartDate, endDate, setEndDate, adults, setAdults, rooms, setRooms, childs, setChilds})=>
 {
-    // Search state
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState(new Date());
-    const [adults, setAdults] = useState(1);
-    const [rooms, setRooms] = useState(1);
-    const [childs, setChilds] = useState(0);
-
+   
+    
     // ................. Handles State ...........................
     function handleAdults(factor)
     {
@@ -84,7 +79,7 @@ export default ()=>
         
           <DateComponent
             date={startDate}
-            andleChange={handleStartDate}
+            handleChange={handleStartDate}
             />
 
             {/*end date*/}
@@ -96,14 +91,9 @@ export default ()=>
         
           <DateComponent
             date={endDate}
-            andleChange={handleEndDate}
+            handleChange={handleEndDate}
             />
     {/*................... end dates section ............................*/}
-    <label for="countPeopleRooms">
-        <p className={"h7 " + style.labelFor}>
-            Personas y habitaciones:
-        </p>{" "}
-        </label>
         <PeopleRoomsComponent
             adults={adults}
             handleAdults = {handleAdults}

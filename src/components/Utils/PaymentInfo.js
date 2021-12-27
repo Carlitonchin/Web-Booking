@@ -6,6 +6,7 @@ let pricePerChild = 50;
 
 export default ({event, adultCount, childCount, dateSince, dateTo})=>
 {
+    console.log("date since " + dateSince)
     let textAdult = (childCount !== undefined)?"Adulto":"Persona";
     if(childCount === undefined)
         childCount = 0;
@@ -17,11 +18,18 @@ export default ({event, adultCount, childCount, dateSince, dateTo})=>
     return <>
     <div className={style.header}>
         <div className={style.img} style={{backgroundImage:`url(${imgUrl})`}}></div>
-        <div className={style.headerInfo}>
-            <h5 className={style.title}>{event}</h5>
-            <p>{dateSince + (dateTo)?`-${dateTo}`:""}</p>
-        </div>
+       
     </div>
+    <div>
+    <div className={style.headerInfo}>
+        <div className={style.containerTitle}>
+            <h5 className={style.title}>{event}</h5>
+            </div>
+           {((dateTo)?(<><p>{`Desde: ${dateSince}`}</p><p>{`Hasta:  ${dateTo}`}</p></>):
+           <p>{`Fecha: ${dateSince}`}</p>
+           )}
+        </div>
+        
     <div className={style.containerPrice}>
         <div className={style.itemPrice}>
         <p>{adultCount + "x " + textAdult}</p>
@@ -37,6 +45,7 @@ export default ({event, adultCount, childCount, dateSince, dateTo})=>
     <div className={style.priceTotal}>
         <h6>Precio total</h6>
         <p>{"$" + totalPrice}</p>
+    </div>
     </div>
     </>
 }

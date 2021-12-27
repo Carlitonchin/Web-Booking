@@ -16,14 +16,35 @@
     background-position: center;
     background-size: cover;
     margin-right: 10px;
-    border-top-left-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.title
+{
+    margin: 0;
+}
+
+.headerInfo
+{
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: flex-end;
 }
 
 .containerPrice
 {
-    width: 70%;
-    margin: 0 auto;
+    //width: 70%;
+    //margin: 0 auto;
     margin-bottom: 20px;
+}
+
+.headerInfo>*
+{
+    margin: 0;
 }
 
 .itemPrice
@@ -35,9 +56,9 @@
 
 .priceTotal
 {
-    margin: 0 auto;
+    //margin: 0 auto;
     display: flex;
-    width: 70%;
+    //width: 70%;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;

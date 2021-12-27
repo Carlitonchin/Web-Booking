@@ -11,13 +11,13 @@ function Select({count, text, handle})
     }
 
     return <div className="select">
-        <div className="btn buttonCount" onClick={minus}>
+        <div className="btn buttonCount plusMinus" onClick={minus}>
             -
         </div>
         <div>
             {`${count} ${text}`}
         </div>
-        <div className="btn buttonCount" onClick={plus}>
+        <div className="btn buttonCount plusMinus" onClick={plus}>
             +
         </div>
         </div>
@@ -31,7 +31,7 @@ export default ({adults, handleAdults, childs, handleChilds, rooms, handleRooms}
 
     return <div>
 
-        <div className="containerSelects  form-control">
+        <div className="containerSelects">
         <Select count={adults} text={textAdult} handle={handleAdults}/>
         <Select count={childs} text={textChild} handle={handleChilds}/>
         <Select count={rooms} text={textRoom} handle={handleRooms}/>

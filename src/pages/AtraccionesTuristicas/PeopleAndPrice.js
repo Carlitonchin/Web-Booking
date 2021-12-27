@@ -2,12 +2,11 @@ import { useState } from "react"
 import BlueButton from "../../components/Utils/BlueButton";
 import style from '../../styles/AtraccionesTuristicas/PeopleAndPrice.module.scss'
 import '../../styles/Utils/pGray.scss'
+import { getStringFromDate } from "../../components/Utils/Functions/dateManager";
 
 
-export default ({name, info, adultPrice, rangeAdult, childPrice, rangeChild})=>
+export default ({name, info, adultPrice, rangeAdult, childPrice, rangeChild, adultCount, childCount, setAdult, setChild, date})=>
 {
-    let [adultCount, setAdult] = useState(1);
-    let [childCount, setChild] = useState(0);
 
     let priceForAdults = adultCount*adultPrice;
     let priceForChilds = childCount*childPrice;
@@ -103,7 +102,7 @@ function handleChildCount(operation)
             </div>
             <div>
                 <BlueButton text="siguiente" 
-                link={`/pagar?event=${name}&adultCount=${adultCount}&childCount=${childCount}`}/>
+                link={`/pagar?event=${name}&adultCount=${adultCount}&childCount=${childCount}&dateSince=${getStringFromDate(date)}`}/>
             </div>
         </div>
     </div>
