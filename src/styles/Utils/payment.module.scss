@@ -1,0 +1,38 @@
+@import '../variables.scss';
+
+.container
+{
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.formContainer
+{
+    width: 50%;
+}
+
+.paymentContainer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid $borderColor;
+}
+
+.right
+{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.containerButton
+{
+    width: 80%;
+    margin: 0 auto;
+}

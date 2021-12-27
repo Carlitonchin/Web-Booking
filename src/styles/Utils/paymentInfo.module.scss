@@ -1,0 +1,49 @@
+.header
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.title
+{
+    margin-top: 1rem;
+}
+
+.img
+{
+    width: 5rem;
+    height: 5rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+    border-top-left-radius: 5px;
+}
+
+.containerPrice
+{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.itemPrice
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.priceTotal
+{
+    margin: 0 auto;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.priceTotal>*
+{
+   margin:0;
+}

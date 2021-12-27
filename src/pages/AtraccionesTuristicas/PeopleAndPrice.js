@@ -57,7 +57,7 @@ function handleChildCount(operation)
         <h6>Cuantos tickets</h6>
         <div className={style.select}>
             <div>
-            <p>Adulto</p>
+            <p>{"Adulto (" + rangeAdult + " anhos)"}</p>
             <p>{"$" + priceForAdults }</p>
             </div>
 
@@ -78,7 +78,7 @@ function handleChildCount(operation)
 
         <div className={style.select}>
             <div>
-            <p>Ninho</p>
+            <p>{"Ninho (" + rangeChild + " anhos)"}</p>
             <p>{"$" + priceForChilds }</p>
             </div>
 
@@ -103,7 +103,7 @@ function handleChildCount(operation)
             </div>
             <div>
                 <BlueButton text="siguiente" 
-                link={`/pagar?event=${name}`}/>
+                link={`/pagar?event=${name}&adultCount=${adultCount}&childCount=${childCount}`}/>
             </div>
         </div>
     </div>
