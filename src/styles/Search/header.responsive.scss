@@ -1,0 +1,59 @@
+@media (max-width: 449px)
+{
+    .containerSearchBar
+    {
+        width: 100%;
+    }
+}
+
+
+@media (min-width:450px) and (max-width: 501px)
+{
+    .containerSearchBar
+    {
+        width: 90%;
+    }
+
+}
+
+@media (min-width:502px) and (max-width: 599px)
+{
+    .containerSearchBar
+    {
+        width: 75%;
+    }
+}
+
+@media (min-width:600px) and (max-width: 649px)
+{
+    .containerSearchBar
+    {
+        width: 65%;
+    }
+}
+
+@media (min-width:650px) and (max-width: 749px)
+{
+    .containerSearchBar
+    {
+        width: 60%;
+    }
+}
+
+
+@media (min-width:750px) and (max-width: 849px)
+{
+    .containerSearchBar
+    {
+        width: 55%;
+    }
+}
+
+
+@media (min-width:850px) and (max-width: 1000px)
+{
+    .containerSearchBar
+    {
+        width: 50%;
+    }
+}

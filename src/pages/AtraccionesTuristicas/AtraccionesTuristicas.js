@@ -57,13 +57,17 @@ const AtraccionesTuristicas = () => {
       "Australia":[{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg", toDo:"10 cosas para hacer"},{text:"Australia", img:"/img/cancun.jpg"}]
     };
 
+    const [value, setValue] = useState("")
     return (
       <>
         
         <Header
         h1="Donde quieres ir"
         h5="Visita los lugares mas hermosos del mundo"
+        value={value}
+        setValue={setValue}
         placeholder="Destinos, museos, tours ..."
+        linkTo={`/turismo/buscar?search=${value}`}
         />
         <div className={headerStyle.cabecera} style={{backgroundImage:'url(img/Hawaii.jpg)'}}></div>
         <div className={style.containerInfo}>

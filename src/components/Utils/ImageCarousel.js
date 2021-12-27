@@ -21,8 +21,13 @@ export default ({list})=>
           items: 3
         },
         mobile: {
-          breakpoint: { max: 600, min: 0 },
+          breakpoint: { max: 600, min: 381 },
           items: 2
+        },
+        smallMobile:
+        {
+          breakpoint: { max: 380, min: 0 },
+          items: 1
         }
       };
 

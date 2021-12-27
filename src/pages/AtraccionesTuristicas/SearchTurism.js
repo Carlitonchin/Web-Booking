@@ -3,6 +3,8 @@ import SearchBar from '../../components/Search/SearchBar';
 import {d} from '../../navegacionxsecciones/tipos-de-alojamineto/testingForHotels'
 import FilterComponent from '../../components/Search/FilterComponent';
 import ListTurism from './ListTurism';
+import { useLocation } from 'react-router';
+import {useState} from'react';
 
 let data = 
 [
@@ -59,6 +61,11 @@ let data =
 
 export default ()=>
 {
+    let { search } = useLocation()
+    let query = new URLSearchParams(search);
+   
+    let name = query.get("search");
+    const [value, setValue] = useState(name)
     return  <div>
     <div className={style.top}>
                 <div className={style.filter}>
@@ -67,6 +74,8 @@ export default ()=>
                 </div>
                 <div className={style.containerSearchBar}>
                     <SearchBar 
+                    value={value}
+                    setValue={setValue}
                     placeholder = "Museos, tours, actividades ..."/>
                 </div>
             </div>

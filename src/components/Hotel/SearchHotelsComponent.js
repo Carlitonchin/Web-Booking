@@ -5,11 +5,17 @@ import PeopleRoomsComponent from '../Search/PeopleRoomsComponent'
 import BlueButton from '../Utils/BlueButton'
 import { useState } from 'react'
 
-export default ({startDate, setStartDate, endDate, setEndDate, adults, setAdults, rooms, setRooms, childs, setChilds})=>
+export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, adults, setAdults, rooms, setRooms, childs, setChilds})=>
 {
    
     
     // ................. Handles State ...........................
+
+    function handleValue(e)
+    {
+        setValue(e.target.value)
+    }
+
     function handleAdults(factor)
     {
         if(adults === 1 && factor === -1)
@@ -66,7 +72,11 @@ export default ({startDate, setStartDate, endDate, setEndDate, adults, setAdults
               Destino/Nombre del alojamiento:
             </p>{" "}
         </label>
-        <InputComponent placeholder = "Ejemplo: Lima"/>
+        <InputComponent 
+        placeholder = "Ejemplo: Lima"
+        value={value}
+        handlerChange={handleValue}
+        />
         {/*................................................*/}
 
         {/*................. dates section ...................*/}

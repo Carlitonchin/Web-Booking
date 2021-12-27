@@ -15,7 +15,7 @@
 
 .containerTypeStay
 {
-    width: 100%;
+   // width: 100%;
     height: 30vh;
 }
 
@@ -27,10 +27,12 @@
 
 .title
 {
-    margin-top: 80px;
+    margin-top: 2.5rem;
 }
 
 .title:first-child
 {
     margin-top: 20px;
 }
+
+@import './Home.responsive.scss';

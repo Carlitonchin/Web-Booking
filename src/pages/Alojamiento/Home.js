@@ -45,46 +45,6 @@ const dataTop = [
   }
 ];  
 
-const dataForBackPacking = [
-  { url: "https://cf.bstatic.com/xdata/images/city/square250/682526.webp?k=824dbecce1c56eb09b8e805ffca68dcb61abc3b27c6024e70abf8e3d83314ee4&o=" },
-  {
-    url: "https://cf.bstatic.com/xdata/images/city/square250/682522.webp?k=a0b34cf5be26779d7423b75160ee9b9c30ba21672596046fca84221955a8d834&o=",
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/city/square250/935970.webp?k=899748d490c9d320640521d3c26332ed1e1da5df27b2d9335b8422a768a9c739&o=",
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/city/square250/918518.webp?k=96666fba04ddd9ab5257049c1a6b8dc1d59c405b335e7123a925c143e08790e9&o=",
-  }
-];
-
-const casas = [
-  { 
-    url: "https://cf.bstatic.com/xdata/images/hotel/square200/87428762.webp?k=b3c5dd1a44523ec77c3a497ffc3540eebde08c1e9f3a71448c4de31ff3056f33&o=&s=1", 
-    link: "house1"
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/hotel/square200/97644401.webp?k=3b21154327640b8a8f06506a1b411de6411fe8b19ce82f2c5b56752569242116&o=&s=1",
-    link: "house2"
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/hotel/square200/48243413.webp?k=e9920f5d1a8480cc6dffc0a8fc4825fd2e2159c9ab5db0740d22efccef86ead8&o=&s=1",
-    link: "house3"
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/hotel/square200/71184956.webp?k=c2a5f6a4078e82eb2419e4d547b50f7b16da0e54426050fe6d402b557544d232&o=&s=1",
-    link: "house4"
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/hotel/square200/71184956.webp?k=c2a5f6a4078e82eb2419e4d547b50f7b16da0e54426050fe6d402b557544d232&o=&s=1",
-    link: "house5"
-  },
-  {
-    url: "https://cf.bstatic.com/xdata/images/hotel/square200/71184956.webp?k=c2a5f6a4078e82eb2419e4d547b50f7b16da0e54426050fe6d402b557544d232&o=&s=1",
-    link: "house6"
-  },
-  
-];
 
 const Home = () => {
     return (

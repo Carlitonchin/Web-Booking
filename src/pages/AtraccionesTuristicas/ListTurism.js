@@ -19,7 +19,9 @@ export default ({data})=>
 
                     <div className={style.price}>
                         <h5>{"$"+price}</h5>
+                        <a href={`/turismo/tour?name=${tour}`}>
                         <BlueButton text="Ver"/>
+                        </a>
                     </div>
                 </div>
             </div>

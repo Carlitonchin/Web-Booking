@@ -6,14 +6,19 @@ import ListHotels from '../../components/Search/ListHotels'
 import style from '../../styles/Search/SearchHotel.module.scss'
 import { useState } from 'react'
 import {d, list} from './testingForHotels.js'
+import { useLocation } from 'react-router'
 
 const Hotel = () => {
-    
+    let { search } = useLocation()
+    let query = new URLSearchParams(search);
+
+    let s = query.get("search");
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [adults, setAdults] = useState(1);
     const [rooms, setRooms] = useState(1);
     const [childs, setChilds] = useState(0);
+    const [value, setValue] = useState(s);
 
     return <div className={style.containerSearch}>
         <div className={style.aside}>
@@ -28,6 +33,8 @@ const Hotel = () => {
         setRooms={setRooms}
         setStartDate={setStartDate}
         startDate={startDate}
+        value={value}
+        setValue={setValue}
         />
         <div className={style.filterContainer}>
         <h5 className={style.filterTitle}>Filtrar por:</h5>

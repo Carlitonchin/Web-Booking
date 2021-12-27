@@ -3,9 +3,8 @@ import BlueButton from '../Utils/BlueButton'
 import InputComponent from './InputComponent'
 import { useState } from 'react'
 
-export default ({placeholder, handleClick})=>
+export default ({placeholder, handleClick, value, setValue, handlerChange, linkTo})=>
 {
-    const [value, setValue] = useState("")
     function handlerChange(e)
     {
         setValue(e.target.value);
@@ -18,7 +17,8 @@ export default ({placeholder, handleClick})=>
         />
         </div>
         <div className={style.button}>
-        <BlueButton text="Buscar"/>
+        {linkTo?<a href={linkTo}><BlueButton text="Buscar"/></a>:<BlueButton text="Buscar"/>}
+        
         </div>
         </>
 }

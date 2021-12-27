@@ -5,8 +5,8 @@ import DateComponent from '../../components/Search/DateComponent';
 import PeopleAndPrice from './PeopleAndPrice';
 import {useState} from 'react';
 import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
+import {useLocation} from 'react-router'
 
-let name = "Tour por Lima"
 let pictures=["../img/playa.jpg","../img/playa.jpg","../img/cancun.jpg","../img/cancun.jpg"]
 let infoTour=
 [
@@ -42,6 +42,13 @@ let infoTour=
 export default ()=>
 {
 
+  let { search } = useLocation()
+  let query = new URLSearchParams(search);
+
+  let name = query.get("name");
+  if(!name)
+  return <h1>Not found</h1>
+
   let [adultCount, setAdult] = useState(1);
   let [childCount, setChild] = useState(0);
   let [date, setDate] = useState(new Date());
@@ -53,7 +60,7 @@ export default ()=>
 
     return <div className={style.container}>
         <div className={style.header}>
-        <h1>Delfinario de Lima</h1>
+        <h1>{name}</h1>
         <a href="#">Lima</a>
         </div>
         <div className={style.containerGallery}>
@@ -77,7 +84,8 @@ export default ()=>
             <p className={style.time}>Empieza a las 8AM</p>
             </div>
             <div className={style.peopleAndPrice}>
-            <PeopleAndPrice name="Delfinario Lima"
+            <PeopleAndPrice 
+              name={name}
               info={[{iconUrl:"/favicon.ico", text:"cancelacion gratis"},
               {iconUrl:"/favicon.ico", text:"Duracion de 2 horas"}]}
               adultPrice={100}
