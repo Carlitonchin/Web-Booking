@@ -102,7 +102,8 @@ function handleChildCount(operation)
                 <p>{"Precio Total $"+totalPrice}</p>
             </div>
             <div>
-                <BlueButton text="siguiente"/>
+                <BlueButton text="siguiente" 
+                link={`/pagar?event=${name}`}/>
             </div>
         </div>
     </div>

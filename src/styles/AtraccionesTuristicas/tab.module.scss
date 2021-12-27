@@ -3,7 +3,7 @@
 .tabContainer
 {
     display: flex;
-    width: 99.5%;
+    width: 99%;
     overflow-x: scroll;
 }
 
@@ -17,7 +17,22 @@
     align-items: center;
     border: 1px $borderColor solid;
     cursor: pointer;
+    border-right:none ;
 }
+
+.tab:first-child
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tab:last-child
+{
+    border-right: 1px $borderColor solid;
+    border-end-end-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 
 .tab:hover
 {
@@ -101,5 +116,11 @@
 
 .containerText>p
 {
+    font-size: smaller;
+}
+
+.toDo
+{
+    color: white;
     font-size: smaller;
 }

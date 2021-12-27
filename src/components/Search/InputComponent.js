@@ -1,11 +1,12 @@
-export default ({placeholder, value, handlerChange})=>
+export default ({placeholder, value, type, handlerChange})=>
 {
     
-
+    if(!type)
+        type = "text"
     return <> 
 
                     <input
-                        type="text"
+                        type={type}
                         class="form-control"
                         placeholder={placeholder}
                         aria-label="Username"

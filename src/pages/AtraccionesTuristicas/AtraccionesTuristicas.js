@@ -17,7 +17,6 @@ import img3 from '../../images/línea-32.png'
 import ImageCarousel from '../../components/Utils/ImageCarousel';
 import TabContinents from './TabContinents';
 
-
 const AtraccionesTuristicas = () => {
 
     const dataTop = [

@@ -34,7 +34,8 @@ export default ({data})=>
                 console.log(text);
                 return <div className={style.containerImg}>
                      <div className={style.img} style={{backgroundImage:`url(${img})`}}></div>
-                     <div className={style.containerText}><h6>{text}</h6><p>{toDo}</p></div>
+                     <div className={style.containerText}><h6>{text}</h6>
+                     <div className={style.toDo}>{toDo}</div></div>
                      </div>
             })}
     </div>

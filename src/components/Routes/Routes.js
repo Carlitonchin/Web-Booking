@@ -22,6 +22,7 @@ import Hotel from '../../navegacionxsecciones/tipos-de-alojamineto/Hotel';
 import SingleHotel from '../../navegacionxsecciones/tipos-de-alojamineto/SingleHotel';
 import SearchTurism from '../../pages/AtraccionesTuristicas/SearchTurism';
 import SingleTour from '../../pages/AtraccionesTuristicas/SingleTour';
+import Payment from '../Utils/Payment';
 
 const Routing = () => {
     return (
@@ -47,6 +48,7 @@ const Routing = () => {
             <Route path="/hotel" element={<SingleHotel/>}/>
             <Route path="/turismo/buscar" element={<SearchTurism/>}/>
             <Route path="/turismo/tour" element={<SingleTour/>}/>
+            <Route path="/pagar" element={<Payment />}/>
           </Routes>
     )
 }

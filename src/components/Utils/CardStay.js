@@ -10,7 +10,7 @@ export default ({type, imgUrl, toDo}) =>
             <div className={style.containerText}>
             <h6>{type}</h6>
             
-           {(toDo)?<p>{toDo}</p>:""} 
+           {(toDo)?<div className={style.toDo}>{toDo}</div>:""} 
            </div>
         </div>
     </div>
