@@ -5,6 +5,8 @@
     background-position: center;
     width: 100%;
     height: $cabeceraHeight;
+    display: flex;
+    min-height:20rem;
     /*padding: 0 1.5rem;*/
     @include breakpoint(md) {
       padding: 0 3rem;
