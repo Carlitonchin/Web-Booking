@@ -1,0 +1,40 @@
+@media (max-width: 700px)
+{
+    .containerGood
+    {
+        flex-direction: column;
+    }
+
+    .good
+    {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerGood
+    {
+        width: fit-content;
+        margin-left: 5px;
+    }
+
+    .titleGood
+    {
+        text-align: center;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 859px)
+{
+    .containerGood
+    {
+        flex-wrap: wrap;
+    }
+
+    .good
+    {
+        width: 49%;
+        margin-bottom: 0.5rem;
+    }
+}

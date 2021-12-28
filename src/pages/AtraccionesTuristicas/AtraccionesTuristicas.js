@@ -97,7 +97,7 @@ const AtraccionesTuristicas = () => {
           </Row>
         </Container>
         */}
-        <h4 className={style.top}>
+        <h4 className={style.top + " " + style.titleGood}>
                 Cuenta con nosotros
               </h4>
         <div className={style.containerGood}>

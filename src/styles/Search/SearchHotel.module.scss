@@ -11,6 +11,7 @@
     background: orange;
     padding: 1rem;
     
+    
 }
 
 .filterTitle
@@ -28,6 +29,7 @@
 .aside
 {
     width: 25%;
+    
     /*margin-top: 10px;
     margin-left: 10px;*/
     
@@ -35,7 +37,8 @@
 
 .filterContainer
 {
-    border-bottom: 1px solid rgb(133, 131, 131);
+    border-bottom: 1px solid $borderColor;
+    border-right: 1px solid $borderColor;
     //margin-left: 10px;
     width: 100%;
     margin-top: 10px;
@@ -53,3 +56,7 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+
+@import './SearchHotel.responsive.scss';

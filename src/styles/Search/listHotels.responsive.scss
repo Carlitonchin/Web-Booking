@@ -1,0 +1,60 @@
+@media (max-width: 539px)
+{
+
+    .noImage
+    {
+        flex-direction: column;
+    }
+    .singleHotel
+    {
+        height: 40vw;
+    }
+
+    .priceSection
+    {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 540px) and (max-width: 770px)
+{
+
+    .singleHotel
+    {
+        height: 30vw;
+    }
+}
+
+@media (max-width: 770px)
+{
+    .containerHotels
+    {
+        width: 100%;
+    }
+}
+
+@media (min-width: 771px) and (max-width: 949px)
+{
+    .containerHotels
+    {
+        width: 95%;
+    }
+
+    .singleHotel
+    {
+        height: 23vw;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1050px)
+{
+    .containerHotels
+    {
+        width: 95%;
+    }
+
+    .singleHotel
+    {
+        height: 21vw;
+    }
+}

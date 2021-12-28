@@ -40,7 +40,7 @@ export default ({ list }) => {
                         </a>
                     </div>
 
-
+                    <div className={style.noImage}>
                     <div className={style.centerPosition}>
                         <div>
                             <div className={style.nameAndStars}>
@@ -85,6 +85,7 @@ export default ({ list }) => {
                         <a href={linkTo}>
                         <BlueButton text="Ver disponibilidad" />
                         </a>
+                    </div>
                     </div>
                 </div>
 

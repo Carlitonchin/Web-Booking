@@ -63,12 +63,14 @@
 .containerImg
 {
     border-radius: 5px;
-    margin-bottom: 1vw;
+    
     width: 96%;
-    height: 30vh;
+    height: 19vw;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 1vw;
 }
 
 .containerImg:hover>.img
@@ -124,3 +126,5 @@
     color: white;
     font-size: smaller;
 }
+
+@import './tab.responsive.scss';

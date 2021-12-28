@@ -47,6 +47,54 @@ var d = {
             "boolean":false
         }
         
+    },
+    "Rascacielos1:":
+    {
+        "200+ pisos":{
+            "count":5,
+            "boolean":false
+        },
+        "100-199 pisos":{
+            "count":10,
+            "boolean":false
+        }
+        
+    },
+    "Rascacielos2:":
+    {
+        "200+ pisos":{
+            "count":5,
+            "boolean":false
+        },
+        "100-199 pisos":{
+            "count":10,
+            "boolean":false
+        }
+        
+    },
+    "Rascacielos3:":
+    {
+        "200+ pisos":{
+            "count":5,
+            "boolean":false
+        },
+        "100-199 pisos":{
+            "count":10,
+            "boolean":false
+        }
+        
+    },
+    "Rascacielos4:":
+    {
+        "200+ pisos":{
+            "count":5,
+            "boolean":false
+        },
+        "100-199 pisos":{
+            "count":10,
+            "boolean":false
+        }
+        
     }
 
 }

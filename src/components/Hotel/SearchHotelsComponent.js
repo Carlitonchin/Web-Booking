@@ -67,6 +67,7 @@ export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, 
         <h2>Buscar</h2>
 
         {/*Input destino*/}
+        <div>
         <label for="destino">
             <p className={"h7 " + style.labelFor}>
               Destino/Nombre del alojamiento:
@@ -77,10 +78,12 @@ export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, 
         value={value}
         handlerChange={handleValue}
         />
+        </div>
         {/*................................................*/}
 
         {/*................. dates section ...................*/}
         {/*start date*/}
+        <div>
         <label for="startDate">
             <p className={"h7 " + style.labelFor}>
                 Fecha de Entrada:
@@ -91,8 +94,9 @@ export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, 
             date={startDate}
             handleChange={handleStartDate}
             />
-
+</div>
             {/*end date*/}
+            <div>
         <label for="endDate">
             <p className={"h7 " + style.labelFor}>
                 Fecha de Salida:
@@ -103,6 +107,7 @@ export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, 
             date={endDate}
             handleChange={handleEndDate}
             />
+            </div>
     {/*................... end dates section ............................*/}
         <PeopleRoomsComponent
             adults={adults}

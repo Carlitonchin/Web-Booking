@@ -1,0 +1,42 @@
+@import '../variables.scss';
+
+@media (max-width: 949px)
+{
+    .aside{
+        width: 90%;
+        display: flex;
+        margin: 0 auto;
+        height: 90vh - $headerHeight;
+        overflow: hidden;
+        border-bottom: 1px solid $borderColor;
+        
+    }
+
+    .listHotels
+    {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .containerSearch
+    {
+        flex-direction: column;
+    }
+
+    .filterContainer
+    {
+        top: 0;
+        left: 90%;
+        height: 100%;
+        overflow-y: scroll;
+        border-bottom:none;
+    }
+
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+}
