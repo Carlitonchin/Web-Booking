@@ -57,6 +57,11 @@
     align-items: center;
 }
 
+.showFiltersMessage
+{
+    cursor: pointer;
+    display: none;
+}
 
 
 @import './SearchHotel.responsive.scss';

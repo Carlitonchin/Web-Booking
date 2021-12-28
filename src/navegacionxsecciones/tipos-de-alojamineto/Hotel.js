@@ -19,6 +19,12 @@ const Hotel = () => {
     const [rooms, setRooms] = useState(1);
     const [childs, setChilds] = useState(0);
     const [value, setValue] = useState(s);
+    const [showFilters, setShowFilters] = useState(false)
+
+    function handleFilters()
+    {
+        setShowFilters(!showFilters);
+    }
 
     return <div className={style.containerSearch}>
         <div className={style.aside}>
@@ -35,11 +41,19 @@ const Hotel = () => {
         startDate={startDate}
         value={value}
         setValue={setValue}
+        showFilters={showFilters}
+        handleFilters={handleFilters}
         />
         <div className={style.filterContainer}>
-        <h5 className={style.filterTitle}>Filtrar por:</h5>
-        <FilterComponent filters={d}/>
+        <h5 className={style.filterTitle + " " + (!showFilters?style.hide:+"")}>Filtrar por:</h5>
+        <div className={style.containerFilters + " " +(!showFilters?style.hide:"")}>
+        <FilterComponent 
+        filters={d}
+        handleFilters={handleFilters}
+        />
+        </div>
             </div>
+            
             </div>
             <div className={style.listHotels}>
                 <ListHotels 

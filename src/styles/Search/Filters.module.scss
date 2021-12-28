@@ -27,4 +27,18 @@
 
 }
 
+.showFiltersMessage
+{
+    cursor: pointer;
+    display: none;
+
+}
+
+@media (max-width: 500px)
+{
+    .showFiltersMessage
+    {
+        display: block;
+    }
+}
 

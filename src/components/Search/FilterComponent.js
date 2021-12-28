@@ -1,7 +1,7 @@
 import style from "../../styles/Search/Filters.module.scss"
 import { useState } from "react";
 
-export default ({filters})=>
+export default ({filters, handleFilters})=>
 {
 
     const [state, setState] = useState(true);
@@ -10,8 +10,9 @@ export default ({filters})=>
         filters[category][filter]["boolean"] = !filters[category][filter]["boolean"];
         setState(!state);
     }
+
     return <>
-{Object.keys(filters).map(category=>
+{(Object.keys(filters).map(category=>
         {
             return <div key={category} className={style.titleCategory} >
                 <h6>
@@ -29,9 +30,15 @@ export default ({filters})=>
                         </label>
                     </div>
                     })}
+                   
             </div>
-             
-        })}</>
+              
+        }))}
+        <a href="#"
+            className={"text-primary " + style.showFiltersMessage}
+              onClick={handleFilters}
+              >Ocultar filtros</a>
+        </>
     
   
 }

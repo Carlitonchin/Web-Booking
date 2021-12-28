@@ -9,7 +9,6 @@ export default ({ list }) => {
     return <><h3 className={style.hotelsFinded}>{list.length + " hoteles encontrados"}</h3>
         <div className={style.containerHotels}>
             {list.map(hotel => {
-                console.log("hola")
                 let { name, stars, location, imgUrl, info, good, bad, price, points, nigths, adults, childs, rooms, since, to } = hotel;
                 let textAdults = (adults === 1) ? "adulto" : "adultos";
                 let textChilds = (childs === 1) ? "niño" : "niños";
@@ -56,15 +55,16 @@ export default ({ list }) => {
                             </div>
                             <div className={style.location}><a href="#">{location}</a></div>
                         </div>
-                        <div className={style.extraInfo}>
+                        <div className={style.points}><h6>{points + " puntos"} </h6><div className={style.hand}><i class="bi bi-hand-thumbs-up-fill"></i></div></div>
+                    </div>
+
+                    <div className={style.priceSection}>
+                    <div className={style.extraInfo}>
                             <div class="text-dark">{info}</div>
                             <div class="text-success">{good}</div>
                             <div class="text-danger">{bad}</div>
                         </div>
-                    </div>
-
-                    <div className={style.priceSection}>
-                        <div className={style.points}><h6>{points + " puntos"} </h6><div className={style.hand}><i class="bi bi-hand-thumbs-up-fill"></i></div></div>
+                        <div class={style.priceAndButton}>
                         <div className={style.price}>
                             <div className={style.peopleRooms}>
                                 {((adults) ? adults + " " + textAdults : "") +
@@ -82,9 +82,12 @@ export default ({ list }) => {
 
                         
                         </div>
+                        <div className={style.containerButton}>
                         <a href={linkTo}>
                         <BlueButton text="Ver disponibilidad" />
                         </a>
+                        </div>
+                        </div>
                     </div>
                     </div>
                 </div>

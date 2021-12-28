@@ -1,12 +1,48 @@
 @import '../variables.scss';
 
+@media (max-width: 500px)
+{
+    .aside
+    {
+        width: 90%;
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .hide
+    {
+        display: none;
+    }
+
+    .showFiltersMessage
+    {
+        display: block;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 599px)
+{
+    .aside
+    {
+        width: 100%;
+        height: 90vh - $headerHeight;
+    }
+}
+
+@media (min-width: 600px) and (max-width:949px)
+{
+    .aside
+    {
+        width: 90%;
+        height: 90vh - $headerHeight;
+    }
+}
+
 @media (max-width: 949px)
 {
     .aside{
-        width: 90%;
         display: flex;
         margin: 0 auto;
-        height: 90vh - $headerHeight;
         overflow: hidden;
         border-bottom: 1px solid $borderColor;
         

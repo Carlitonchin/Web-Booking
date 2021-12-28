@@ -5,7 +5,7 @@ import PeopleRoomsComponent from '../Search/PeopleRoomsComponent'
 import BlueButton from '../Utils/BlueButton'
 import { useState } from 'react'
 
-export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, adults, setAdults, rooms, setRooms, childs, setChilds})=>
+export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, adults, setAdults, rooms, setRooms, childs, setChilds, showFilters, handleFilters})=>
 {
    
     
@@ -120,5 +120,8 @@ export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, 
          <div className={style.containerBlueButton}>
         <BlueButton text="Buscar"/>
         </div>
+        <p 
+        onClick={handleFilters}
+        className={style.showFiltersMessage + " text-primary"}>{showFilters?"Ocultar Filtros":"Mostrar Filtros"}</p>
     </div>
 }

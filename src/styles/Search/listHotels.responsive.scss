@@ -1,31 +1,134 @@
-@media (max-width: 539px)
+@media (max-width: 369px)
 {
+    .singleHotel
+    {
+        height: 82vw;
+    }
+}
 
+@media (min-width: 370px) and (max-width:379px)
+{
+    .singleHotel
+    {
+        height: 78vw;
+    }
+}
+
+@media (min-width: 380px) and (max-width:400px)
+{
+    .singleHotel
+    {
+        height: 70vw;
+    }
+}
+
+
+@media (min-width: 401px) and (max-width:449px)
+{
+    .singleHotel
+    {
+        height: 65vw;
+    }
+}
+
+@media (min-width: 450px) and (max-width:499px)
+{
+    .singleHotel
+    {
+        height: 60vw;
+    }
+}
+
+
+@media (max-width: 499px)
+{
     .noImage
     {
-        flex-direction: column;
+        align-items: center;
     }
+
+    .priceSection
+    {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .priceAndButton
+    {
+        width: 100%;
+        height: fit-content;
+        align-items: flex-start;
+    }
+
+    .extraInfo
+    {
+        text-align: left;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .containerImag
+    {
+        width: 80vw;
+    }
+
+    .points
+    {
+        display: none;
+    }
+
+    .price
+    {
+        align-items: flex-start;
+    }
+
+    .containerButton
+    {
+        width: 100%;
+    }
+
+    .name>a>h4
+    {
+        width: min-content;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 599px)
+{
     .singleHotel
     {
         height: 40vw;
     }
 
-    .priceSection
+    .name>a>h4
     {
-        flex-direction: row;
+        margin: 0;
+        width: min-content;
     }
+
 }
 
-@media (min-width: 540px) and (max-width: 770px)
+@media (min-width: 600px) and (max-width: 700px)
 {
 
     .singleHotel
     {
-        height: 30vw;
+        height: 28vw;
     }
 }
 
-@media (max-width: 770px)
+@media (min-width: 701px) and (max-width: 859px)
+{
+
+    .singleHotel
+    {
+        height: 25vw;
+    }
+}
+
+@media (max-width: 859px)
 {
     .containerHotels
     {
@@ -33,7 +136,7 @@
     }
 }
 
-@media (min-width: 771px) and (max-width: 949px)
+@media (min-width: 860px) and (max-width: 949px)
 {
     .containerHotels
     {
