@@ -2,38 +2,46 @@
 import InputComponent from '../Search/InputComponent'
 import DateComponent from '../Search/DateComponent'
 import BlueButton from '../Utils/BlueButton'
+import style from '../../styles/AlquilerCoches/headerCar.module.scss'
 
 const HeaderCoches = ({placeRent,handlePlaceRent, placeReturn, handlePlaceReturn,
   returnAtSamePlace, handleReturnAtSamePlace, since, handleSince, to, handleTo}) => {
 
     return <>
-    <h6>Lugar de recogida</h6>
+    <div className={style.item}>
+    <h6 className={style.text}>Lugar de recogida</h6>
     <InputComponent
     handlerChange={handlePlaceRent}
     value={placeRent}
     />
+    </div>
+
 
     {!returnAtSamePlace
-    ?<>
-    <h6>Lugar de devolucion</h6>
+    ?<div className={style.item}>
+    <h6 className={style.text}>Lugar de devolucion</h6>
     <InputComponent
     handlerChange={handlePlaceReturn}
     value={placeReturn}
     />
-    </>
+    </div>
     :""}
-
-      <h6>Fecha de recogida</h6>
+<div className={style.item}>
+      <h6 className={style.text}>Fecha de recogida</h6>
       <DateComponent
       date = {since}
       handleChange={handleSince}
       />
-        <h6>Fecha de devolucion</h6>
+      </div>
+      <div className={style.item}>
+        <h6 className={style.text}>Fecha de devolucion</h6>
       <DateComponent
       date = {to}
       handleChange={handleTo}
       />
-<div>
+      </div>
+      
+  <div>
       <div class="form-check">
         <input
         type="radio"
@@ -65,7 +73,7 @@ const HeaderCoches = ({placeRent,handlePlaceRent, placeReturn, handlePlaceReturn
         >Devolver en otro sitio</label>
 </div>
 </div>
-<div style={{marginTop:'1rem', width:'90%'}}>
+<div className={style.containerButton}>
 <BlueButton text="Buscar"/>
 </div>
     </>
