@@ -60,7 +60,7 @@ export default ()=>
 
     return <div className={style.container}>
         <div className={style.header}>
-        <h1>{name}</h1>
+        <h1 >{name}</h1>
         <a href="#">Lima</a>
         </div>
         <div className={style.containerGallery}>
