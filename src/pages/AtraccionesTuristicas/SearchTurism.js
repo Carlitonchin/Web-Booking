@@ -15,6 +15,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/cook.jpg'
+        ,linkTo:'/turismo/tour'
     },
     {
         place:"Acuario Nacional",
@@ -22,6 +23,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/cook.jpg'
+        ,linkTo:'/turismo/tour'
     },
     {
         place:"Acuario Nacional",
@@ -29,6 +31,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/cook.jpg'
+        ,linkTo:'/turismo/tour'
     },
     {
         place:"Acuario Nacional",
@@ -36,6 +39,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/cook.jpg'
+        ,linkTo:'/turismo/tour'
     },
     {
         place:"Acuario Nacional",
@@ -43,6 +47,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/unnamed.jpg'
+        ,linkTo:'/turismo/tour'
     },
     {
         place:"Acuario Nacional",
@@ -50,6 +55,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/cook.jpg'
+        ,linkTo:'/turismo/tour'
     },
     {
         place:"Acuario Nacional",
@@ -57,6 +63,7 @@ let data =
         description:"Comparta una experiencia increible con estos animales",
         price:200,
         imgUrl:'/img/cook.jpg'
+        ,linkTo:'/turismo/tour'
     }
 ]
 
@@ -104,7 +111,9 @@ export default ()=>
         </div>
 
         <div className={style.results}>
-            <ListTurism data={data}/>
+            <ListTurism
+            linkTo="/turismo/tour"
+            data={data}/>
         </div>
 
         </div>

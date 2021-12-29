@@ -8,6 +8,7 @@ import {useState} from 'react'
 import style from '../../styles/AlquilerCoches/searchCar.module.scss'
 import styleHide from '../../styles/Search/hideFilterTour.module.scss'
 import BlueButton from "../../components/Utils/BlueButton"
+import {useLocation} from 'react-router'
 
 let data = 
 [
@@ -18,6 +19,17 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
+    }, {
+        place:"Rentacar",
+        tour:"Wolwagen 50040 m2 r212",
+        description:"Nuevo en perfecto estado",
+        price:200,
+        imgUrl:'/img/cook.jpg',
+        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"
+        ,linkTo:'/coches/coche'
+    }
+    ]
     }, {
         place:"Rentacar",
         tour:"Wolwagen 50040 m2 r212",
@@ -25,6 +37,7 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
     }, {
         place:"Rentacar",
         tour:"Wolwagen 50040 m2 r212",
@@ -32,6 +45,7 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
     }, {
         place:"Rentacar",
         tour:"Wolwagen 50040 m2 r212",
@@ -39,6 +53,7 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
     }, {
         place:"Rentacar",
         tour:"Wolwagen 50040 m2 r212",
@@ -46,6 +61,7 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
     }, {
         place:"Rentacar",
         tour:"Wolwagen 50040 m2 r212",
@@ -53,6 +69,7 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
     }, {
         place:"Rentacar",
         tour:"Wolwagen 50040 m2 r212",
@@ -60,23 +77,29 @@ let data =
         price:200,
         imgUrl:'/img/cook.jpg',
         list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
+        ,linkTo:'/coches/coche'
     }
 ]
 
 export default ()=>
 {
-    const [placeRent, setPlaceRent] = useState("");
-  const [placeReturn, setPlaceReturn] = useState("");
-  const [returnAtSamePlace, setReturnAtSamePlace] = useState(true);
-  const [since, setSince] = useState(new Date());
-  const [to, setTo] = useState(new Date());
+
+
+  let { search } = useLocation()
+  let query = new URLSearchParams(search);
+
+  let rent = query.get("recogida");
+  let _return = query.get("entrega");
+  let _since = query.get("desde");
+  let _to = query.get("hasta");
+  let returnAtSP = query.get("devolverEnElMismoLugar");
+
+
+    const [placeRent, setPlaceRent] = useState(rent);
+  const [placeReturn, setPlaceReturn] = useState(_return);
+  const [returnAtSamePlace, setReturnAtSamePlace] = useState(returnAtSP);
+  const [since, setSince] = useState(getDateFromString(_since));
+  const [to, setTo] = useState(getDateFromString(_to));
   const [showFilters, setShowFilters] = useState(false)
 
   function handleFilters()
@@ -147,7 +170,10 @@ export default ()=>
 
         <div className={styleFromTour.results}>
             <h3>{data.length + " resultados"}</h3>
-            <ListTurism data={data}/>
+            <ListTurism
+            data={data}
+            linkTo="/coches/coche"
+            />
         </div>
 
         </div>

@@ -97,6 +97,7 @@ const RentarCoches = () => {
     setTo(getDateFromString(e.target.value))
   }
 
+  let linkTo = `/coches/buscar?recogida=${placeRent}&entrega=${placeReturn}&desde=${getStringFromDate(since)}&hasta=${getStringFromDate(to)}&devolverEnElMismoLugar=${returnAtSamePlace}`;
   return (
     <div>
             <div className={style.title}>
@@ -117,8 +118,11 @@ const RentarCoches = () => {
         since={since}
         to={to}
         />
+        
       <div style={{marginTop:'1rem', width:'100%'}}>
+      <a href={linkTo}>
         <BlueButton text="Buscar"/>
+        </a>
         </div>
       </div>
 

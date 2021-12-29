@@ -1,7 +1,7 @@
 import BlueButton from '../../components/Utils/BlueButton';
 import style from '../../styles/AtraccionesTuristicas/listTurism.module.scss';
 
-export default ({data})=>
+export default ({data, linkTo})=>
 {
     return <>
     {data.map(element=>
@@ -30,7 +30,7 @@ export default ({data})=>
                     </div>
                     <div className={style.price}>
                         <h5>{"$"+price}</h5>
-                        <a href={`/turismo/tour?name=${tour}`}>
+                        <a href={`${linkTo}?name=${tour}`}>
                         <BlueButton text="Ver"/>
                         </a>
                     </div>
