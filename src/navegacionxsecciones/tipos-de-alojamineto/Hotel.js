@@ -7,6 +7,7 @@ import style from '../../styles/Search/SearchHotel.module.scss'
 import { useState } from 'react'
 import {d, list} from './testingForHotels.js'
 import { useLocation } from 'react-router'
+import styleHide from '../../styles/Search/hideFilterHotel.module.scss'
 
 const Hotel = () => {
     let { search } = useLocation()
@@ -50,6 +51,7 @@ const Hotel = () => {
         <FilterComponent 
         filters={d}
         handleFilters={handleFilters}
+        styleHide={styleHide}
         />
         </div>
             </div>

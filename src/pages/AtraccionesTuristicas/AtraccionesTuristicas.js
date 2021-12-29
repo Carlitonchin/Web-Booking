@@ -58,6 +58,12 @@ const AtraccionesTuristicas = () => {
     };
 
     const [value, setValue] = useState("")
+    const [showFilters, setShowFilters] = useState(false)
+
+    function handleFilters()
+    {
+        setShowFilters(!showFilters);
+    }
     return (
       <>
         

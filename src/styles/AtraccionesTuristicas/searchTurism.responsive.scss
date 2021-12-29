@@ -1,0 +1,112 @@
+
+@media (max-width: 700px)
+{
+    .top
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .filter
+    {
+        margin-top: 1rem;
+        width: fit-content;
+    }
+
+    .thingsToDo
+    {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .filtersAndResults
+    {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 799px)
+{
+    .filtersAndResults
+    {
+        flex-direction: column;
+        width: 70%;
+    }
+
+   
+}
+@media (min-width: 500px) and (max-width: 799px)
+{
+    .containerSearchBar
+    {
+        width: 85%;
+    }
+
+}
+
+@media (max-width: 799px)
+{
+   
+    .filters
+    {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .results
+    {
+        width: 100%;
+    }
+    .hide
+    {
+        display: none;
+    }
+
+    .showFiltersMessage
+    {
+        display: block;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 949px)
+{
+    .filtersAndResults
+    {
+        width: 98%;
+    }
+
+    .containerSearchBar
+    {
+        width: 80%;
+        background: rebeccapurple;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1050px)
+{
+    .filtersAndResults
+    {
+        width: 90%;
+    }
+
+    .containerSearchBar
+    {
+        width: 70%;
+    }
+}
+
+@media (max-width: 499px)
+{
+    .containerSearchBar
+    {
+        width: 100%;
+    }
+
+    .top
+    {
+        width: 90%;
+    }
+}

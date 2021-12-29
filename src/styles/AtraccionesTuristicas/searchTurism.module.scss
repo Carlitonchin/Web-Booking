@@ -6,8 +6,8 @@
     display: flex;
     width: 80%;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .filter
@@ -23,6 +23,7 @@
     background: orange;
     padding: 3px;
     border-radius: 5px;
+    height: fit-content;
 }
 
 .filtersAndResults
@@ -37,10 +38,17 @@
 {
     height: min-content;
     width: 35%;
-    border-bottom: 1px solid $borderColor;
 }
 
 .results
 {
     width: 50%;
 }
+
+.showFiltersMessage
+{
+    cursor: pointer;
+    display: none;
+}
+
+@import './searchTurism.responsive.scss';

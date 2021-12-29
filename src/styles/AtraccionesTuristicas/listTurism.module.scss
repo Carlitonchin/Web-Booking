@@ -10,11 +10,16 @@
     position: relative;
 }
 
+.description
+{
+    width: 70%;
+}
+
 .containerImg
 {
     height: 23vh;
     width: 25%;
-    margin-right: 15px;
+    margin-right: 0.5rem;
     overflow: hidden;
 }
 
@@ -59,4 +64,24 @@
     flex-direction: column;
     align-items: center;
     color: green;
+}
+
+.list
+{
+    margin-top: 1rem;
+}
+
+.icon
+{
+    background-position: center;
+    background-size: cover;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 3px;
+}
+
+.item
+{
+    display: flex;
+    align-items: center;
 }

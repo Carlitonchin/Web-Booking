@@ -1,0 +1,23 @@
+.title
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.containerHeader
+{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: orange;
+    padding:1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+}
+
+@import './rentCar.responsive.scss';

@@ -1,7 +1,8 @@
 import style from "../../styles/Search/Filters.module.scss"
 import { useState } from "react";
+import { Col } from "react-bootstrap";
 
-export default ({filters, handleFilters})=>
+export default ({filters, handleFilters, styleHide})=>
 {
 
     const [state, setState] = useState(true);
@@ -20,7 +21,7 @@ export default ({filters, handleFilters})=>
                     </h6>
                 {Object.keys(filters[category]).map(filter=>
                     {
-                        return <div class="form-check">
+                        return <Col><div class="form-check">
                         <input type="checkbox"  class="form-check-input" id={category+filter} 
                          onChange={changeHandler.bind(this, category, filter)}
                          checked={filters[category][filter]["boolean"]}/>
@@ -28,14 +29,16 @@ export default ({filters, handleFilters})=>
                             {filter}
                             <span class="badge rounded-pill" style={{color:"gray"}}>{`(${filters[category][filter]["count"]})`}</span>
                         </label>
-                    </div>
+                        </div>
+                        </Col>
+                    
                     })}
                    
             </div>
               
         }))}
         <a href="#"
-            className={"text-primary " + style.showFiltersMessage}
+            className={"text-primary " + style.showFiltersMessage + " " + (styleHide?styleHide.showFiltersMessage:"")}
               onClick={handleFilters}
               >Ocultar filtros</a>
         </>
