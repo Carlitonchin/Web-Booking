@@ -1,0 +1,45 @@
+
+
+@media (max-width: 700px)
+{
+    .infoAndPrice
+    {
+        flex-direction: column;
+    }
+
+    .infoAndPrice>*
+    {
+        width: fit-content;
+    }
+
+    .price
+    {
+        margin-top: 2.5rem;
+
+    }
+}
+
+@media (max-width: 500px)
+{
+    .price
+    {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 501px) and (max-width: 700px)
+{
+    .price
+    {
+        width: 70%;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1050px)
+{
+    .infoAndPrice>*
+{
+    width: 45%;
+}
+}

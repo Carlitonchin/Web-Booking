@@ -6,6 +6,7 @@ import PeopleAndPrice from './PeopleAndPrice';
 import {useState} from 'react';
 import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
 import {useLocation} from 'react-router'
+import styleFromSingleHotel from '../../styles/Alojamineto/singleHotel.module.scss'
 
 let pictures=["../img/playa.jpg","../img/playa.jpg","../img/cancun.jpg","../img/cancun.jpg"]
 let infoTour=
@@ -63,7 +64,7 @@ export default ()=>
         <h1 >{name}</h1>
         <a href="#">Lima</a>
         </div>
-        <div className={style.containerGallery}>
+        <div className={styleFromSingleHotel.containerGallery}>
           <ContainerImages pictures={pictures}/>
         </div>
         <div className={style.infoAndPrice}>
