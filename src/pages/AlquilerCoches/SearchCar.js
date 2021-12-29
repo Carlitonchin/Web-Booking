@@ -6,6 +6,7 @@ import { getDateFromString, getStringFromDate } from "../../components/Utils/Fun
 import {d} from '../../navegacionxsecciones/tipos-de-alojamineto/testingForHotels'
 import {useState} from 'react'
 import style from '../../styles/AlquilerCoches/searchCar.module.scss'
+import styleHide from '../../styles/Search/hideFilterTour.module.scss'
 
 let data = 
 [
@@ -75,6 +76,12 @@ export default ()=>
   const [returnAtSamePlace, setReturnAtSamePlace] = useState(true);
   const [since, setSince] = useState(new Date());
   const [to, setTo] = useState(new Date());
+  const [showFilters, setShowFilters] = useState(false)
+
+  function handleFilters()
+  {
+      setShowFilters(!showFilters);
+  }
 
   function handlePlaceRent(e)
   {
@@ -120,12 +127,22 @@ export default ()=>
         to={to}
         />
         </div>
+        <a className={"text-primary " + style.showFiltersMessage}
+            onClick={handleFilters}
+            className={styleFromTour.showFiltersMessage}>{(!showFilters?"Mostrar Filtros":"Ocultar Filtros")}</a>
+              <div className={styleFromTour.filters + " " + style.containerFilters + " " +(!showFilters?styleFromTour.hide:"")}>
             <h5>Filtrar por</h5>
        
-        <FilterComponent filters={d}/>
+        <FilterComponent
+        filters={d}
+        handleFilters={handleFilters}
+        styleHide={styleHide}
+        />
+        </div>
         </div>
 
         <div className={styleFromTour.results}>
+            <h3>{data.length + " resultados"}</h3>
             <ListTurism data={data}/>
         </div>
 
