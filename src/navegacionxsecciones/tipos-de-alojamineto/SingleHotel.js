@@ -59,7 +59,7 @@ export default () => {
 
       <div className={style.containerBooking}>
         <div className={style.booking}>
-          <GrayButton text="Buscar otro hotel" />
+          <GrayButton text="Atras" />
         </div>
        
         <div className={style.booking}>
@@ -100,7 +100,7 @@ export default () => {
     </div>
     <div className={style.finalBookingContainer}>
       <div className={style.finalBooking}>
-        <GrayButton text="Buscar otro hotel" />
+        <GrayButton text="Atras" />
       </div>
      
       <div className={style.finalBooking}>

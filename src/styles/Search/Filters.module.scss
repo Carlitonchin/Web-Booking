@@ -7,12 +7,18 @@
     
 }
 
+
+
 .titleCategory
 {
     padding: 15px;
     border: $borderColor 1px solid;
     border-bottom: none;
-    border-right: none;
+}
+
+.titleCategory:last-of-type
+{
+    border-bottom: $borderColor 1px solid;
 }
 
 .titleCategory>h6

@@ -84,7 +84,7 @@ export default ({ list }) => {
                         </div>
                         <div className={style.containerButton}>
                         <a href={linkTo}>
-                        <BlueButton text="Ver disponibilidad" />
+                        <BlueButton text="Ver mas" />
                         </a>
                         </div>
                         </div>

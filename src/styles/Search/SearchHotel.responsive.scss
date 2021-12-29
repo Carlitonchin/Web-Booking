@@ -7,6 +7,8 @@
         width: 90%;
         flex-direction: column;
         height: fit-content;
+
+        border-bottom: none;
     }
 
     .hide
@@ -38,13 +40,14 @@
     }
 }
 
+
+
 @media (max-width: 949px)
 {
     .aside{
         display: flex;
         margin: 0 auto;
         overflow: hidden;
-        border-bottom: 1px solid $borderColor;
         
     }
 
@@ -75,4 +78,12 @@
         justify-content: space-between;
     }
 
+}
+
+@media (min-width: 501px) and (max-width: 949px)
+{
+    .aside{
+        border-bottom: 1px solid $borderColor;
+
+    }
 }
