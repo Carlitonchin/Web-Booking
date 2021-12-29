@@ -3,7 +3,7 @@ import style from '../../../styles/Alojamineto/bestServices.module.scss'
 export default ({services})=>
 {
     return <>
-    <h6>Servicios más populares</h6>
+    <h6 className={style.title}>Servicios más populares</h6>
     <div className={style.container}>
         {services.map(s=>
             {

@@ -2,7 +2,7 @@
 
 .containerSelects
 {
-    padding: 1rem;
+    padding: 0.1rem;
 }
 
 .select
@@ -11,6 +11,8 @@
     justify-content: space-between;
     margin:0 auto;
     padding: 0.3rem;
+    align-items: center;
+    width:100%
     
 }
 
@@ -19,7 +21,8 @@
     box-shadow: none;
     color: $grayColor;
     border: 1px solid $grayColor;
-    width: 15%;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;

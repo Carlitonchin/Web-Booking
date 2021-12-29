@@ -1,0 +1,60 @@
+
+
+@media (min-width: 501px) and (max-width: 599px)
+{
+    .containerGood
+    {
+    width: fit-content;
+    }
+}
+
+@media (max-width:859px)
+{
+    .left
+    {
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start
+    }
+    .containerInfo
+    {
+    width: 60%;
+    margin-bottom: 5px;
+
+    }
+
+    .containerInfo:last-child
+    {
+        margin-bottom: 2rem;
+    }
+
+    .roomInfo
+    {
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px)
+{
+    .roomInfo
+    {
+        flex-direction: column;
+        
+    }
+
+    .containerPeopleRooms
+    {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .containerGood
+    {
+        width: 100%;
+    }
+
+    .containerInfo
+    {
+        width: 100%;
+    }
+}

@@ -11,7 +11,7 @@
 .iconText
 {
     display: flex;
-    margin-right: 20px;
+    margin-right: 1rem;
     color:$grayColor;
     align-items: center;
 }
@@ -24,3 +24,5 @@
     background-size: cover;
     margin-right: 2px;
 }
+
+@import './bestServices.responsive.scss';
