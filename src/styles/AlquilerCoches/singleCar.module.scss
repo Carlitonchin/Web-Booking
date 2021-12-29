@@ -1,0 +1,74 @@
+.container
+{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.imag
+{
+    width: 20rem;
+    height: 15rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.imagAndInfo
+{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.info
+{
+    padding:1rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0;
+}
+
+.moreMargin
+{
+    margin-top: 1rem;
+}
+
+.infoAndPay
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background:#bbe4f08f;
+    border: 1px solid #98bae7;
+    padding:1rem;
+    border-radius: 5px;
+}
+
+.pay
+{
+    width: 50%;
+    margin-left:2rem;
+}
+
+.containerPersonalInfo
+{
+    width: 60%;
+    margin-top: 2rem;
+}
+
+.containerButtons
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.containerButtons>div
+{
+    width: 49.5%;
+}
+
+@import './singleCar.responsive.scss';

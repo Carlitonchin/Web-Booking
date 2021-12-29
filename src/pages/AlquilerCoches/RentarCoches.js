@@ -7,6 +7,7 @@ import styleFromTour from '../../styles/AtraccionesTuristicas/AT.module.scss'
 import ImageCarousel from '../../components/Utils/ImageCarousel';
 import style from '../../styles/AlquilerCoches/rentCar.module.scss'
 import {getStringFromDate, getDateFromString} from '../../components/Utils/Functions/dateManager';
+import BlueButton from '../../components/Utils/BlueButton';
 
 
 const empresas = [
@@ -116,6 +117,9 @@ const RentarCoches = () => {
         since={since}
         to={to}
         />
+      <div style={{marginTop:'1rem', width:'100%'}}>
+        <BlueButton text="Buscar"/>
+        </div>
       </div>
 
 

@@ -24,6 +24,8 @@ import SearchTurism from '../../pages/AtraccionesTuristicas/SearchTurism';
 import SingleTour from '../../pages/AtraccionesTuristicas/SingleTour';
 import Payment from '../Utils/Payment';
 import SearchCar from '../../pages/AlquilerCoches/SearchCar';
+import SingleCar from '../../pages/AlquilerCoches/SingleCar';
+
 
 const Routing = () => {
     return (
@@ -51,6 +53,8 @@ const Routing = () => {
             <Route path="/turismo/tour" element={<SingleTour/>}/>
             <Route path="/pagar" element={<Payment />}/>
             <Route path="/coches/buscar" element={<SearchCar />}/>
+            <Route path="/coches/coche" element={<SingleCar />}/>
+
           </Routes>
     )
 }

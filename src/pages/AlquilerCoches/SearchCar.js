@@ -7,6 +7,7 @@ import {d} from '../../navegacionxsecciones/tipos-de-alojamineto/testingForHotel
 import {useState} from 'react'
 import style from '../../styles/AlquilerCoches/searchCar.module.scss'
 import styleHide from '../../styles/Search/hideFilterTour.module.scss'
+import BlueButton from "../../components/Utils/BlueButton"
 
 let data = 
 [
@@ -126,6 +127,9 @@ export default ()=>
         since={since}
         to={to}
         />
+    <div style={{marginTop:'1rem', width:'100%'}}>
+        <BlueButton text="Buscar"/>
+        </div>
         </div>
         <a className={"text-primary " + style.showFiltersMessage}
             onClick={handleFilters}

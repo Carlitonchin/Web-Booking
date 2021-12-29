@@ -73,9 +73,7 @@ const HeaderCoches = ({placeRent,handlePlaceRent, placeReturn, handlePlaceReturn
         >Devolver en otro sitio</label>
 </div>
 </div>
-<div className={style.containerButton}>
-<BlueButton text="Buscar"/>
-</div>
+
     </>
 }
 
