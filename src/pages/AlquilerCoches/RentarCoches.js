@@ -102,7 +102,7 @@ const RentarCoches = () => {
     <div>
             <div className={style.title}>
       <h1>Renta de autos</h1>
-      <h4>Recorre los mejores sitios con los mejores automoviles</h4>
+      <h5>Recorre los mejores sitios con los mejores automoviles</h5>
       </div>
       <div className={style.containerHeader}>
   
