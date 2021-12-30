@@ -136,7 +136,8 @@ export default ()=>
 
 
     return <>
-    <div className={styleFromTour.filtersAndResults}>
+    <div className={styleFromTour.filtersAndResults}
+    >
         <div className={styleFromTour.filters}>
         <div className={style.containerSearchForm}>
         <SearchFlyComponent
