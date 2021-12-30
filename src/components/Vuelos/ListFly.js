@@ -79,8 +79,12 @@ export default ({list})=>
 
                 <div className={style.priceContainer}>
                     <h5 className={style.price}>{"$" + price}</h5>
-                    <div className={style.button}><BlueButton text="Ver mas"/></div>
-                    <a href="#" className={style.link}>{"Ver mas >>"}</a>
+                    <div className={style.button}>
+                        <a href="/vuelos/reservar">
+                        <BlueButton text="Ver mas"/>
+                        </a>
+                        </div>
+                    <a href="/vuelos/reservar" className={style.link}>{"Ver mas >>"}</a>
                 </div>
                 
             </div>
