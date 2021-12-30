@@ -41,7 +41,63 @@ let data =
             targetPlace:"Miami",
             countScale: 0
         }
+    },
+    {
+      price:1000,
+      infoTop:["Bueno", "Bonito", "Barato"],
+      companies:["American Airlines", "LATAM Airlines"],
+
+      go:
+      {
+          companyName:"American Airlines",
+          companyLogo:"/favicon.ico",
+          time1:"9:49",
+          time2:"15:00",
+          duration:"5h 30m",
+          firstPlace:"LA",
+          targetPlace:"Lima",
+          countScale:1
+      },
+      ret:
+      {
+          companyName:"LATAM Airlines",
+          companyLogo:"/favicon.ico",
+          time1:"9:49",
+          time2:"14:00",
+          duration:"4h 30m",
+          firstPlace:"Lima",
+          targetPlace:"Miami",
+          countScale: 0
+      }
+  },
+  {
+    price:1000,
+    infoTop:["Bueno", "Bonito", "Barato"],
+    companies:["American Airlines", "LATAM Airlines"],
+
+    go:
+    {
+        companyName:"American Airlines",
+        companyLogo:"/favicon.ico",
+        time1:"9:49",
+        time2:"15:00",
+        duration:"5h 30m",
+        firstPlace:"LA",
+        targetPlace:"Lima",
+        countScale:1
+    },
+    ret:
+    {
+        companyName:"LATAM Airlines",
+        companyLogo:"/favicon.ico",
+        time1:"9:49",
+        time2:"14:00",
+        duration:"4h 30m",
+        firstPlace:"Lima",
+        targetPlace:"Miami",
+        countScale: 0
     }
+}
 ]
 
 export default ()=>
@@ -56,14 +112,23 @@ export default ()=>
   let idaVuelta = query.get("idaVuelta");
   let fechaSalida = query.get("fechaSalida");
   let fechaRetorno = query.get("fechaRetorno");
+  let cantPasajeros = query.get("cantPasajeros")
 
   const [firstPlace, setFirstPlace] = useState(salidaDesde);
   const [targetPlace, setTargetPlace] = useState(destino);
-  const [goAndReturn, setGoAndReturn] = useState(idaVuelta);
+  const [goAndReturn, setGoAndReturn] = useState(idaVuelta === 'true'?true:false);
   const [since, setSince] = useState(getDateFromString(fechaSalida));
   const [to, setTo] = useState(getDateFromString(fechaRetorno));
   const [showFilters, setShowFilters] = useState(false)
+  const [count, setCount] = useState(cantPasajeros)
+  function handleCount(e)
+  {
+    let value = e.target.value;
+    if(value == '0')
+      return;
 
+    setCount(value)
+  }
   function handleFilters()
   {
       setShowFilters(!showFilters);
@@ -113,6 +178,8 @@ export default ()=>
   since={since}
   targetPlace={targetPlace}
   to={to}
+  count={count}
+  handleCount={handleCount}
   />
     <div style={{marginTop:'1rem', width:'100%'}}>
         <BlueButton text="Buscar"/>

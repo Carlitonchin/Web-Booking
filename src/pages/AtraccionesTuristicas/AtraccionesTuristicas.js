@@ -113,9 +113,9 @@ const AtraccionesTuristicas = () => {
             <div className={style.good}>
             <div className={style.imag} style={{backgroundImage:`url(${img1})`}}></div>
               <div className={style.headerGood}>
-                <h6>Descubre las principales atracciones turisticas</h6>
+                <h6>Rapido y flexible</h6>
                 <p className={style.textGood}>
-                Conoce lo mejor del destino con atracciones, tours y mucho mas
+                Puedes reservar todos los tickets online, y hay cancelacion gratis en muchas ocasiones
               </p>
               </div>
              
@@ -127,9 +127,9 @@ const AtraccionesTuristicas = () => {
             <div className={style.imag} style={{backgroundImage:`url(${img1})`}}></div>
               <div className={style.headerGood}>
                 
-                <h6>Descubre las principales atracciones turisticas</h6>
+                <h6>Atencion al cliente</h6>
                 <p className={style.textGood}>
-                Conoce lo mejor del destino con atracciones, tours y mucho mas
+                  Estamos atentos a todas tus dudas, cualquier inquietud no dudes en hablar con nosotros
               </p>
               </div>
               

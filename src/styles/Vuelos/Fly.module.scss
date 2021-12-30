@@ -1,10 +1,10 @@
-@import "../variables.scss";
-
-.letter {
-     margin-top: 300px;
-     display: grid;
-     align-items: center;
-     justify-content: center;
+.container
+{
+     width: 90%;
+     margin: 0 auto;
 }
- 
 
+.marginTop
+{
+     margin-top: 2rem;
+}

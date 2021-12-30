@@ -138,7 +138,7 @@ const RentarCoches = () => {
 
         <Row>
           <Col>
-            <Accordion defaultActiveKey="0">
+            <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
                   ¿Que es necesario para alquilar un coche?

@@ -5,7 +5,7 @@ export default (length) =>
     let result = [];
     for(let i = 0; i < length; i++)
     {
-        result.push(true);
+        result.push(i+1);
     }
 
     return result;

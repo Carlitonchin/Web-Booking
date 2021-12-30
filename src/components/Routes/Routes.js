@@ -16,6 +16,7 @@ import Payment from '../Utils/Payment';
 import SearchCar from '../../pages/AlquilerCoches/SearchCar';
 import SingleCar from '../../pages/AlquilerCoches/SingleCar';
 import SearchFly from '../../pages/Vuelos/SearchFly';
+import PayFly from '../../pages/Vuelos/PayFly';
 
 
 const Routing = () => {
@@ -24,6 +25,7 @@ const Routing = () => {
             
             <Route path="/" element={<Home />} />
             <Route path="/vuelos" element={<Fly />} />
+            <Route path="/vuelos/reservar" element={<PayFly/>} />
             <Route path="/vuelos/buscar" element={<SearchFly />} />
             <Route path="/coches" element={<RentarCoches />} />
             <Route path="/turismo" element={<AtraccionesTuristicas />} />

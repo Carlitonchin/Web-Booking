@@ -3,7 +3,8 @@ import InputComponent from '../Search/InputComponent'
 import DateComponent from '../Search/DateComponent'
 
 export default ({firstPlace, targetPlace, goAndReturn, since, to,
-handleFirstPlace, handleTargetPlace, handleGoAndReturn, handleSince, handleTo
+handleFirstPlace, handleTargetPlace, handleGoAndReturn, handleSince, handleTo,
+count, handleCount
 })=>
 {
     return  <>
@@ -20,6 +21,15 @@ handleFirstPlace, handleTargetPlace, handleGoAndReturn, handleSince, handleTo
     <InputComponent
     handlerChange={handleTargetPlace}
     value={targetPlace}
+    />
+    </div>
+
+    <div className={style.item}>
+    <h6 className={style.text}>Cantidad de pasajeros</h6>
+    <InputComponent
+    type="number"
+    handlerChange={handleCount}
+    value={count}
     />
     </div>
 
