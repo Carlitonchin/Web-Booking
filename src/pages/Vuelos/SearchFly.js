@@ -10,75 +10,37 @@ import styleHide from '../../styles/Search/hideFilterTour.module.scss'
 import BlueButton from "../../components/Utils/BlueButton"
 import {useLocation} from 'react-router'
 import SearchFlyComponent from '../../components/Vuelos/SearchFlyComponent';
+import ListFly from '../../components/Vuelos/ListFly.js'
 
 let data = 
 [
     {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"
-        ,linkTo:'/coches/coche'
-    }
-    ]
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
-    }, {
-        place:"Rentacar",
-        tour:"Wolwagen 50040 m2 r212",
-        description:"Nuevo en perfecto estado",
-        price:200,
-        imgUrl:'/img/cook.jpg',
-        list:[{icon:'/favicon.ico', text:"llantas michelin"}, {icon:'/favicon.ico', text:"aire acondicionado"}, {icon:'/favicon.ico', text:"Super comodo"}]
-        ,linkTo:'/coches/coche'
+        price:1000,
+        infoTop:["Bueno", "Bonito", "Barato"],
+        companies:["American Airlines", "LATAM Airlines"],
+
+        go:
+        {
+            companyName:"American Airlines",
+            companyLogo:"/favicon.ico",
+            time1:"9:49",
+            time2:"15:00",
+            duration:"5h 30m",
+            firstPlace:"LA",
+            targetPlace:"Lima",
+            countScale:1
+        },
+        ret:
+        {
+            companyName:"LATAM Airlines",
+            companyLogo:"/favicon.ico",
+            time1:"9:49",
+            time2:"14:00",
+            duration:"4h 30m",
+            firstPlace:"Lima",
+            targetPlace:"Miami",
+            countScale: 0
+        }
     }
 ]
 
@@ -172,9 +134,8 @@ export default ()=>
 
         <div className={styleFromTour.results}>
             <h3>{data.length + " resultados"}</h3>
-            <ListTurism
-            data={data}
-            linkTo="/coches/coche"
+            <ListFly
+            list={data}
             />
         </div>
 

@@ -7,13 +7,6 @@ import headerStyle from "../../styles/Alojamineto/Sleep.module.scss"
 import { Container, Row, Col, Card  } from 'react-bootstrap';
 import style from '../../styles/AtraccionesTuristicas/AT.module.scss'
 import Header from '../../components/Search/Header';
-import CardTop from '../../components/AtraccionesTuristicas/CardTop';
-import CardsEuropa from '../../components/AtraccionesTuristicas/CardsEuropa';
-import CardAsia from '../../components/AtraccionesTuristicas/CardAsia';
-import CardsAmericaN from '../../components/AtraccionesTuristicas/CardsAmericaN';
-import img1 from '../../images/fortuna-24.png'
-import img2 from '../../images/calendario-24.png'
-import img3 from '../../images/línea-32.png'
 import ImageCarousel from '../../components/Utils/ImageCarousel';
 import TabContinents from './TabContinents';
 
@@ -58,7 +51,7 @@ const AtraccionesTuristicas = () => {
     };
 
     const [value, setValue] = useState("")
-    
+    let img1 = '/favicon.ico'
     return (
       <>
         

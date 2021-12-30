@@ -4,6 +4,7 @@ import style from '../../styles/Search/listHotels.module.scss'
 import createArrayOfLength from '../Utils/Functions/createArrayOfLength';
 import { Link } from 'react-router-dom';
 import { room } from '../../navegacionxsecciones/tipos-de-alojamineto/testing/commentsTest';
+import styleItem from '../../styles/Utils/listItem.module.scss'
 
 export default ({ list }) => {
     return <><h3 className={style.hotelsFinded}>{list.length + " hoteles encontrados"}</h3>
@@ -32,7 +33,7 @@ export default ({ list }) => {
                     to = dateToString
 
                 let linkTo = `/hotel?name=${name}&adultCount=${adults}&childCount=${childs}&dateSince=${since}&dateTo=${to}&countRoom=${rooms}`
-                return <div className={style.singleHotel}>
+                return <div className={style.singleHotel + " " + styleItem.item}>
                     <div className={style.containerImag}>
                         <a href={linkTo}>
                             <div className={style.backHotel} style={{ backgroundImage: 'url(/img/cancun.jpg)' }}></div>

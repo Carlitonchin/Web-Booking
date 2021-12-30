@@ -1,5 +1,6 @@
 import BlueButton from '../../components/Utils/BlueButton';
 import style from '../../styles/AtraccionesTuristicas/listTurism.module.scss';
+import styleItem from '../../styles/Utils/listItem.module.scss'
 
 export default ({data, linkTo})=>
 {
@@ -9,7 +10,7 @@ export default ({data, linkTo})=>
             let {place, tour, description, price, imgUrl, list} = element;
             if(!list)
                 list = [];
-           return <div className={style.containerItem}>
+           return <div className={style.containerItem + " " + styleItem.item}>
                <div className={style.containerImg}>
                 <div className={style.img} style={{backgroundImage:`url(${imgUrl})`}}></div>
                 </div>

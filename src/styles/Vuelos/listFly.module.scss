@@ -1,0 +1,150 @@
+@import '../variables.scss';
+
+.container
+{
+    display: flex;
+    padding: 1rem;
+    border-radius: 5px;
+   // border: 1px $borderColor solid;
+  
+    padding-bottom: 0.1rem;
+}
+
+
+
+.top
+{
+    margin-bottom: 1rem;
+}
+
+.itemTop
+{
+    font-weight: bold;
+    padding: 0.2rem;
+    margin-right: 7px;
+    background:rgba(128, 128, 128, 0.185);
+    border-radius: 5px;
+}
+
+.company
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $borderColor;
+    text-align: center;
+    font-size: smaller;
+}
+
+.logo
+{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.companyName
+{
+    width: min-content;
+    
+}
+
+.left
+{
+    width: 60%;
+}
+
+.top
+{
+    display: flex;
+}
+
+.fly
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.fly:last-of-type
+{
+    margin-top: 1rem;
+}
+
+.infoFly
+{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.place>*
+{
+    margin: 0;
+ 
+}
+
+.place
+{
+ width: 25%;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+}
+
+.scale
+{
+width: 45%;
+text-align: center;
+font-size: smaller;
+color:$borderColor;
+}
+
+.line
+{
+    
+    height: 2px;
+    width: 100%;
+    background:$borderColor;
+}
+
+.priceContainer
+{
+    width: 40%;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 0.9rem;
+}
+
+.price
+{
+    
+    color: green;
+}
+
+.link
+{
+    display: none;
+}
+
+.leftBottom
+{
+    color: gray;
+    font-size: smaller;
+}
+
+.companiesLine
+{
+    margin-top: 0.5rem;
+    height: 1px;
+    background: rgba(196, 195, 195, 0.329)
+}
+
+@import './listFly.responsive.scss';
