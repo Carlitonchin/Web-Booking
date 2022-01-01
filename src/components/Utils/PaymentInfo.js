@@ -4,7 +4,7 @@ let imgUrl = '/img/España.jpg'
 let pricePerAdult = 100;
 let pricePerChild = 50;
 
-export default ({event, adultCount, childCount, dateSince, dateTo})=>
+export default ({event, adultCount, childCount, dateSince, dateTo, place})=>
 {
     console.log("date since " + dateSince)
     let textAdult = (childCount !== undefined)?"Adulto":"Persona";
@@ -26,7 +26,10 @@ export default ({event, adultCount, childCount, dateSince, dateTo})=>
             <h5 className={style.title}>{event}</h5>
             </div>
            {((dateTo)?(<><p>{`Desde: ${dateSince}`}</p><p>{`Hasta:  ${dateTo}`}</p></>):
-           <p>{`Fecha: ${dateSince}`}</p>
+           
+           <>
+           <p>{place}</p>
+           <p>{`Fecha: ${dateSince}`}</p></>
            )}
         </div>
         

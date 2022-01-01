@@ -40,6 +40,8 @@ let infoTour=
 
   },
 ]
+
+let place = "Lima"
 export default ()=>
 {
 
@@ -62,7 +64,7 @@ export default ()=>
     return <div className={style.container}>
         <div className={style.header}>
         <h1 >{name}</h1>
-        <a href="#">Lima</a>
+        <a href="#">{place}</a>
         </div>
         <div className={styleFromSingleHotel.containerGallery}>
           <ContainerImages pictures={pictures}/>
@@ -97,7 +99,8 @@ export default ()=>
               childCount={childCount}
               setAdult={setAdult}
               setChild={setChild}
-              date={date}                 
+              date={date}       
+              place={place}          
                     />
                     </div>
           </div>

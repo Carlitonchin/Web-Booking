@@ -5,7 +5,7 @@ import '../../styles/Utils/pGray.scss'
 import { getStringFromDate } from "../../components/Utils/Functions/dateManager";
 
 
-export default ({name, info, adultPrice, rangeAdult, childPrice, rangeChild, adultCount, childCount, setAdult, setChild, date})=>
+export default ({name, info, adultPrice, rangeAdult, childPrice, rangeChild, adultCount, childCount, setAdult, setChild, date, place})=>
 {
 
     let priceForAdults = adultCount*adultPrice;
@@ -102,7 +102,7 @@ function handleChildCount(operation)
             </div>
             <div>
                 <BlueButton text="siguiente" 
-                link={`/pagar?event=${name}&adultCount=${adultCount}&childCount=${childCount}&dateSince=${getStringFromDate(date)}`}/>
+                link={`/pagar?event=${name}&adultCount=${adultCount}&childCount=${childCount}&dateSince=${getStringFromDate(date)}&place=${place}`}/>
             </div>
         </div>
     </div>

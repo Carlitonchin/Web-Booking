@@ -21,19 +21,19 @@ const NavHeader = ({menuOpen, menuToggleHandler}) => {
             >
               <ul>
                 <li>
-                  <Link to="/" onClick={menuToggleHandler}>Alojamiento</Link>
+                  <Link to="/" onClick={menuOpen?menuToggleHandler:""} >Alojamiento</Link>
                 </li>
                 <li>
-                  <Link to="/vuelos" onClick={menuToggleHandler}>Vuelos</Link>
+                  <Link to="/vuelos" onClick={menuOpen?menuToggleHandler:""} >Vuelos</Link>
                 </li>
                 <li>
-                  <Link to="/coches" onClick={menuToggleHandler}>Alquiler de Coches</Link>
+                  <Link to="/coches" onClick={menuOpen?menuToggleHandler:""} >Alquiler de Coches</Link>
                 </li>
                 <li>
-                  <Link to="/turismo" onClick={menuToggleHandler}>Atracciones Turisticas</Link>
+                  <Link to="/turismo" onClick={menuOpen?menuToggleHandler:""} >Atracciones Turisticas</Link>
                 </li>
                 <li>
-                  <Link to="/taxi" onClick={menuToggleHandler} >Taxi al Aereopuerto</Link>
+                  <Link to="/taxis" onClick={menuOpen?menuToggleHandler:""} >Taxi al Aereopuerto</Link>
                 </li>
               </ul>
             </nav>

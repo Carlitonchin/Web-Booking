@@ -12,6 +12,7 @@ export default () => {
     let query = new URLSearchParams(search);
 
     let event = query.get("event");
+    let place = query.get("place");
     let adultCount = query.get("adultCount");
     let childCount = query.get("childCount");
     let dateSince = query.get("dateSince");
@@ -47,7 +48,7 @@ export default () => {
             childCount={childCount}
             dateSince={dateSince}
             dateTo={dateTo}
-
+            place={place}
             />
 
         </div>

@@ -17,6 +17,7 @@ import SearchCar from '../../pages/AlquilerCoches/SearchCar';
 import SingleCar from '../../pages/AlquilerCoches/SingleCar';
 import SearchFly from '../../pages/Vuelos/SearchFly';
 import PayFly from '../../pages/Vuelos/PayFly';
+import SearchTaxi from '../../pages/TaxiAereopuerto/SearchTaxi';
 
 
 const Routing = () => {
@@ -29,7 +30,8 @@ const Routing = () => {
             <Route path="/vuelos/buscar" element={<SearchFly />} />
             <Route path="/coches" element={<RentarCoches />} />
             <Route path="/turismo" element={<AtraccionesTuristicas />} />
-            <Route path="/taxi" element={<Taxi/>}/>
+            <Route path="/taxis" element={<Taxi/>}/>
+            <Route path="/taxis/buscar" element={<SearchTaxi/>}/>
             <Route path="/buscar" element={<Hotel/>}/>
             <Route path="/hotel" element={<SingleHotel/>}/>
             <Route path="/turismo/buscar" element={<SearchTurism/>}/>

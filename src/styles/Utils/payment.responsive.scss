@@ -1,0 +1,56 @@
+@media (max-width: 460px)
+{
+    .container
+    {
+        width: 95%;
+    }
+}
+
+@media (max-width:600px)
+{
+    .right
+    {
+        width: 100%;
+    }
+
+    .formContainer
+    {
+        width:100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width:800px)
+{
+    .right
+    {
+        width: 80%;
+    }
+
+    .formContainer
+    {
+        width:80%;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 999px)
+{
+   
+    .right
+    {
+        width: 50%;
+    }
+}
+
+@media (max-width:999px)
+{
+    .container
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right
+    {
+        margin-top: 3rem;
+    }
+}
