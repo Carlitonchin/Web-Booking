@@ -1,0 +1,12 @@
+.transition
+{
+    transition: 0.5s ease-out;
+    display: block;
+}
+
+.hide{
+   scale: 0;
+   margin: 0;
+   padding: 0;
+   position: absolute;
+}
