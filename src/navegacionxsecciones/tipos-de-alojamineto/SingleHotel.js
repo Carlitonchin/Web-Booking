@@ -1,6 +1,5 @@
-import ImageGallery from 'react-image-gallery';
+
 import style from '../../styles/Alojamineto/singleHotel.module.scss'
-import "react-image-gallery/styles/css/image-gallery.css";
 import HeaderHotel from './HeaderHotel';
 import BlueButton from '../../components/Utils/BlueButton';
 import ContainerImages from '../../components/Utils/ContainerImages';
@@ -13,6 +12,8 @@ import FinalInfo from '../../components/Search/FinalInfo';
 import { useLocation } from 'react-router';
 import { useState } from 'react';
 import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
+import picturesManager from '../../components/Utils/Functions/picturesManager';
+import AllPictures from '../../components/Utils/Functions/AllPictures';
 
 
 export default () => {
@@ -41,6 +42,12 @@ export default () => {
   const [since, setSince] = useState(getDateFromString(dateSince))
   const [to, setTo] = useState(getDateFromString(dateTo))
   const [cRooms, setRooms] = useState(Number(countRooms))
+  const [imageExpanded, setImageExpanded] = useState(false);
+
+  function handleImageExpanded()
+  {
+    setImageExpanded(!imageExpanded);
+  }
 
   if (isNaN(adults) || isNaN(childs) || isNaN(cRooms))
     return <h1>Not found</h1>
@@ -71,7 +78,13 @@ export default () => {
       </div>
     </div>
     <div className={style.containerGallery}>
-      <ContainerImages pictures={pictures} />
+      {(!imageExpanded?<ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
+    :<AllPictures 
+    pictures={pictures}
+    closeHandler={handleImageExpanded}
+    />  )
+    }
+      
     </div>
     <h2 className={style.h2}>Comentarios</h2>
     <CommentsComponent comments={comments} />

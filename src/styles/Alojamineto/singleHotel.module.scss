@@ -40,8 +40,13 @@
     width: 100%;
     height: 85vh - $headerHeight;
     min-height: 400px;
+    max-height: 85vh - $headerHeight;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .img
 {
