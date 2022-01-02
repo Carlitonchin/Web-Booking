@@ -3,7 +3,7 @@ import styleFromTour from '../../styles/AtraccionesTuristicas/searchTurism.modul
 import FilterComponent from "../../components/Search/FilterComponent"
 import HeaderCoches from "../../components/RentarCoches/HeaderCoches"
 import { getDateFromString, getStringFromDate } from "../../components/Utils/Functions/dateManager"
-import {d} from '../../navegacionxsecciones/tipos-de-alojamineto/testingForHotels'
+import {d} from '../../components/Hotel/testingForHotels'
 import {useState} from 'react'
 import style from '../../styles/AlquilerCoches/searchCar.module.scss'
 import styleHide from '../../styles/Search/hideFilterTour.module.scss'

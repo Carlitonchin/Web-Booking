@@ -1,6 +1,6 @@
 import style from '../../styles/AtraccionesTuristicas/searchTurism.module.scss';
 import SearchBar from '../../components/Search/SearchBar';
-import {d} from '../../navegacionxsecciones/tipos-de-alojamineto/testingForHotels'
+import {d} from '../../components/Hotel/testingForHotels'
 import FilterComponent from '../../components/Search/FilterComponent';
 import ListTurism from './ListTurism';
 import { useLocation } from 'react-router';

@@ -8,8 +8,8 @@ import AtraccionesTuristicas from "../../pages/AtraccionesTuristicas/Atracciones
 import Fly from "../../pages/Vuelos/Fly"
 /*-------------------------------------------------------------------------------------------*/
 
-import Hotel from '../../navegacionxsecciones/tipos-de-alojamineto/Hotel';
-import SingleHotel from '../../navegacionxsecciones/tipos-de-alojamineto/SingleHotel';
+import Hotel from '../Hotel/Hotel';
+import SingleHotel from '../Hotel/SingleHotel';
 import SearchTurism from '../../pages/AtraccionesTuristicas/SearchTurism';
 import SingleTour from '../../pages/AtraccionesTuristicas/SingleTour';
 import Payment from '../Utils/Payment';

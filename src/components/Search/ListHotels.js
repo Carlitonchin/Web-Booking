@@ -3,7 +3,7 @@ import BlueButton from '../Utils/BlueButton';
 import style from '../../styles/Search/listHotels.module.scss'
 import createArrayOfLength from '../Utils/Functions/createArrayOfLength';
 import { Link } from 'react-router-dom';
-import { room } from '../../navegacionxsecciones/tipos-de-alojamineto/testing/commentsTest';
+import { room } from '../Hotel/testing/commentsTest';
 import styleItem from '../../styles/Utils/listItem.module.scss'
 
 export default ({ list }) => {

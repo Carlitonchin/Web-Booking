@@ -5,7 +5,7 @@ import FilterComponent from '../../components/Search/FilterComponent'
 import ListHotels from '../../components/Search/ListHotels'
 import style from '../../styles/Search/SearchHotel.module.scss'
 import { useState } from 'react'
-import {d, list} from './testingForHotels.js'
+import {d, list} from '../Hotel/testingForHotels'
 import { useLocation } from 'react-router'
 import styleHide from '../../styles/Search/hideFilterHotel.module.scss'
 

@@ -1,7 +1,6 @@
 
 import React, {useState} from 'react'
 import Layout from '../../layout/Layout'
-import Aturisticas from '../../components/AtraccionesTuristicas/Aturisticas'
 
 import headerStyle from "../../styles/Alojamineto/Sleep.module.scss"
 import { Container, Row, Col, Card  } from 'react-bootstrap';

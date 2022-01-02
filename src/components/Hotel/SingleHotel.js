@@ -5,7 +5,7 @@ import BlueButton from '../../components/Utils/BlueButton';
 import ContainerImages from '../../components/Utils/ContainerImages';
 import GrayButton from '../../components/Utils/GrayButton';
 import CommentsComponent from '../../components/Search/CommentsComponent';
-import { comments, bestServices, blackServices, room, listInfo } from './testing/commentsTest'; // borrar luego
+import { comments, bestServices, blackServices, room, listInfo } from '../Hotel/testing/commentsTest'; // borrar luego
 import BestServices from './Services/BestServices';
 import BlackServices from './Services/BlackServices';
 import FinalInfo from '../../components/Search/FinalInfo';
