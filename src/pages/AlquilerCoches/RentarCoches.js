@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Layout from '../../layout/Layout'
 import HeaderCoches from '../../components/RentarCoches/HeaderCoches'
 import { Container, Row, Col, Accordion } from 'react-bootstrap';
-import CarCards from '../../components/RentarCoches/CarCards';
 import styleFromTour from '../../styles/AtraccionesTuristicas/AT.module.scss'
 import ImageCarousel from '../../components/Utils/ImageCarousel';
 import style from '../../styles/AlquilerCoches/rentCar.module.scss'
