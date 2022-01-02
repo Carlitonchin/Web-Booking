@@ -8,7 +8,6 @@ import style from '../../styles/AlquilerCoches/rentCar.module.scss'
 import {getStringFromDate, getDateFromString} from '../../components/Utils/Functions/dateManager';
 import BlueButton from '../../components/Utils/BlueButton';
 
-
 const empresas = [
   {
     imgUrl: "/img/cancun.jpg",
