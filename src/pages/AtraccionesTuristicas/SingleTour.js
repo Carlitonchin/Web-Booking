@@ -7,6 +7,8 @@ import {useState} from 'react';
 import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
 import {useLocation} from 'react-router'
 import styleFromSingleHotel from '../../styles/Alojamineto/singleHotel.module.scss'
+import AllPictures from '../../components/Utils/Functions/AllPictures';
+
 
 let pictures=["../img/playa.jpg","../img/playa.jpg","../img/cancun.jpg","../img/cancun.jpg"]
 let infoTour=
@@ -55,10 +57,17 @@ export default ()=>
   let [adultCount, setAdult] = useState(1);
   let [childCount, setChild] = useState(0);
   let [date, setDate] = useState(new Date());
+  const [imageExpanded, setImageExpanded] = useState(false);
 
   function handleDate(e) {
     e.preventDefault()
     setDate(getDateFromString(e.target.value))
+  }
+
+
+  function handleImageExpanded()
+  {
+    setImageExpanded(!imageExpanded);
   }
 
     return <div className={style.container}>
@@ -67,7 +76,13 @@ export default ()=>
         <a href="#">{place}</a>
         </div>
         <div className={styleFromSingleHotel.containerGallery}>
-          <ContainerImages pictures={pictures}/>
+        {(!imageExpanded?<ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
+    :<AllPictures 
+    pictures={pictures}
+    closeHandler={handleImageExpanded}
+    />  )
+    
+    }
         </div>
         <div className={style.infoAndPrice}>
           <div className={style.info}>
