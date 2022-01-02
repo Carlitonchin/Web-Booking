@@ -7,6 +7,8 @@ import HeaderCoches from "../../components/RentarCoches/HeaderCoches"
 import PersonalDataForm from "../../components/Utils/PersonalDataForm"
 import BlueButton from "../../components/Utils/BlueButton"
 import GrayButton from "../../components/Utils/GrayButton"
+import {useState} from 'react'
+import {getDateFromString, getStringFromDate} from "../../components/Utils/Functions/dateManager";
 
 let info=
 [
@@ -51,10 +53,41 @@ let imgUrl = '/img/reserva.jpg'
 
 export default ()=>
 {
-  function f(a)
+ 
+  const [placeRent, setPlaceRent] = useState("");
+  const [placeReturn, setPlaceReturn] = useState("");
+  const [returnAtSamePlace, setReturnAtSamePlace] = useState(true);
+  const [since, setSince] = useState(new Date());
+  const [to, setTo] = useState(new Date());
+
+
+  function handlePlaceRent(e)
   {
-    return a;
+      setPlaceRent(e.target.value);
   }
+
+  function handlePlaceReturn(e)
+  {
+      setPlaceReturn(e.target.value);
+  }
+
+  function handleReturnAtSamePlace(value)
+  {
+    setReturnAtSamePlace(value);
+  }
+
+  function handleSince(e) {
+    e.preventDefault()
+    setSince(getDateFromString(e.target.value))
+  }
+
+  function handleTo(e)
+  {
+    
+    e.preventDefault()
+    setTo(getDateFromString(e.target.value))
+  }
+
    return<div className={style.container}>
    <h1>Finalizacion de la reserva</h1>
    <div className={style.imagAndInfo}>
@@ -85,7 +118,17 @@ export default ()=>
     </div>
     <div className={style.pay}>
       <HeaderCoches 
-      handleReturnAtSamePlace={f}
+      handleReturnAtSamePlace={handleReturnAtSamePlace}
+      handlePlaceRent={handlePlaceRent}
+      handlePlaceReturn={handlePlaceReturn}
+      handleSince={handleSince}
+      handleTo={handleTo}
+      placeRent={placeRent}
+      placeReturn={placeReturn}
+      returnAtSamePlace={returnAtSamePlace}
+      since={since}
+      to={to}
+
       />
     </div>
     </div>
