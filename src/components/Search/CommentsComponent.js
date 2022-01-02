@@ -30,17 +30,19 @@ export default ({comments})=>
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2
+          items: 2.5
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1
+          items: 1.5
         }
       };
 
     return <div className={style.containerComments}>
 
-        <Carousel responsive={responsive}>
+        <Carousel 
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        responsive={responsive}>
         {comments.map(c=>
             {
                 let {userName, imgUrl, country, text} = c;

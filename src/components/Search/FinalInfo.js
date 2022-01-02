@@ -8,17 +8,27 @@ import PeopleRoomsComponent from './PeopleRoomsComponent';
 export default ({listInfo, room, countRooms, setRooms, countAdults, setAdults, countChilds, setChilds, startDate, endDate, setStartDate, setEndDate}) =>
 {
 
-    function handlerAdults()
+    function handlerAdults(n)
     {
-        setAdults(countAdults + 1);
+        if(n == -1 && countAdults == 1)
+            return;
+
+        setAdults(countAdults + n);
     }
-    function handlerChilds(e)
+    function handlerChilds(n)
     {
-        setChilds(countChilds + 1);
+
+        if(n == -1 && countChilds == 0)
+            return;
+
+        setChilds(countChilds + n);
     }
-    function handlerRooms()
+    function handlerRooms(n)
     {
-        setRooms(countRooms + 1);
+        if(n == -1 && countRooms == 1)
+            return;
+
+        setRooms(countRooms + n);
     }
 
     function handleDate(set, date) {
