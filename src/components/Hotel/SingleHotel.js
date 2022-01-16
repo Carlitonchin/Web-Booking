@@ -20,6 +20,8 @@ import ReserveData from './components/ReserveData';
 import ModifySearch from './components/ModifySearch';
 import BadNew from '../Utils/BadNew';
 import GoodNew from '../Utils/GoodNew';
+import Health from './components/Health';
+import Beach from './components/Beach';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -55,6 +57,59 @@ const goodPoints = [
     icon:'/favicon.ico',
     text:"Muevete a tu aire"
   }
+]
+
+let beaches = [
+
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  },
+  {
+    picture:"/img/unnamed.jpg",
+    name:"Playa Varadero",
+    calification:"7.6 Buena Playa",
+    distance:"A 900m del alojamiento"
+  }
+
 ]
 
 export default () => {
@@ -169,13 +224,24 @@ icon="/favicon.ico"
 title="Disponibilidad limitada en Lima para la fecha"
 info="8 hoteles de 3 estrellas como este ya no están disponibles en nuestra página"
 />
-<div className={style.h2}></div>
+<div className={style.marginBottom}></div>
 <GoodNew
 icon="/favicon.ico"
 title="Consigue un buen precio para tu próxima estancia"
 info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
 />
- 
+
+<div className={style.marginBottom}></div>
+<Health/>
+
+
+
+<h4 className={style.h2}>Playas mas cercanas</h4>
+ <Beach data={beaches}/>
+<div className={style.buttonRight}>
+ <BlueButton text="Ver disponibilidad"/>
+ </div>
+
     <h4 className={style.h2}>Comentarios</h4>
     <CommentsComponent comments={comments} />
 

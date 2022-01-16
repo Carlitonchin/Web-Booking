@@ -1,0 +1,31 @@
+@import '../variables.scss';
+
+.container
+{
+    width: 95%;
+    padding: 1rem;
+    border: 1px solid $borderColor;
+    display: flex;
+}
+
+.picture
+{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-size: cover;
+    background-position: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.name
+{
+    font-weight: bold;
+    margin: 0;
+}
+
+.gray
+{
+    color: gray;
+    margin: 0;
+}
