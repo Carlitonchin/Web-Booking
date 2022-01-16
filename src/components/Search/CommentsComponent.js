@@ -3,9 +3,13 @@ import style from '../../styles/Search/comments.module.scss'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+let topics = ["Ubicacion", "Gimnasio", "Masaje", "Cama", "Vistas"]
+
 export default ({comments})=>
 {
-    const [readMore, setReadMore] = useState(null);
+
+    const [readMore, setReadMore] = useState(null); 
+    const [topicsSelected, setTopics] = useState([]);
 
     function readMoreHandler(comment)
     {
@@ -17,6 +21,18 @@ export default ({comments})=>
 
         setReadMore(comment);
     }
+
+    function handleTopic(t)
+    {
+        if(!topicsSelected.includes(t))
+        {
+            setTopics(topicsSelected.concat([t]));
+        }
+
+        else
+            setTopics(topicsSelected.filter(m=>m!=t));
+    }
+
 
     const responsive = {
         superLargeDesktop: {
@@ -39,7 +55,20 @@ export default ({comments})=>
       };
 
     return <div className={style.containerComments}>
-
+        <h6>Elige los temas de los comentarios</h6>
+        <div className={style.containerTopics}>
+            {topics.map(t=>
+                {
+                    return topicsSelected.includes(t)
+                    ? <button
+                    onClick={handleTopic.bind(this, t)}
+                    class="btn btn-primary" type="button">{t + " -"}</button>
+                    :<button
+                    onClick={handleTopic.bind(this, t)}
+                    type="button" class="btn btn-outline-primary">{t + " +"}</button>
+                })}
+        </div>
+        <h6>Lo que más gustó a otros clientes:</h6>
         <Carousel 
         removeArrowOnDeviceType={["tablet", "mobile"]}
         responsive={responsive}>
@@ -77,5 +106,9 @@ export default ({comments})=>
                 </div>
             })}
             </Carousel>
+            <br/>
+            <button type="button" class="btn btn-outline-primary">
+                Leer todos los comentarios
+                </button>
     </div>
 }

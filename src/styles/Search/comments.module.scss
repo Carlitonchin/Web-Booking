@@ -1,5 +1,18 @@
 @import '../../styles/variables.scss';
 
+.containerTopics
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.containerTopics>*
+{
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    
+}
+
 .containerComments
 {
     width: 100%;
@@ -10,11 +23,10 @@
 
 .containerSingleComment
 {
-    margin: 0 auto;
     width: 95%;
     padding: 10px;
     border-radius: 3px;
-    border: 1px solid rgb(170, 167, 167);
+    border: 1px solid $borderColor;
 }
 
 .containerSingleCommentExpanded

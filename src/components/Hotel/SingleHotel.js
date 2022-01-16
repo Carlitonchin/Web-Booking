@@ -313,7 +313,7 @@ export default () => {
 
     <div className={style.marginBottom}></div>
   <CalificationCategory data={calificationCategory}/>
-
+  <div className={style.marginBottom}></div>
     <CommentsComponent comments={comments} />
 
     <h4 className={style.h2}>Servicios</h4>
