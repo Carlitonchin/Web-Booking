@@ -11,7 +11,7 @@ import BlackServices from './Services/BlackServices';
 import FinalInfo from '../../components/Search/FinalInfo';
 import { useLocation } from 'react-router';
 import { useState } from 'react';
-import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
+import { getDateFromString, getStringFromDate } from '../../components/Utils/Functions/dateManager';
 import picturesManager from '../../components/Utils/Functions/picturesManager';
 import AllPictures from '../../components/Utils/Functions/AllPictures';
 import Description from './components/Description';
@@ -22,6 +22,9 @@ import BadNew from '../Utils/BadNew';
 import GoodNew from '../Utils/GoodNew';
 import Health from './components/Health';
 import Beach from './components/Beach';
+import Reasons from './components/Reasons';
+import CalificationComments from './components/CalificationComments';
+import CalificationCategory from './components/CalificationCategory';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -38,78 +41,140 @@ cercanos son el Mercado Indio y el centro comercial Larcomar.
 
 const goodPoints = [
   {
-    icon:'/favicon.ico',
-    text:"Ubicacion fantastica"
+    icon: '/favicon.ico',
+    text: "Ubicacion fantastica"
   },
   {
-    icon:'/favicon.ico',
-    text:"Comodidad para tus vacaciones"
+    icon: '/favicon.ico',
+    text: "Comodidad para tus vacaciones"
   },
   {
-    icon:'/favicon.ico',
-    text:"Barrio tranquilo"
+    icon: '/favicon.ico',
+    text: "Barrio tranquilo"
   },
   {
-    icon:'/favicon.ico',
-    text:"Empieza el dia con buen pie"
+    icon: '/favicon.ico',
+    text: "Empieza el dia con buen pie"
   },
   {
-    icon:'/favicon.ico',
-    text:"Muevete a tu aire"
+    icon: '/favicon.ico',
+    text: "Muevete a tu aire"
   }
 ]
 
 let beaches = [
 
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   },
   {
-    picture:"/img/unnamed.jpg",
-    name:"Playa Varadero",
-    calification:"7.6 Buena Playa",
-    distance:"A 900m del alojamiento"
+    picture: "/img/unnamed.jpg",
+    name: "Playa Varadero",
+    calification: "7.6 Buena Playa",
+    distance: "A 900m del alojamiento"
   }
 
+]
+
+let reasons = [
+  {
+    icon: '/favicon.ico',
+    text: "Precios Imbatibles"
+  },
+  {
+    icon: '/favicon.ico',
+    text: "Una reserva segura"
+  },
+  {
+    icon: '/favicon.ico',
+    text: "Gestiona tus reservas online"
+  },
+  {
+    icon: '/favicon.ico',
+    text: "El personal habla español"
+  }
+]
+
+let calificationsComments=
+{
+  calification:8.6,
+  textCalificacion:"Fabuloso",
+  count:845
+}
+
+let calificationCategory=
+[
+  {
+    name:"Ubicacion",
+    calification:9.3
+  },
+  {
+    name:"Personal",
+    calification:7
+  },
+  {
+    name:"Limpieza",
+    calification:7.9
+  },
+  {
+    name:"Confort",
+    calification:8
+  },
+  {
+    name:"Confort",
+    calification:8
+  },
+  {
+    name:"Confort",
+    calification:8
+  },
+  {
+    name:"Confort",
+    calification:8
+  },
+  {
+    name:"Relacion Calidad-Precio",
+    calification:10
+  }
 ]
 
 export default () => {
@@ -140,8 +205,7 @@ export default () => {
   const [cRooms, setRooms] = useState(Number(countRooms))
   const [imageExpanded, setImageExpanded] = useState(false);
 
-  function handleImageExpanded()
-  {
+  function handleImageExpanded() {
     setImageExpanded(!imageExpanded);
   }
 
@@ -164,85 +228,92 @@ export default () => {
         <div className={style.booking}>
           <GrayButton text="Atras" />
         </div>
-       
+
         <div className={style.booking}>
-        <a href={linkTo}>
-          <BlueButton text="Reservar" />
+          <a href={linkTo}>
+            <BlueButton text="Reservar" />
           </a>
         </div>
-        
+
       </div>
     </div>
     <div className={style.containerGallery}>
-      {(!imageExpanded?<ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
-    :<AllPictures 
-    pictures={pictures}
-    closeHandler={handleImageExpanded}
-    />  )
-    }
-      
+      {(!imageExpanded ? <ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
+        : <AllPictures
+          pictures={pictures}
+          closeHandler={handleImageExpanded}
+        />)
+      }
+
     </div>
     <div className={style.descriptionAndGood}>
-    
-    <div className={style.description}>
 
-    <Description text={textDescription}/>
-    </div>
+      <div className={style.description}>
 
-    <div className={style.goodPoints}>
-    <GoodPoints items={goodPoints}/>
-    <div style={{marginTop:'1.5rem'}}>
-    <BlueButton text="Reservar"/>
-    </div>
-    </div>
+        <Description text={textDescription} />
+      </div>
+
+      <div className={style.goodPoints}>
+        <GoodPoints items={goodPoints} />
+        <div style={{ marginTop: '1.5rem' }}>
+          <BlueButton text="Reservar" />
+        </div>
+      </div>
     </div>
 
     <BestServices services={bestServices} />
     <div className={style.line}></div>
-    
+
     <div className={style.avaible + " " + style.h2}>
-<h4>Disponibilidad</h4>
-<div className={style.equilityPrice}>
-<i class="bi bi-shield-fill-check"></i>
-<p>Igualamos el precio</p>
-</div>
-</div>
-<div className={style.reserveData}>
-  <ReserveData name={name}/>
-</div>
+      <h4>Disponibilidad</h4>
+      <div className={style.equilityPrice}>
+        <i class="bi bi-shield-fill-check"></i>
+        <p>Igualamos el precio</p>
+      </div>
+    </div>
+    <div className={style.reserveData}>
+      <ReserveData name={name} />
+    </div>
 
-<div className={style.modifySearch}>
-  <ModifySearch
-  countAdults={adultCount}
-  countChilds={childCount}
-  since={since}
-  to={to}/>
-</div>
+    <div className={style.modifySearch}>
+      <ModifySearch
+        countAdults={adultCount}
+        countChilds={childCount}
+        since={since}
+        to={to} />
+    </div>
 
-<BadNew
-icon="/favicon.ico"
-title="Disponibilidad limitada en Lima para la fecha"
-info="8 hoteles de 3 estrellas como este ya no están disponibles en nuestra página"
-/>
-<div className={style.marginBottom}></div>
-<GoodNew
-icon="/favicon.ico"
-title="Consigue un buen precio para tu próxima estancia"
-info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
-/>
+    <BadNew
+      icon="/favicon.ico"
+      title="Disponibilidad limitada en Lima para la fecha"
+      info="8 hoteles de 3 estrellas como este ya no están disponibles en nuestra página"
+    />
+    <div className={style.marginBottom}></div>
+    <GoodNew
+      icon="/favicon.ico"
+      title="Consigue un buen precio para tu próxima estancia"
+      info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
+    />
 
-<div className={style.marginBottom}></div>
-<Health/>
+    <div className={style.marginBottom}></div>
+    <Health />
 
 
 
-<h4 className={style.h2}>Playas mas cercanas</h4>
- <Beach data={beaches}/>
-<div className={style.buttonRight}>
- <BlueButton text="Ver disponibilidad"/>
- </div>
+    <h4 className={style.h2}>Playas mas cercanas</h4>
+    <Beach data={beaches} />
+    <div className={style.buttonRight}>
+      <BlueButton text="Ver disponibilidad" />
+    </div>
 
-    <h4 className={style.h2}>Comentarios</h4>
+    <h4 className={style.h2}>{reasons.length + " razones para escojer el " + name}</h4>
+      <Reasons data={reasons}/>
+    <h4 className={style.h2}>Comentarios de los clientes</h4>
+    <CalificationComments data={calificationsComments}/>
+
+    <div className={style.marginBottom}></div>
+  <CalificationCategory data={calificationCategory}/>
+
     <CommentsComponent comments={comments} />
 
     <h4 className={style.h2}>Servicios</h4>
@@ -271,13 +342,13 @@ info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
       <div className={style.finalBooking}>
         <GrayButton text="Atras" />
       </div>
-     
+
       <div className={style.finalBooking}>
-      <a href={linkTo}>
-        <BlueButton text="Reservar" />
+        <a href={linkTo}>
+          <BlueButton text="Reservar" />
         </a>
       </div>
-      
+
     </div>
 
   </div>

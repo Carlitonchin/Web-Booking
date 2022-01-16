@@ -1,0 +1,40 @@
+@import '../variables.scss';
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.item
+{
+    width: 85%;
+}
+
+.calification
+{
+    display: flex;
+    align-items: center;
+    font-size:smaller;
+    height: min-content;
+}
+
+.calificationBar
+{
+    height: 0.6rem;
+    width: 100%;
+    background:$lightBlue;
+    margin-right: 0.6rem;
+}
+
+.calificationPercent
+{
+    height: 100%;
+    background:darkblue;
+}
+
+.calificationText
+{
+    margin: 0;
+    color: gray;
+}

@@ -1,0 +1,22 @@
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reason
+{
+    margin-right: 7rem;
+    display: flex;
+    margin-bottom: 0.7rem;
+    align-items: center;
+}
+
+.icon
+{
+    width: 2.7rem;
+    height: 2.7rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 1rem;
+}

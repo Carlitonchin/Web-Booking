@@ -1,0 +1,21 @@
+.container
+{
+    display: flex;
+}
+
+.item
+{
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.calification
+{
+    background:darkblue;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 0.4rem;
+    margin-right: 0.3rem;
+}

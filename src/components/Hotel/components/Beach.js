@@ -17,11 +17,11 @@ export default ({data})=>
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2.5
+          items:1.5
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1.5
+          items: 1.1
         }
       };
 
