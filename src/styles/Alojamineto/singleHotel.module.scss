@@ -61,6 +61,73 @@
     margin-top: 1rem;
 }
 
+.descriptionAndGood
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.description
+{
+    width: 60%;
+}
+
+.goodPoints
+{
+    background: $lightBlue;
+    padding: 1rem;
+    width: 25%;
+    border-radius: 5px;
+}
+
+.line
+{
+    width: 100%;
+    height: 1px;
+    background:$borderColor;
+    margin-top: 1rem;
+}
+
+.avaible
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.equilityPrice
+{
+    display: flex;
+    
+}
+
+.equilityPrice>i
+{
+    margin-right: 0.2rem;
+    font-size: 1rem;
+    color: $primary;
+}
+
+.reserveData
+{
+    margin-top: 0.5rem;
+    background:rgba(255, 196, 0, 0.644);
+    padding: 1rem;
+    border: solid 2px orange;
+}
+
+.modifySearch
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border: 1px solid $borderColor;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
 .containerBlackServices
 {
     margin-top: 2rem;

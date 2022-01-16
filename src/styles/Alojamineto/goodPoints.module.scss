@@ -1,0 +1,27 @@
+
+
+.item
+{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.item:first-of-type
+{
+    margin-top: 1.5rem;
+}
+
+.itemText
+{
+    font-size: smaller;
+}
+
+.icon
+{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 0.5rem;
+}

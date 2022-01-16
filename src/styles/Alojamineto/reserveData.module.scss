@@ -1,0 +1,42 @@
+
+.title
+{
+    font-weight: normal;
+}
+
+.column
+{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+
+.date
+{
+    width: 33%;
+}
+
+.containerButton
+{
+    align-self: flex-end;
+    
+}
+
+.roomPeople
+{
+    display: flex;
+    margin-top: 0.7rem;
+}
+
+.item
+{
+    display: flex;
+    margin-right: 1.5rem;
+}
+
+.item>p
+{
+    margin-right: 0.3rem;
+}

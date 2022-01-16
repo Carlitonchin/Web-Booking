@@ -1,0 +1,28 @@
+@import '../variables.scss';
+
+.containerDates
+{
+    display: flex;
+}
+
+.date1
+{
+    margin-right: 2.5rem;
+}
+
+.title
+{
+    font-weight: bold;
+}
+
+.blue
+{
+    color: $primary;
+    font-weight: bold;
+}
+
+.info
+{
+    color:gray;
+    font-weight: 500;
+}

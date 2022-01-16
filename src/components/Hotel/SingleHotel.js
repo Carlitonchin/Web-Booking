@@ -14,7 +14,48 @@ import { useState } from 'react';
 import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
 import picturesManager from '../../components/Utils/Functions/picturesManager';
 import AllPictures from '../../components/Utils/Functions/AllPictures';
+import Description from './components/Description';
+import GoodPoints from './components/GoodPoints';
+import ReserveData from './components/ReserveData';
+import ModifySearch from './components/ModifySearch';
+import BadNew from '../Utils/BadNew';
+import GoodNew from '../Utils/GoodNew';
 
+const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
+Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
+Todas las habitaciones del establecimiento Faraona Grand Hotel disponen de ventanas insonorizadas y TV de pantalla plana.
+Se sirve un desayuno continental con zumo natural, fruta tropical y cruasanes. El restaurante ofrece platos de la cocina
+regional. Los cócteles exóticos del bar pueden tomarse en una terraza jardín con encanto.
+El establecimiento Faraona Grand Hotel proporciona un servicio de enlace con el aeropuerto y un servicio de alquiler de
+coches por un suplemento. Hay aparcamiento gratuito y consigna de equipaje. El personal del mostrador de información
+turística del hotel puede ayudar a los huéspedes con la organización de excursiones por Lima, Cuzco y otras ciudades
+peruanas.
+El aeropuerto Jorge Chávez queda a 15 km. El centro de Lima está a 25 minutos en coche. Algunos lugares de interés
+cercanos son el Mercado Indio y el centro comercial Larcomar.
+`
+
+const goodPoints = [
+  {
+    icon:'/favicon.ico',
+    text:"Ubicacion fantastica"
+  },
+  {
+    icon:'/favicon.ico',
+    text:"Comodidad para tus vacaciones"
+  },
+  {
+    icon:'/favicon.ico',
+    text:"Barrio tranquilo"
+  },
+  {
+    icon:'/favicon.ico',
+    text:"Empieza el dia con buen pie"
+  },
+  {
+    icon:'/favicon.ico',
+    text:"Muevete a tu aire"
+  }
+]
 
 export default () => {
 
@@ -86,10 +127,59 @@ export default () => {
     }
       
     </div>
-    <h2 className={style.h2}>Comentarios</h2>
+    <div className={style.descriptionAndGood}>
+    
+    <div className={style.description}>
+
+    <Description text={textDescription}/>
+    </div>
+
+    <div className={style.goodPoints}>
+    <GoodPoints items={goodPoints}/>
+    <div style={{marginTop:'1.5rem'}}>
+    <BlueButton text="Reservar"/>
+    </div>
+    </div>
+    </div>
+
+    <BestServices services={bestServices} />
+    <div className={style.line}></div>
+    
+    <div className={style.avaible + " " + style.h2}>
+<h4>Disponibilidad</h4>
+<div className={style.equilityPrice}>
+<i class="bi bi-shield-fill-check"></i>
+<p>Igualamos el precio</p>
+</div>
+</div>
+<div className={style.reserveData}>
+  <ReserveData name={name}/>
+</div>
+
+<div className={style.modifySearch}>
+  <ModifySearch
+  countAdults={adultCount}
+  countChilds={childCount}
+  since={since}
+  to={to}/>
+</div>
+
+<BadNew
+icon="/favicon.ico"
+title="Disponibilidad limitada en Lima para la fecha"
+info="8 hoteles de 3 estrellas como este ya no están disponibles en nuestra página"
+/>
+<div className={style.h2}></div>
+<GoodNew
+icon="/favicon.ico"
+title="Consigue un buen precio para tu próxima estancia"
+info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
+/>
+ 
+    <h4 className={style.h2}>Comentarios</h4>
     <CommentsComponent comments={comments} />
 
-    <h2 className={style.h2}>Servicios</h2>
+    <h4 className={style.h2}>Servicios</h4>
     <BestServices services={bestServices} />
     <div className={style.containerBlackServices}>
       <BlackServices services={blackServices} />
