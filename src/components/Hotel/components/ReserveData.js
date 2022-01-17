@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import style from '../../../styles/Alojamineto/reserveData.module.scss'
+import style from '../../../styles/Alojamineto/components/reserveData.module.scss'
 import DateComponent from '../../Search/DateComponent';
 import BlueButton from '../../Utils/BlueButton';
 

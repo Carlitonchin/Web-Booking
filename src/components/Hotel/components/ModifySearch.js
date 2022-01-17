@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/modifySearch.module.scss'
+import style from '../../../styles/Alojamineto/components/modifySearch.module.scss'
 import BlueButton from '../../Utils/BlueButton'
 import { getStringFromDate } from '../../Utils/Functions/dateManager'
 

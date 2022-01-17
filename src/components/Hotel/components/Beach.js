@@ -1,7 +1,7 @@
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import style from '../../../styles/Alojamineto/beach.module.scss'
+import style from '../../../styles/Alojamineto/components/beach.module.scss'
 
 export default ({data})=>
 {

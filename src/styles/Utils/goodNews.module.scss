@@ -1,9 +1,21 @@
+@import '../variables.scss';
+
 .container
 {
-    background: rgba(65, 212, 65, 0.315);
     padding: 1rem;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.green
+{
     border: green solid 1px;
+    background: rgba(65, 212, 65, 0.315);
+}
+
+.white
+{
+    border: solid 1px $borderColor;
 }
 
 .icon
@@ -12,11 +24,9 @@
     height: 1.3rem;
     background-size: cover;
     background-position: center;
-    margin-right: 2rem;
 }
 
 .row
 {
-    align-items: center;
-    display: flex;
+width: calc(100% - 1.3rem - 2rem);
 }

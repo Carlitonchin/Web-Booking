@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/qAndA.module.scss'
+import style from '../../../styles/Alojamineto/components/qAndA.module.scss'
 import {useState} from 'react'
 
 let data = [

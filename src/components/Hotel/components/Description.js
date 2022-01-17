@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/description.module.scss'
+import style from '../../../styles/Alojamineto/components/description.module.scss'
 import {useState} from 'react'
 
 function getText(text, index)

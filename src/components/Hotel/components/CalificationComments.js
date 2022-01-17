@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/calificationComments.module.scss'
+import style from '../../../styles/Alojamineto/components/calificationComments.module.scss'
 
 export default ({data})=>
 {

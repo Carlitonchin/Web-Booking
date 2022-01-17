@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/goodPoints.module.scss'
+import style from '../../../styles/Alojamineto/components/goodPoints.module.scss'
 
 export default ({items})=>
 {

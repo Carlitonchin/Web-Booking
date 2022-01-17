@@ -20,13 +20,15 @@ import ReserveData from './components/ReserveData';
 import ModifySearch from './components/ModifySearch';
 import BadNew from '../Utils/BadNew';
 import GoodNew from '../Utils/GoodNew';
-import Health from './components/Health';
+import Health from './components/InfoLink';
 import Beach from './components/Beach';
 import Reasons from './components/Reasons';
 import CalificationComments from './components/CalificationComments';
 import CalificationCategory from './components/CalificationCategory';
 import QandA from './components/QandA';
 import Hostess from './components/Hostess';
+import InfoLink from './components/InfoLink';
+import Around from './components/Around';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -290,15 +292,19 @@ export default () => {
       title="Disponibilidad limitada en Lima para la fecha"
       info="8 hoteles de 3 estrellas como este ya no están disponibles en nuestra página"
     />
-    <div className={style.marginBottom}></div>
+<div style={{marginBottom:'0.5rem'}}></div>
     <GoodNew
       icon="/favicon.ico"
       title="Consigue un buen precio para tu próxima estancia"
       info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
     />
 
-    <div className={style.marginBottom}></div>
-    <Health />
+<div style={{marginBottom:'0.5rem'}}></div>
+    <InfoLink
+    title= "Medidas de salud y seguridad especiales"
+    info="Este alojamiento ha tomado medidas de higiene y salud especiales por que tu seguridad es lo más importante"
+    link="Ver info sobre salud y seguridad"
+    picture="/favicon.ico" />
 
 
 
@@ -322,6 +328,12 @@ export default () => {
     <QandA/>
     <div className={style.marginBottom}></div>
     <Hostess/>
+
+<div className={style.around}>
+<h4 className={style.h2}>Alrededores del alojamiento</h4>
+<div className={style.buttonRight}><BlueButton text="Ver disponibilidad"/></div>
+</div>
+<Around/>
     <h4 className={style.h2}>Servicios</h4>
     <BestServices services={bestServices} />
     <div className={style.containerBlackServices}>

@@ -58,13 +58,13 @@
 
 .h2
 {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
 .marginBottom
 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .descriptionAndGood
@@ -140,6 +140,18 @@
     margin-top: 1rem;
     align-self: flex-end;
     margin-right: 3rem;
+}
+
+.around
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.around>.buttonRight
+{
+    margin: 0;
 }
 
 .containerBlackServices

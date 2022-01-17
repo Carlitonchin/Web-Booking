@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/hostess.module.scss'
+import style from '../../../styles/Alojamineto/components/hostess.module.scss'
 
 let name = "Josip";
 let text = `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever

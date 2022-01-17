@@ -1,4 +1,4 @@
-import style from '../../../styles/Alojamineto/reasons.module.scss'
+import style from '../../../styles/Alojamineto/components/reasons.module.scss'
 
 export default ({data})=>
 {

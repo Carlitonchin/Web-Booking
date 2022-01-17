@@ -1,0 +1,66 @@
+@import '../../variables.scss';
+
+.head
+{
+    display: flex;
+    font-size: smaller;
+    margin-bottom: 1rem;
+}
+
+.presentation
+{
+    margin-right: 0.5rem;
+}
+
+.link
+{
+    font-weight: bold;
+}
+
+.containerList
+{
+    margin-top: 1rem;    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.column
+{
+    width: 80%;
+}
+
+.headerList
+{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.icon
+{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-size: cover;
+    background-position: center;
+    margin-right: 0.5rem;
+    
+}
+
+.item
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-bottom: 1px solid $borderColor;
+}
+
+.itemDistance{
+    color: gray;
+}
+
+.item:last-of-type
+{
+    border-bottom: none;
+}
