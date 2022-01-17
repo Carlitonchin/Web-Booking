@@ -1,0 +1,92 @@
+@import '../variables.scss';
+
+.container
+{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.box
+{
+    padding: 1rem;
+    border: 1px solid $borderColor;
+    height: fit-content;
+}
+
+.box1
+{
+    width: 33%;
+}
+
+.box1>p
+{
+    margin-bottom: 0.5rem;
+    font-size: smaller;
+}
+
+.box1>p:first-of-type
+{
+    font-size:medium;
+}
+
+.box1>p:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.containerQuestions
+{
+    width: 65%;
+}
+
+.details
+{
+    color: gray;
+    font-size: smaller;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.qa
+{
+    display: flex;
+    padding-bottom: 1rem;
+}
+
+.qa:last-of-type
+{
+    
+    border-bottom:1px solid $borderColor ;
+}
+
+.icon
+{
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 1rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.translateAndLike
+{
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.translateAndLike>*
+{
+    display: flex;
+}
+
+.like>p
+{
+    margin-right: 1rem;
+}
+
+.moreQuestions
+{
+    width: 100%;
+}
