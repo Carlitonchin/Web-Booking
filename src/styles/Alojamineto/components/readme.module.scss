@@ -1,0 +1,95 @@
+@import '../../variables.scss';
+
+.presentation
+{
+    color:gray
+}
+
+.box
+{
+    background:$lightBlue;
+    padding:2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.row
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rowAclaration
+{
+    padding-top: 1rem;
+    padding-bottom: 1.8rem;
+   
+}
+
+.aclaration
+{
+    color: gray;
+}
+
+.rowNoTime
+{
+    margin-top: 2rem;
+}
+
+.left
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.icon
+{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-position: center;
+    background-size: cover;
+    margin-right: 0.3rem;
+}
+
+.right
+{
+    width: 78%;
+}
+
+.containerBarTime
+{
+    background:$borderColor;
+    display: flex;
+    width: 40%;
+    height: 1.1rem;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.barTime
+{
+    height: 100%;
+    background:green;
+    position: absolute;
+}
+
+.timeText
+{
+    position: absolute;
+    font-size: 0.8rem;
+    top: -1.2rem;
+    margin-left: -1rem;
+}
+
+.sentence
+{
+    margin-bottom: 0.5rem;
+}
+
+.sentence:last-of-type
+{
+    margin-bottom: 0;
+}

@@ -29,6 +29,7 @@ import QandA from './components/QandA';
 import Hostess from './components/Hostess';
 import InfoLink from './components/InfoLink';
 import Around from './components/Around';
+import Readme from './components/Readme';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -331,14 +332,29 @@ export default () => {
 
 <div className={style.around}>
 <h4 className={style.h2}>Alrededores del alojamiento</h4>
-<div className={style.buttonRight}><BlueButton text="Ver disponibilidad"/></div>
+<div><BlueButton text="Ver disponibilidad"/></div>
 </div>
 <Around/>
-    <h4 className={style.h2}>Servicios</h4>
+<div className={style.around}>
+<h4 className={style.h2}>Servicios de {name}</h4>
+<div><BlueButton text="Ver disponibilidad"/></div>
+</div>
     <BestServices services={bestServices} />
     <div className={style.containerBlackServices}>
       <BlackServices services={blackServices} />
     </div>
+
+    <InfoLink
+    title= "Iniciativas sostenibles"
+    info="Este alojamiento ha tomado medidas para promover una forma de viajar más sostenible y respetuosa con el medioambiente"
+    link="Leer más"
+    picture="/favicon.ico" />
+
+<div className={style.around}>
+<h4 className={style.h2}>Léeme</h4>
+<div ><BlueButton text="Ver disponibilidad"/></div>
+</div>
+<Readme/>
     <div className={style.containerFinalInfo}>
       <FinalInfo
         listInfo={listInfo}

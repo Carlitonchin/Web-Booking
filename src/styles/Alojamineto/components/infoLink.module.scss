@@ -4,15 +4,15 @@
     border: 2px solid $borderColor;
     padding: 1rem;
     display: flex;
+    justify-content: space-between;
 }
 
 .icon
 {
-    width: 3.5rem;
+    width: 4rem;
     height: 5rem;
     background-position: center;
     background-size: cover;
-    margin-right: 2rem;
 }
 
 .containerInfo
@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: calc(100% - 4rem - 2rem);
 }
 
 .title
