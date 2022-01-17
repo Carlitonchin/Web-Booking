@@ -1,0 +1,62 @@
+@import '../variables.scss';
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid $borderColor;
+    margin-bottom: 0.5rem;
+}
+
+.calification
+{
+    display: flex;
+}
+.textCalification
+{
+    margin-right: 0.3rem;
+}
+
+.points
+{
+    font-weight: bold;
+    color: darkblue;
+    border: 1px solid darkblue;
+    border-radius: 3px;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}
+
+.description
+{
+    display: flex;
+}
+
+.hostess
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.picture
+{
+    width: 7rem;
+    height: 7rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.nameSubPicture
+{
+    font-weight: bold;
+}
+
+.descriptionText>p:first-of-type{
+    margin-bottom: 0.5rem;
+}
