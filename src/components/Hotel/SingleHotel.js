@@ -30,6 +30,7 @@ import Hostess from './components/Hostess';
 import InfoLink from './components/InfoLink';
 import Around from './components/Around';
 import Readme from './components/Readme';
+import InfoBlue from './components/InfoBlue';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -330,13 +331,13 @@ export default () => {
     <div className={style.marginBottom}></div>
     <Hostess/>
 
-<div className={style.around}>
-<h4 className={style.h2}>Alrededores del alojamiento</h4>
+<div className={style.around + " " + style.h2}>
+<h4>Alrededores del alojamiento</h4>
 <div><BlueButton text="Ver disponibilidad"/></div>
 </div>
 <Around/>
-<div className={style.around}>
-<h4 className={style.h2}>Servicios de {name}</h4>
+<div className={style.around + " " + style.h2}>
+<h4>Servicios de {name}</h4>
 <div><BlueButton text="Ver disponibilidad"/></div>
 </div>
     <BestServices services={bestServices} />
@@ -350,11 +351,21 @@ export default () => {
     link="Leer más"
     picture="/favicon.ico" />
 
-<div className={style.around}>
-<h4 className={style.h2}>Léeme</h4>
+<div className={style.around + " " + style.h2}>
+<h4>Léeme</h4>
 <div ><BlueButton text="Ver disponibilidad"/></div>
 </div>
 <Readme/>
+<div className={style.around + " " + style.h2}>
+<h4>A tener en cuenta</h4>
+<div ><BlueButton text="Ver disponibilidad"/></div>
+</div>
+<InfoBlue
+info="Informa a Apartment Luxury Palace No1 con antelación de tu hora prevista de llegada. Para ello, puedes utilizar el apartado de peticiones especiales al hacer la reserva
+o ponerte en contacto directamente con el alojamiento. Los datos de contacto aparecen en la conﬁrmación de la reserva."
+/>
+
+<div className={style.marginBottom}></div>
     <div className={style.containerFinalInfo}>
       <FinalInfo
         listInfo={listInfo}

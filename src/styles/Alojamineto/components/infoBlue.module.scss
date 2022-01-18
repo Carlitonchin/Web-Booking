@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.container
+{
+    background:$lightBlue;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>p
+{
+    margin: 0;
+}

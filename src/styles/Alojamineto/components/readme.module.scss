@@ -72,8 +72,10 @@
 .barTime
 {
     height: 100%;
-    background:green;
+    background:rgba(69, 231, 63, 0.705);
     position: absolute;
+    border-left: 2px solid yellow;
+    border-right: 2px solid yellow;
 }
 
 .timeText
