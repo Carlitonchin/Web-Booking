@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+.container
+{
+    display: flex;
+}
+
+.left
+{
+    width: 25%;
+    background:$lightBlue;
+    padding: 2rem;
+}
+
+.h
+{
+    width: fit-content;
+    line-height: 2.2rem;
+}
+
+.rigth
+{
+    width: 75%;
+}

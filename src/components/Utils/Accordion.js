@@ -11,13 +11,13 @@ export default ({data})=>
         <Accordion>
             {array.map(index =>
                 {
-                    let {header, body} = data[index];
+                    let {question, answer} = data[index];
                     return <Accordion.Item eventKey={index}>
                         <Accordion.Header>
-                            {header}
+                            <p style={{fontWeight:'550'}}>{question}</p>
                         </Accordion.Header>
                         <Accordion.Body>
-                            {body}
+                            {answer}
                         </Accordion.Body>
                     </Accordion.Item>;
                 })}

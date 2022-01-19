@@ -1,0 +1,23 @@
+.container
+{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.column
+{
+    width: 90%;
+}
+
+.places
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.category
+{
+    font-weight: bold;
+}
