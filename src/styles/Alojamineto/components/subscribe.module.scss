@@ -1,0 +1,111 @@
+@import '../../variables.scss';
+
+.container
+{
+    width: 111.111111111111111111111%;
+    margin: 0;
+    margin-left: -5vw;
+}
+
+.top
+{
+    padding: 3rem;
+    background:$myDarkBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerText
+{
+    color: gray;
+    margin-bottom: 1rem;
+}
+
+.form
+{
+    display: flex;
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+.inputContainer
+{
+    width: 80%;
+    margin-right: 5px;
+}
+
+.buttonContainer
+{
+    width: 20%;
+}
+
+.info
+{
+    color: white;
+    font-size: smaller;
+}
+
+.bottom
+{
+    background:$blue;
+    color: white;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonRegister
+{
+    border: 1px solid white;
+    padding: 0.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.buttonRegister:hover
+{
+    background:$borderColor;
+}
+
+.line
+{
+    height: 2px;
+    width: 100%;
+    background:white;
+    margin-bottom: 1rem;
+}
+
+.containerLinks
+{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.link
+{
+    color: white;
+    text-decoration: underline;
+    margin-right: 1rem;
+    
+}
+
+.link:hover
+{
+    color: white;
+}
+
+.link:last-of-type
+{
+    margin-right: 0;
+}

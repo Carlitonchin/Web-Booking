@@ -33,6 +33,7 @@ import Readme from './components/Readme';
 import InfoBlue from './components/InfoBlue';
 import FrequentQuestions from './components/FrequentQuestions';
 import PopularPlaces from './components/PopularPlaces';
+import Subscribe from './components/Subscribe';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -371,7 +372,8 @@ o ponerte en contacto directamente con el alojamiento. Los datos de contacto apa
 <FrequentQuestions/>
 <div className={style.marginBottom}></div>
 <PopularPlaces/>
-
+<div className={style.marginBottom}></div>
+<Subscribe/>
 
   </div>
 }
