@@ -17,13 +17,13 @@
 
 .imgLeft
 {
-    height: 49.5%;
+    height: calc(50% - 0.25rem);
     width: 100%;
 }
 
 .imgRight
 {
-    width: 69%;
+    width: calc(70% - 0.5rem);
     height: 100%;
     
 }

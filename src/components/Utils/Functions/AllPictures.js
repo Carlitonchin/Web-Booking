@@ -1,19 +1,90 @@
 import style from '../../../styles/Utils/Gallery/allImages.module.scss';
-import {useState} from 'react'
+import { useState } from 'react';
+import createArrayOfLength from '../Functions/createArrayOfLength'
+import BlueButton from '../BlueButton';
+import leftArrow from '../../../svg_vistas_travel/flechaizq.svg'
+import rightArrow from '../../../svg_vistas_travel/flechader.svg'
+
+let hotel = "Hotel Miramar"
+let stars = 3;
+let data = ["../img/playa.jpg", "../img/playa.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg"]
+
 
 export default ({pictures, closeHandler})=>
 {
-    
+    const [clickedImage, setImageClicked] = useState(-1);
+
+    function handleGallery(index)
+    {
+        setImageClicked(index);
+    }
 
     return <div className={style.container}>
-        
-        {pictures.map(img=>
-            {
-                return <img src={img} className={style.img}/>
-            })}
+    <div className={style.top}>
+        <div className={style.close} onClick={handleGallery.bind(this, -1)}>{clickedImage!=-1?
+       <>
+            <i class="bi bi-arrow-left-short"></i>
+            <p className={style.textClose}>Galeria</p>
+        </>
+        :""}</div>
 
-            <div 
-            onClick={closeHandler}
-            className={style.close}><h1>X</h1></div>
+        <div className={style.hotel}>
+
+        <p className={style.nameHotel}>{hotel}</p>
+        <div className={style.stars}>
+        {createArrayOfLength(stars).map(_=>
+            {
+                return <><i className={"bi bi-star-fill"}></i></>;
+            })}
+       
+        </div>
+        <div className={style.containerButton}>
+        <BlueButton text="Reservar"/>
+        </div>
+        </div>
+
+<div className={style.close} onClick={closeHandler}>
+    <p className={style.textClose}>Cerrar</p>
+    <i class="bi bi-x"></i>
+</div>
+    </div>
+    <div className={style.commentsAndGallery}>
+
+<div className={style.containerGallery}>
+    {clickedImage == -1?
+<div className={style.gallery}>
+    {createArrayOfLength(data.length).map(index=>
+    <article>
+         <figure>
+             <div className={style.containerImg} onClick={handleGallery.bind(this, index-1)}>
+         <img className={style.img} src={data[index]} />
+         </div>
+     </figure>
+     </article>
+        )}
+</div>
+:
+<div className={style.containerCarousel}>
+<div className={style.carousel}>
+
+{clickedImage>0?<img className={style.svg} src={leftArrow} onClick={handleGallery.bind(this, clickedImage-1)}></img>
+:<img className={style.svg + " " + style.invisible}></img>}
+
+
+<img className={style.imgCarousel} src={data[clickedImage]}></img>
+
+{clickedImage<data.length-1?<img className={style.svg} src={rightArrow} onClick={handleGallery.bind(this, clickedImage+1)}></img>
+:<img className={style.svg + " " + style.invisible}></img>}
+
+</div>
+<h4 className={style.counter}>{(clickedImage+1) + "/" + data.length}</h4>
+</div>
+}
+</div>
+
+
+
+    <div className={style.containerComments}></div>
+    </div>
     </div>
 }

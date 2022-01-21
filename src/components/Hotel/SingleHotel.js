@@ -10,7 +10,7 @@ import BestServices from './Services/BestServices';
 import BlackServices from './Services/BlackServices';
 import FinalInfo from '../../components/Search/FinalInfo';
 import { useLocation } from 'react-router';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getDateFromString, getStringFromDate } from '../../components/Utils/Functions/dateManager';
 import picturesManager from '../../components/Utils/Functions/picturesManager';
 import AllPictures from '../../components/Utils/Functions/AllPictures';
@@ -34,6 +34,8 @@ import InfoBlue from './components/InfoBlue';
 import FrequentQuestions from './components/FrequentQuestions';
 import PopularPlaces from './components/PopularPlaces';
 import Subscribe from './components/Subscribe';
+import FinalLinks from './components/FinalLinks';
+import styleScroll from '../../styles/Utils/notScroll.module.scss'
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -189,7 +191,7 @@ let calificationCategory=
 export default () => {
 
   //borrar luego ......................
-  let pictures = ["../img/playa.jpg", "../img/playa.jpg", "../img/cancun.jpg", "../img/cancun.jpg"]
+  let pictures = ["../img/playa.jpg", "../img/playa.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg"]
 
   let location = "Varadero";
   let stars = 3;
@@ -215,8 +217,20 @@ export default () => {
   const [imageExpanded, setImageExpanded] = useState(false);
 
   function handleImageExpanded() {
+
     setImageExpanded(!imageExpanded);
   }
+
+  useEffect(() => {
+    let html = document.getElementsByTagName("html")[0];
+    if(imageExpanded)
+      html.className += " " + styleScroll.notScroll;
+
+    else
+      html.classList.remove(styleScroll.notScroll)
+    
+  })
+
 
   if (isNaN(adults) || isNaN(childs) || isNaN(cRooms))
     return <h1>Not found</h1>
@@ -226,8 +240,9 @@ export default () => {
 
   let linkTo = `/pagar?event=${name}&adultCount=${adults}&childCount=${childs}&dateSince=${getStringFromDate(since)}&dateTo=${getStringFromDate(to)}`
 
-  //...................................................
+  //.......................................... .........
   return <div className={style.container}>
+    <div className={style.rightTop}>
     <div className={style.containerHeader}>
       <div className={style.nameStarsLocation}>
         <HeaderHotel name={name} location={location} stars={stars} />
@@ -246,7 +261,7 @@ export default () => {
 
       </div>
     </div>
-    <div className={style.containerGallery}>
+    <div className={style.containerGallery + " " + (imageExpanded?style.allImage:"")}>
       {(!imageExpanded ? <ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
         : <AllPictures
           pictures={pictures}
@@ -254,6 +269,7 @@ export default () => {
         />)
       }
 
+    </div>
     </div>
     <div className={style.descriptionAndGood}>
 
@@ -374,6 +390,6 @@ o ponerte en contacto directamente con el alojamiento. Los datos de contacto apa
 <PopularPlaces/>
 <div className={style.marginBottom}></div>
 <Subscribe/>
-
+<FinalLinks/>
   </div>
 }

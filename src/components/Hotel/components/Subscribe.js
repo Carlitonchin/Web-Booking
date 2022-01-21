@@ -15,9 +15,10 @@ export default ()=>
                     <BlueButton text="Registrate"/>
                 </div>
             </div>
-
-            <p className={style.info}>Envíame un enlace para descargar la app de Booking.com GRATIS</p>
-
+            <div class="form-check">
+                <input type="checkbox" id="sendApp"/>
+                <label for="sendApp" className={style.info}>Envíame un enlace para descargar la app de Booking.com GRATIS</label>
+            </div>
         </div>
 
         <div className={style.bottom}>
