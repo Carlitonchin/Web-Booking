@@ -36,6 +36,7 @@ import PopularPlaces from './components/PopularPlaces';
 import Subscribe from './components/Subscribe';
 import FinalLinks from './components/FinalLinks';
 import styleScroll from '../../styles/Utils/notScroll.module.scss'
+import SearchHotelsComponent from './SearchHotelsComponent';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -193,7 +194,7 @@ export default () => {
   //borrar luego ......................
   let pictures = ["../img/playa.jpg", "../img/playa.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg", "../img/cancun.jpg"]
 
-  let location = "Varadero";
+  let location = "Calle Manuel Bonilla 185 - Miraﬂores, Miraﬂores, Lima 01, Perú -";
   let stars = 3;
 
   let { search } = useLocation()
@@ -214,6 +215,7 @@ export default () => {
   const [since, setSince] = useState(getDateFromString(dateSince))
   const [to, setTo] = useState(getDateFromString(dateTo))
   const [cRooms, setRooms] = useState(Number(countRooms))
+  const [place, setPlace] = useState("")
   const [imageExpanded, setImageExpanded] = useState(false);
 
   function handleImageExpanded() {
@@ -242,25 +244,30 @@ export default () => {
 
   //.......................................... .........
   return <div className={style.container}>
+    <div className={style.top}>
+      <div className={style.leftTop}>
+      <SearchHotelsComponent 
+        adults={adults}
+        childs={childs}
+        endDate={to}
+        rooms = {cRooms}
+        setAdults={setAdults}
+        setChilds={setChilds}
+        setEndDate={setTo}
+        setRooms={setRooms}
+        setStartDate={setSince}
+        startDate={since}
+        value={place}
+        setValue={setPlace}
+        />
+
+        <div className={style.map}>
+          <BlueButton text="Ver Mapa"/>
+        </div>
+      </div>
+
     <div className={style.rightTop}>
-    <div className={style.containerHeader}>
-      <div className={style.nameStarsLocation}>
         <HeaderHotel name={name} location={location} stars={stars} />
-      </div>
-
-      <div className={style.containerBooking}>
-        <div className={style.booking}>
-          <GrayButton text="Atras" />
-        </div>
-
-        <div className={style.booking}>
-          <a href={linkTo}>
-            <BlueButton text="Reservar" />
-          </a>
-        </div>
-
-      </div>
-    </div>
     <div className={style.containerGallery + " " + (imageExpanded?style.allImage:"")}>
       {(!imageExpanded ? <ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
         : <AllPictures
@@ -269,6 +276,7 @@ export default () => {
         />)
       }
 
+    </div>
     </div>
     </div>
     <div className={style.descriptionAndGood}>

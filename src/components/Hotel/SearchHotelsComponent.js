@@ -120,8 +120,6 @@ export default ({value, setValue, startDate, setStartDate, endDate, setEndDate, 
          <div className={style.containerBlueButton}>
         <BlueButton text="Buscar"/>
         </div>
-        <p 
-        onClick={handleFilters}
-        className={style.showFiltersMessage + " text-primary"}>{showFilters?"Ocultar Filtros":"Mostrar Filtros"}</p>
+        
     </div>
 }

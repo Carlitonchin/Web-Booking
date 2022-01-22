@@ -8,9 +8,29 @@
     display: flex;
     flex-direction: column;
     margin:0 auto;
+    margin-top: 1rem;
 }
 
+.top
+{
+    display: flex;
+    justify-content: space-between;
+}
 
+.leftTop{
+    width: 25%;
+}
+
+.rightTop
+{
+    width: 74%;
+}
+
+.map
+{
+    padding: 2rem;
+    background:green;
+}
 
 .containerHeader
 {
@@ -48,7 +68,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background:red;
 }
 
 .allImage

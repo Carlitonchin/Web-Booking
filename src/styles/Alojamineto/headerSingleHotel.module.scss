@@ -1,16 +1,46 @@
 @import '../variables.scss';
 
+.container
+{
+    margin-bottom: 0.5rem;
+}
+.labelHotel
+{
+    background:gray;
+    color: white;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.top
+{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
 
 .stars
 {
-    margin-left: 10px;
+    margin-left: 0.3rem;
+    display: flex;
 }
 
 .stars>i
 {
     color:$goldenColor;
-    font-size: 1.3rem;
     margin-right: 3px;
+}
+
+.hand
+{
+    background:$goldenColor;
+    color: white;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    border-radius: 5px;
 }
 
 .nameAndStars
@@ -23,3 +53,45 @@
  {
      margin:0;
  }
+
+ .reserve
+ {
+     display: flex;
+     align-items: center;
+ }
+
+.reserve>i
+{
+    color: $primary;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.reserve>i:hover
+{
+    scale: 1.1;
+}
+
+.location
+{
+    margin: 0;
+    font-weight: 500;
+}
+
+.samePriceContainer
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.samePrice
+{
+    display: flex;
+    color: $primary;
+    font-weight: 500;
+}
+
+.samePrice>i
+{
+    margin-right: 0.1rem;
+}

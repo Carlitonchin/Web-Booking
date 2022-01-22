@@ -8,6 +8,7 @@ import { useState } from 'react'
 import {d, list} from '../Hotel/testingForHotels'
 import { useLocation } from 'react-router'
 import styleHide from '../../styles/Search/hideFilterHotel.module.scss'
+import styleFromSearch from '../../styles/Search/SearchHotel.module.scss'
 
 const Hotel = () => {
     let { search } = useLocation()
@@ -45,6 +46,9 @@ const Hotel = () => {
         showFilters={showFilters}
         handleFilters={handleFilters}
         />
+        <p 
+        onClick={handleFilters}
+        className={styleFromSearch.showFiltersMessage + " text-primary"}>{showFilters?"Ocultar Filtros":"Mostrar Filtros"}</p>
         <div className={style.filterContainer}>
         <h5 className={style.filterTitle + " " + (!showFilters?style.hide:+"")}>Filtrar por:</h5>
         <div className={style.containerFilters + " " +(!showFilters?style.hide:"")}>
