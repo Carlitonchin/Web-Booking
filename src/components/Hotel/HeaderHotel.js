@@ -13,8 +13,25 @@ export default ({name, stars, location})=>
     return  <div className={style.container}>
         <div className={style.top}>
     <div className={style.nameAndStars}>
+        <div className={style.labelStars}>
         <div className={style.labelHotel}>hotel</div>
+        <div className={style.stars + " " + style.starsMobile}>
+        {createArrayOfLength(stars).map(_=>
+            {
+                return <><i className={"bi bi-star-fill"}></i></>;
+            })}
+      <div className={style.hand}>  <i className={"bi bi-hand-thumbs-up-fill"}></i></div>
+        </div>
+        </div>
+        <div className={style.containerNameHotel}> 
         <h3 className={style.name}>{name}</h3>
+        <div className={style.shareMobile + " " + style.reserve}>
+        <i 
+            onClick={()=>setLike(!liked)}
+            className={(liked?"bi bi-heart-fill":"bi bi-heart")}></i>
+                <i className={"bi bi-share-fill"}></i>
+        </div>
+        </div>
     <div className={style.stars}>
         {createArrayOfLength(stars).map(_=>
             {

@@ -22,10 +22,22 @@
     width: 100%;
 }
 
+.labelStars
+{
+    display: flex;
+}
+
+
+
 .stars
 {
     margin-left: 0.3rem;
     display: flex;
+}
+
+.starsMobile
+{
+    display: none;
 }
 
 .stars>i
@@ -47,7 +59,14 @@
 {
     display: flex;
     align-items: center;
+    max-width: 50%;
  }
+
+.containerNameHotel
+{
+    display: flex;
+    align-items: center;
+}
 
  .name
  {
@@ -76,6 +95,7 @@
 {
     margin: 0;
     font-weight: 500;
+    max-width: 50%;
 }
 
 .samePriceContainer
@@ -95,3 +115,11 @@
 {
     margin-right: 0.1rem;
 }
+
+.shareMobile
+{
+    margin-left: 1rem;
+    display: none;
+}
+
+@import './headerSingleHotel.responsive.scss'

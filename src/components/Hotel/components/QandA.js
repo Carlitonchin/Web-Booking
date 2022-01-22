@@ -1,5 +1,6 @@
 import style from '../../../styles/Alojamineto/components/qAndA.module.scss'
-import {useState} from 'react'
+import {useState} from 'react';
+import createArrayOfLength from '../../Utils/Functions/createArrayOfLength'
 
 let data = [
 
@@ -52,6 +53,7 @@ export default ()=>
 {
 
     const [more, setMore] = useState(false)
+    const [[liked, notLiked], setLiked] = useState([[], []]);
 
     let maxQuestions = 2
     let max = more?data.length:maxQuestions;
@@ -59,6 +61,25 @@ export default ()=>
     function handleMore()
     {
         setMore(!more);
+    }
+
+    function handleLike(index)
+    {
+        console.log(liked)
+        if(liked.includes(index))
+            setLiked([liked.filter(i=>i!=index), notLiked]);
+        
+        else
+            setLiked([liked.concat([index]), notLiked.filter(i=>i!=index)]);
+    }
+
+    function handleNotLike(index)
+    {
+        if(notLiked.includes(index))
+            setLiked([liked, notLiked.filter(i=>i!=index)]);
+
+        else
+            setLiked([liked.filter(i=>i!=index), notLiked.concat([index])]);
     }
 
     return <>
@@ -71,9 +92,9 @@ export default ()=>
        </div>
 
     <div className={style.containerQuestions}>
-        {data.slice(0, max).map(q=>
+        {createArrayOfLength(max).map(i=>
             {
-                let {question, answer, translate, details} = q;
+                let {question, answer, translate, details} = data[i-1];
                 return  <><div className={style.box + " " + style.singleQuestion}>
                     <div className={style.containerQA}>
                 <div className={style.qa}>
@@ -91,10 +112,16 @@ export default ()=>
 
                 <div className={style.translateAndLike}>
                     <div className={style.like}>
-                        <p class="text-primary">Útil</p>
-                        <p class="text-primary">Poco Útil</p>
+                        <p class="text-primary"
+                        onClick={handleLike.bind(this, i-1)}
+                        >
+                            <i class={liked.includes(i-1)?"bi bi-hand-thumbs-up-fill":"bi bi-hand-thumbs-up"}></i>Útil</p>
+                        <p 
+                        onClick={handleNotLike.bind(this, i-1)}
+                        class="text-primary">
+                            <i class={notLiked.includes(i-1)?"bi bi-hand-thumbs-down-fill":"bi bi-hand-thumbs-down"}></i>
+                            Poco Útil</p>
                     </div>
-
                     <div className={style.translate}>
                         {translate
                         ?<><p>{"traducido - "}</p><a href='#'>Ver original</a></>

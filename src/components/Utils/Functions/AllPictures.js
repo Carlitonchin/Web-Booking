@@ -1,5 +1,5 @@
 import style from '../../../styles/Utils/Gallery/allImages.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import createArrayOfLength from '../Functions/createArrayOfLength'
 import BlueButton from '../BlueButton';
 import leftArrow from '../../../svg_vistas_travel/flechaizq.svg'
@@ -18,6 +18,21 @@ export default ({pictures, closeHandler})=>
     {
         setImageClicked(index);
     }
+
+    useEffect(() =>{
+        const handleResize = () => {
+        
+           if(window.innerWidth <= 700)
+                closeHandler();
+        };
+        
+        window.addEventListener("resize",handleResize);
+        window.addEventListener("onload", handleResize)
+          
+        return () => {
+            window.removeEventListener("onload", handleResize)
+            window.removeEventListener("resize", handleResize)}
+      },[])
 
     return <div className={style.container}>
     <div className={style.top}>

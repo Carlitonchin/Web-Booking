@@ -134,24 +134,23 @@ overflow: hidden;
 .containerCarousel
 {
     height: 100%;
-   padding-left: 3rem;
-   padding-right: 3rem;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 .carousel
 {
     height: calc(100% - 3rem);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    background:red;
 }
 
 .imgCarousel
 {
-    max-width: 100%;
+    max-width: calc(100% - 7rem);
     max-height: 100%;
 }
 

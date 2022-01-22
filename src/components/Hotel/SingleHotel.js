@@ -37,6 +37,7 @@ import Subscribe from './components/Subscribe';
 import FinalLinks from './components/FinalLinks';
 import styleScroll from '../../styles/Utils/notScroll.module.scss'
 import SearchHotelsComponent from './SearchHotelsComponent';
+import CarouselHotelImages from './components/CarouselHotelImages';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -218,6 +219,26 @@ export default () => {
   const [place, setPlace] = useState("")
   const [imageExpanded, setImageExpanded] = useState(false);
 
+  const [size, setSize] = useState({
+    width: undefined,
+    height: undefined,
+});
+
+useEffect(() =>{
+  const handleResize = () => {
+     setSize({
+         width: window.innerWidth,
+         height: window.innerHeight,
+     });
+  };
+  window.addEventListener("resize",handleResize);
+  window.onload = ()=>setSize({  width: window.innerWidth,
+    height: window.innerHeight,})
+
+  return () => window.removeEventListener("resize", handleResize)
+},[])
+
+
   function handleImageExpanded() {
 
     setImageExpanded(!imageExpanded);
@@ -268,12 +289,15 @@ export default () => {
 
     <div className={style.rightTop}>
         <HeaderHotel name={name} location={location} stars={stars} />
-    <div className={style.containerGallery + " " + (imageExpanded?style.allImage:"")}>
-      {(!imageExpanded ? <ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
+    <div className={style.containerGallery + " " + ((size.width > 700)?(imageExpanded?style.allImage:""):"")}>
+      {
+      size.width > 700?((!imageExpanded ? <ContainerImages pictures={pictures} handleImageExpanded={handleImageExpanded} />
         : <AllPictures
           pictures={pictures}
           closeHandler={handleImageExpanded}
-        />)
+        />))
+        :
+        <CarouselHotelImages pictures={pictures}/>
       }
 
     </div>

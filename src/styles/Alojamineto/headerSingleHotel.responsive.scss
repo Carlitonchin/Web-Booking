@@ -1,0 +1,64 @@
+@media (max-width: 1000px)
+{
+    .stars
+    {
+        display: none;
+    }
+
+    .starsMobile
+    {
+        display: flex;
+    }
+
+    .nameAndStars
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .reserve
+    {
+        display: none;
+    }
+
+    .shareMobile
+    {
+        display: flex;
+    }
+
+    .nameAndStars
+    {
+        max-width: 100%;
+    }
+
+    .location
+    {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .samePrice
+    {
+        display: none;
+    }
+
+    .nameAndStars
+    {
+        width: 100%;
+    }
+
+    .name
+    {
+        max-width: 70%;
+    }
+
+    .containerNameHotel{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
