@@ -1,0 +1,71 @@
+@media (max-width: 949px)
+{
+    .left
+    {
+        width: 25%;
+    }
+
+    .right
+    {
+        width: 73%;
+    }
+
+    .containerBarTime
+    {
+        width: 50%;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .containerBarTime
+    {
+        width: 50%;
+        margin-top: 1.3rem;
+    }
+
+    .row
+    {
+        flex-direction: column;
+    }
+
+    .left
+    {
+        width: 100%;
+    }
+
+    .right
+    {
+        width: 100%;
+    }
+
+    .rowAclaration
+    {
+
+    padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 500px)
+{
+    .containerBarTime
+    {
+        width: 65%;
+    }
+}
+
+@media (max-width: 499px) and (min-width: 401px)
+{
+    .containerBarTime
+    {
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .containerBarTime
+    {
+        width: 100%;
+    }
+}

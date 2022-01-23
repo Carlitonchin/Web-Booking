@@ -1,4 +1,6 @@
 import style from '../../../styles/Alojamineto/components/readme.module.scss'
+import checkputIcon from '../../../svg_vistas_travel/out.svg'
+import checkinIcon from '../../../svg_vistas_travel/in.svg'
 
 function getTime(timeText)
 {
@@ -33,22 +35,18 @@ let checkout = {
 let data = 
 [
     {
-        icon:'/favicon.ico',
+        icon:'/assets/check.svg',
         name:'Check-In online diponible',
         info:['En este alojamiento, puedes hacer el check-in online antes de la estancia y ahórrate esperas cuando llegues.']
     },
     {
-        icon:'/favicon.ico',
-        name:'Cancelacion/Prepago',
+        icon:'/assets/info.svg',
+        name:'Cancelacion / Prepago',
         info:['Las condiciones de cancelación y de pago por adelantado pueden varias según el tipo de apartamento.']
     },
+    
     {
-        icon:'/favicon.ico',
-        name:'Check-In online diponible',
-        info:['En este alojamiento, puedes hacer el check-in online antes de la estancia y ahórrate esperas cuando llegues.']
-    },
-    {
-        icon:'/favicon.ico',
+        icon:'/assets/boy.svg',
         name:'Camas para ninhos',
         info:['Condiciones para estancias con niños',
     'Se pueden alojar niños de cualquier edad.',
@@ -60,22 +58,22 @@ let data =
 ]
     },
     {
-        icon:'/favicon.ico',
+        icon:'/assets/capacidad.svg',
         name:'No hay restricción por edad',
         info:['No hay edad mínima para el check-in']
     },
     {
-        icon:'/favicon.ico',
+        icon:'/assets/credit-cards-payment.svg',
         name:'Pagos mediante Booking.com',
         info:['Booking.com gestiona el pago de tu estancia en nombre del alojamiento, pero asegúrate de llevar efectivo para poder abonar cualquier gasto adicional una vez estés allí.']
     },
     {
-        icon:'/favicon.ico',
+        icon:'/assets/smoker.svg',
         name:'Fumadores / No fumadores',
         info:['No se puede fumar.']
     },
     {
-        icon:'/favicon.ico',
+        icon:'/assets/moon.svg',
         name:'Horario sin ruido',
         info:['Los clientes deben minimizar el ruido de 00:00 a 08:00']
     }
@@ -98,7 +96,7 @@ export default ()=>
         <div className={style.row}>
     <div className={style.left}>
         <div className={style.icon}
-        style={{backgroundImage:`url(/favicon.ico)`}}></div>
+        style={{backgroundImage:`url(${checkinIcon}`}}></div>
         <p>Entrada</p>
     </div>
 
@@ -128,7 +126,7 @@ export default ()=>
     <div className={style.row}>
     <div className={style.left}>
         <div className={style.icon}
-        style={{backgroundImage:`url(/favicon.ico)`}}></div>
+        style={{backgroundImage:`url(${checkputIcon}`}}></div>
         <p>Salida</p>
     </div>
 
