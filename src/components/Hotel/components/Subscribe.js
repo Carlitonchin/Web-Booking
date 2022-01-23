@@ -14,6 +14,9 @@ export default ()=>
                 <div className={style.buttonContainer}>
                     <BlueButton text="Registrate"/>
                 </div>
+                <div className={"btn btn-primary " + style.buttonMobile}>
+                <i class="bi bi-send-fill"></i>
+                </div>
             </div>
             <div className={"form-check " + style.checkContainer}>
                 <input type="checkbox" id="sendApp"/>

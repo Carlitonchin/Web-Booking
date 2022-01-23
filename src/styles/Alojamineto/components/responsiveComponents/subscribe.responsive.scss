@@ -56,6 +56,16 @@
 {
     .buttonContainer
     {
-        width: 30%;
+        display: none;
+    }
+
+    .buttonMobile
+    {
+        display: block;
+    }
+
+    .inputContainer
+    {
+        width: 100%;
     }
 }
