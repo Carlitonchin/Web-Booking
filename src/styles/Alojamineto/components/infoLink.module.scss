@@ -7,6 +7,12 @@
     justify-content: space-between;
 }
 
+.head
+{
+    display: flex;
+    justify-content: space-between;
+}
+
 .icon
 {
     width: 4rem;
@@ -27,3 +33,10 @@
 {
     font-weight: bold;
 }
+
+.finalInfoMobile
+{
+    display: none;
+}
+
+@import './responsiveComponents/infoLink.responsive.scss';

@@ -25,3 +25,10 @@
     color:gray;
     font-weight: 500;
 }
+
+.hidePersons
+{
+    display: none
+}
+
+@import './responsiveComponents/modifySearch.responsive.scss';

@@ -1,0 +1,28 @@
+@media (max-width: 500px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .finalInfoMobile
+    {
+        display: block;
+    }
+
+    .finalInfo
+    {
+        display: none;
+    }
+
+    .head
+    {
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+
+    .title
+    {
+        font-size: 1.2rem;
+    }
+}

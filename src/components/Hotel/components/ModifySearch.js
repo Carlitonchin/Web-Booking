@@ -19,9 +19,16 @@ export default ({since, to, countAdults, countChilds})=>
         <p className={style.info}>Estancia de 15 noches</p>
     </div>
 
+    <div className={style.hidePersons}>
+       <p className={style.title}>
+           {"huéspedes"}
+        </p>
+        <p className={style.blue}>{countAdults + " adultos"}</p>
+        {countChilds? <p className={style.blue}>{countChilds + " niños"}</p> : ""} 
+    </div>
     </div>
 
-    <div>
+    <div className={style.persons}>
        <p className={style.title}>
            {"huéspedes"}
         </p>
