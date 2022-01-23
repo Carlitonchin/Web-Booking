@@ -7,7 +7,7 @@ import {useState} from 'react';
 import {getDateFromString, getStringFromDate} from '../../components/Utils/Functions/dateManager';
 import {useLocation} from 'react-router'
 import styleFromSingleHotel from '../../styles/Alojamineto/singleHotel.module.scss'
-import AllPictures from '../../components/Utils/Functions/AllPictures';
+import AllPictures from '../../components/Utils/AllPictures';
 
 
 let pictures=["../img/playa.jpg","../img/playa.jpg","../img/cancun.jpg","../img/cancun.jpg"]

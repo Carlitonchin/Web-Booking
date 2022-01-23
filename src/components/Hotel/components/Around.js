@@ -5,7 +5,7 @@ let data=
 [
     [
         {
-            icon:'/favicon.ico',
+            icon:'/assets/caminar.svg',
             name:'Qué hay cerca?',
             data:[
                 {name:'Palacio de Diocleciano', distance:'0.1 km'},
@@ -24,7 +24,7 @@ let data=
 
     [
         {
-            icon:'/favicon.ico',
+            icon:'/assets/tenedores.svg',
             name:'Restaurantes y cafeterias',
             data:[
                 {name:'Cafeteria Bar', distance:'0.1 km'},
@@ -33,7 +33,7 @@ let data=
             ]
         },
         {
-            icon:'/favicon.ico',
+            icon:'/assets/rueda.svg',
             name:'Atracciones turísticas destacadas',
             data:[
                 {name:'Palacio de Diocleciano', distance:'0.1 km'},
@@ -51,7 +51,7 @@ let data=
 
     [
         {
-            icon:'/favicon.ico',
+            icon:'/assets/montain.svg',
             name:'Entorno Natural',
             data:[
                 {name:'Mar/Ocenao', distance:'0.3 km'},
@@ -59,7 +59,7 @@ let data=
             ]
         },
         {
-            icon:'/favicon.ico',
+            icon:'/assets/sea_2.svg',
             name:'Playas en la zona',
             data:[
                 {name:'Palacio de Diocleciano', distance:'0.1 km'},
@@ -74,7 +74,7 @@ let data=
             ]
         },
         {
-            icon:'/favicon.ico',
+            icon:'/assets/avion.svg',
             name:'Aeropuertos mas cercano',
             data:[
                 {name:'Palacio de Diocleciano', distance:'0.1 km'},
@@ -97,7 +97,7 @@ export default ()=>
     info={`El centro histórico de Split presume de tener el palacio romano mejor conservador del mundo, construido hace 1.600 años por el emperador Diocleciano. El
     antiguo palacio hoy alberga tiendas, restaurantes e incluso casas particulares.`}
     white={true}
-    icon="/favicon.ico"
+    icon="/assets/tower.svg"
     />
 
     <div className={style.containerList}>

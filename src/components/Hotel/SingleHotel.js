@@ -13,7 +13,7 @@ import { useLocation } from 'react-router';
 import { useState, useEffect } from 'react';
 import { getDateFromString, getStringFromDate } from '../../components/Utils/Functions/dateManager';
 import picturesManager from '../../components/Utils/Functions/picturesManager';
-import AllPictures from '../../components/Utils/Functions/AllPictures';
+import AllPictures from '../Utils/AllPictures';
 import Description from './components/Description';
 import GoodPoints from './components/GoodPoints';
 import ReserveData from './components/ReserveData';
@@ -54,23 +54,23 @@ cercanos son el Mercado Indio y el centro comercial Larcomar.
 
 const goodPoints = [
   {
-    icon: '/favicon.ico',
+    icon: '/assets/sea.svg',
     text: "Ubicacion fantastica"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/arbol2.svg',
     text: "Comodidad para tus vacaciones"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/ciudad.svg',
     text: "Barrio tranquilo"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/caminar.svg',
     text: "Empieza el dia con buen pie"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/parking.svg',
     text: "Muevete a tu aire"
   }
 ]
@@ -130,19 +130,19 @@ let beaches = [
 
 let reasons = [
   {
-    icon: '/favicon.ico',
+    icon: '/assets/billet.svg',
     text: "Precios Imbatibles"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/candado2.svg',
     text: "Una reserva segura"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/setting.svg',
     text: "Gestiona tus reservas online"
   },
   {
-    icon: '/favicon.ico',
+    icon: '/assets/mensaje.svg',
     text: "El personal habla español"
   }
 ]
@@ -341,13 +341,13 @@ useEffect(() =>{
     </div>
 
     <BadNew
-      icon="/favicon.ico"
+      icon="/assets/timer.svg"
       title="Disponibilidad limitada en Lima para la fecha"
       info="8 hoteles de 3 estrellas como este ya no están disponibles en nuestra página"
     />
 <div style={{marginBottom:'0.5rem'}}></div>
     <GoodNew
-      icon="/favicon.ico"
+      icon="/assets/candado.svg"
       title="Consigue un buen precio para tu próxima estancia"
       info="Puede ser que los precios suban, así que garantiza tu reserva ahora!"
     />
@@ -357,7 +357,7 @@ useEffect(() =>{
     title= "Medidas de salud y seguridad especiales"
     info="Este alojamiento ha tomado medidas de higiene y salud especiales por que tu seguridad es lo más importante"
     link="Ver info sobre salud y seguridad"
-    picture="/favicon.ico" />
+    picture="/assets/escudo.svg" />
 
 
 
@@ -400,7 +400,7 @@ useEffect(() =>{
     title= "Iniciativas sostenibles"
     info="Este alojamiento ha tomado medidas para promover una forma de viajar más sostenible y respetuosa con el medioambiente"
     link="Leer más"
-    picture="/favicon.ico" />
+    picture="/assets/logo99.svg" />
 
 <div className={style.around + " " + style.h2}>
 <h4>Léeme</h4>

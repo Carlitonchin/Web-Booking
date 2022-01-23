@@ -1,0 +1,74 @@
+@import '../variables.scss';
+
+.top
+{
+    display: flex;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.calification
+{
+    background:darkblue;
+    color:white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.calificationVerbal
+{
+    font-weight: bold;
+}
+
+.countComments
+{
+    color: gray;
+    font-size: smaller;
+}
+
+.containerComments
+{
+    padding: 0.5rem;
+}
+
+.singleComment
+{
+    margin-bottom: 1rem;
+    border-top: 1px solid $borderColor;
+}
+
+.textComments
+{
+    margin-bottom: 0.3rem;
+}
+
+.userInfo
+{
+    display: flex;
+    align-items: center;
+}
+
+.img
+{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    margin-right: 0.3rem;
+}
+
+.nameAndCountry>*
+{
+    margin: 0;
+}
+
+.country
+{
+    font-size: smaller;
+    color: gray;
+}

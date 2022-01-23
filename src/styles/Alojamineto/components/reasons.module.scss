@@ -10,6 +10,15 @@
     display: flex;
     margin-bottom: 0.7rem;
     align-items: center;
+    
+}
+
+.containerIcon
+{
+    background:rgba(124, 245, 245, 0.486);
+    margin-right: 1rem;
+    padding: 0.3rem;
+    border-radius: 5px;
 }
 
 .icon
@@ -18,7 +27,7 @@
     height: 2.7rem;
     background-position: center;
     background-size: cover;
-    margin-right: 1rem;
+    
 }
 
 @media (max-width: 500px)

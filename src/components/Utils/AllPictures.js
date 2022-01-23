@@ -1,9 +1,10 @@
-import style from '../../../styles/Utils/Gallery/allImages.module.scss';
+import style from '../../styles/Utils/Gallery/allImages.module.scss';
 import { useState, useEffect } from 'react';
-import createArrayOfLength from '../Functions/createArrayOfLength'
-import BlueButton from '../BlueButton';
-import leftArrow from '../../../svg_vistas_travel/flechaizq.svg'
-import rightArrow from '../../../svg_vistas_travel/flechader.svg'
+import createArrayOfLength from './Functions/createArrayOfLength'
+import BlueButton from './BlueButton';
+import leftArrow from '../../svg_vistas_travel/flechaizq.svg'
+import rightArrow from '../../svg_vistas_travel/flechader.svg'
+import AllComments from './AllComments';
 
 let hotel = "Hotel Miramar"
 let stars = 3;
@@ -72,7 +73,7 @@ export default ({pictures, closeHandler})=>
     <article>
          <figure>
              <div className={style.containerImg} onClick={handleGallery.bind(this, index-1)}>
-         <img className={style.img} src={data[index]} />
+         <img className={style.img} src={data[index-1]} />
          </div>
      </figure>
      </article>
@@ -99,7 +100,9 @@ export default ({pictures, closeHandler})=>
 
 
 
-    <div className={style.containerComments}></div>
+    <div className={style.containerComments}>
+        <AllComments/>
+    </div>
     </div>
     </div>
 }

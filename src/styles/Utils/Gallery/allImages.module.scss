@@ -95,17 +95,28 @@ overflow: hidden;
 .commentsAndGallery
 {
     height: calc(100% - 4rem);
+    display: flex;
+    justify-content: space-between;
 }
 
 .containerGallery
 {
+    width: 75%;
     height: 100%;
     overflow-y: scroll;
 }
 
+.containerComments
+{
+    width: 24%;
+    padding: 1rem;
+    overflow-y: scroll;
+    border-left: 1px solid $borderColor;
+}
+
 .gallery
 {
-    padding: 1rem;
+    padding: 0.5rem;
     width:100%;
     column-count: 3;
     height: fit-content;
@@ -145,7 +156,6 @@ overflow: hidden;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    background:red;
 }
 
 .imgCarousel
@@ -180,4 +190,3 @@ overflow: hidden;
     text-align: center;
     font-size: 2rem;
 }
-

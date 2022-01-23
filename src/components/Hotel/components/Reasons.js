@@ -7,10 +7,12 @@ export default ({data})=>
             {
                 let {icon, text} = reason;
                 return <div className={style.reason}>
+                    <div className={style.containerIcon}>
                     <div 
                     className={style.icon}
                     style={{backgroundImage:`url(${icon})`}}
                     ></div>
+                    </div>
                     <p style={{fontWeight:'bold'}}>{text}</p>
                 </div>
             })}

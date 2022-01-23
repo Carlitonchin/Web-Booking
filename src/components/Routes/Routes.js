@@ -19,7 +19,6 @@ import SearchFly from '../../pages/Vuelos/SearchFly';
 import PayFly from '../../pages/Vuelos/PayFly';
 import SearchTaxi from '../../pages/TaxiAereopuerto/SearchTaxi';
 import PayTaxi from '../../pages/TaxiAereopuerto/PayTaxi';
-import AllPictures from '../Utils/Functions/AllPictures';
 
 
 const Routing = () => {
@@ -42,7 +41,6 @@ const Routing = () => {
             <Route path="/pagar" element={<Payment />}/>
             <Route path="/coches/buscar" element={<SearchCar />}/>
             <Route path="/coches/coche" element={<SingleCar />}/>
-            <Route path="/allpicture" element={<AllPictures />}/>
             
           </Routes>
     )
