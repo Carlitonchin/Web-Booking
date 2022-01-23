@@ -417,9 +417,9 @@ o ponerte en contacto directamente con el alojamiento. Los datos de contacto apa
 />
 
 <div className={style.marginBottom}></div>
-<FrequentQuestions/>
+<FrequentQuestions />
 <div className={style.marginBottom}></div>
-<PopularPlaces/>
+<PopularPlaces />
 <div className={style.marginBottom}></div>
 <Subscribe/>
 <FinalLinks/>
