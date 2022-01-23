@@ -384,7 +384,7 @@ useEffect(() =>{
 
 <div className={style.around + " " + style.h2}>
 <h4>Alrededores del alojamiento</h4>
-<div><BlueButton text="Ver disponibilidad"/></div>
+<div className={style.buttonAvaibility}><BlueButton text="Ver disponibilidad"/></div>
 </div>
 <Around/>
 <div className={style.around + " " + style.h2}>

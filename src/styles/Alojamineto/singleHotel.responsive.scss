@@ -23,6 +23,17 @@
        align-self: center;
        margin-top: 1rem;
     }
+
+    .around
+    {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .around>div
+    {
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media (max-width:500px)
