@@ -1,6 +1,8 @@
 import style from '../../../styles/Alojamineto/components/qAndA.module.scss'
 import {useState} from 'react';
 import createArrayOfLength from '../../Utils/Functions/createArrayOfLength'
+import questionIcon from '../../../svg_vistas_travel/capacidad.svg';
+import answerIcon from '../../../svg_vistas_travel/chat.svg';
 
 let data = [
 
@@ -98,13 +100,13 @@ export default ()=>
                 return  <><div className={style.box + " " + style.singleQuestion}>
                     <div className={style.containerQA}>
                 <div className={style.qa}>
-                    <div style={{backgroundImage:`url(/favicon.ico)`}}
+                    <div style={{backgroundImage:`url(${questionIcon})`}}
                     className={style.icon}></div>
                     <p style={{fontWeight:'bold'}}>{question}</p>
                 </div>
 
                 <div className={style.qa}>
-                    <div style={{backgroundImage:`url(/favicon.ico)`}}
+                    <div style={{backgroundImage:`url(${answerIcon})`}}
                     className={style.icon}></div>
                     <p>{answer}</p>
                 </div>

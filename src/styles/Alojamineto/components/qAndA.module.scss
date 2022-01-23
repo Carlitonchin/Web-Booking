@@ -97,3 +97,26 @@
 {
     width: 100%;
 }
+
+@media (max-width: 800px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .box1
+    {
+        margin-bottom: 1rem;
+    }
+
+    .box
+    {
+        width: 100%;
+    }
+
+    .containerQuestions
+    {
+        width: 100%;
+    }
+}

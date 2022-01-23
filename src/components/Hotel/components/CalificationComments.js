@@ -8,12 +8,14 @@ export default ({data})=>
             <p style={{fontWeight:'bold'}}>{data.textCalificacion}</p>
         </div>
 
+    <div className={style.count}>
         <div className={style.item}>
             <p style={{color:'gray'}}>{data.count + " comentarios"}</p>
         </div>
 
         <div className={style.item}>
             <a href="#">Leer todos los comentarios</a>
+        </div>
         </div>
     </div>
 }

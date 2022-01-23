@@ -3,6 +3,11 @@
     display: flex;
 }
 
+.count
+{
+    display: flex;
+}
+
 .item
 {
     display: flex;
@@ -18,4 +23,47 @@
     font-weight: bold;
     padding: 0.4rem;
     margin-right: 0.3rem;
+}
+
+@media (max-width: 500px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .item
+    {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .count>.item
+    {
+        margin-bottom: 0;
+    }
+
+    .count
+    {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .count
+    {
+        flex-direction: column;
+    }
+
+    .item
+    {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .item:last-of-type
+    {
+        margin-bottom: 0;
+    }
 }

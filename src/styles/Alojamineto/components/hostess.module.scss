@@ -1,4 +1,5 @@
 @import '../../variables.scss';
+
 .header
 {
     display: flex;
@@ -59,3 +60,5 @@
 .descriptionText>p:first-of-type{
     margin-bottom: 0.5rem;
 }
+
+@import './responsiveComponents//hostess.responsive.scss';
