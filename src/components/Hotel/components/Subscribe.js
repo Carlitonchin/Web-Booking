@@ -15,7 +15,7 @@ export default ()=>
                     <BlueButton text="Registrate"/>
                 </div>
             </div>
-            <div class="form-check">
+            <div className={"form-check " + style.checkContainer}>
                 <input type="checkbox" id="sendApp"/>
                 <label for="sendApp" className={style.info}>Envíame un enlace para descargar la app de Booking.com GRATIS</label>
             </div>
