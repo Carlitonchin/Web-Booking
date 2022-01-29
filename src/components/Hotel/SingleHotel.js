@@ -228,11 +228,13 @@ export default () => {
 
 useEffect(() =>{
   const handleResize = () => {
+
      setSize({
          width: window.innerWidth,
          height: window.innerHeight,
      });
   };
+
   window.addEventListener("resize",handleResize);
   window.onload = ()=>setSize({  width: window.innerWidth,
     height: window.innerHeight,})
@@ -254,13 +256,20 @@ useEffect(() =>{
       room:room
     })
   }
+
   useEffect(() => {
     let html = document.getElementsByTagName("html")[0];
-    if(imageExpanded || roomsExpanded.expanded)
+    if(imageExpanded)
       html.className += " " + styleScroll.notScroll;
 
+    else if(roomsExpanded.expanded)
+      html.className += " " + styleScroll.notScrollStrong;
+
     else
+    {
+      html.classList.remove(styleScroll.notScrollStrong)
       html.classList.remove(styleScroll.notScroll)
+    }
     
   })
 
@@ -361,6 +370,8 @@ handleExpanded={handleRoomsExpanded}/>
 roomExpanded = {roomsExpanded}
 handleExpanded={handleRoomsExpanded}/>
 }
+
+<div className={style.marginBottom}></div>
 
     <BadNew
       icon="/assets/timer.svg"

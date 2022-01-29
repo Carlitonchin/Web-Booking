@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import style from '../../styles/Utils/Gallery/allImages.module.scss';
+
+import leftArrow from '../../svg_vistas_travel/flechaizq.svg'
+import rightArrow from '../../svg_vistas_travel/flechader.svg'
 export default ({data})=>
 {
     const [index, setIndex] = useState(0)
@@ -14,13 +17,13 @@ export default ({data})=>
     return <div className={style.containerCarousel}>
 <div className={style.carousel}>
 
-{clickedImage>0?<img className={style.svg} src={leftArrow} onClick={handleGallery.bind(this, index-1)}></img>
+{index>0?<img className={style.svg} src={leftArrow} onClick={handleGallery.bind(this, index-1)}></img>
 :<img className={style.svg + " " + style.invisible}></img>}
 
 
 <img className={style.imgCarousel} src={data[index]}></img>
 
-{clickedImage<data.length-1?<img className={style.svg} src={rightArrow} onClick={handleGallery.bind(this, index+1)}></img>
+{index<data.length-1?<img className={style.svg} src={rightArrow} onClick={handleGallery.bind(this, index+1)}></img>
 :<img className={style.svg + " " + style.invisible}></img>}
 
 </div>

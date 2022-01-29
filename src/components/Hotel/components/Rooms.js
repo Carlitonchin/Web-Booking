@@ -3,6 +3,7 @@ import style from '../../../styles/Alojamineto/components/rooms.module.scss'
 import capacityIcon from '../../../svg_vistas_travel/capacidad.svg'
 import BlueButton from '../../Utils/BlueButton'
 import createArrayOfLength from '../../Utils/Functions/createArrayOfLength'
+import SingleRoom from './SingleRoom'
 
 
 let data = [
@@ -42,63 +43,76 @@ let data = [
     }
 ]
 
-export default ({roomExpanded, handleExpanded})=>
+function Rooms({roomExpanded, handleExpanded})
 {
     return <div className={style.container}>
-        <div className={style.row + " " + style.header}>
-            <div className={style.capacity}>
-                <div className={style.containerTextHeader}>
-                <h6 style={{margin:0}}>Capacidad</h6>
-                </div>
-                </div>
-            <div className={style.type}>
+    <div className={style.row + " " + style.header}>
+        <div className={style.capacity}>
             <div className={style.containerTextHeader}>
-                <h6 style={{margin:0}}>Tipo de habitaciones</h6>
-                </div>
-                </div>
-        </div>
-        {data.map(item=>
-            {
-                let {capacity, title, bet} = item;
-                return <div className={style.row}>
-                    <div className={style.capacity + " " + style.containerIconsCap}>
-                        {capacity<4?
-                        createArrayOfLength(capacity).map(_=>
-                            <img src={capacityIcon} className={style.iconCap}></img>
-                            )
-                        :<div className={style.containerCount}> 
-                            <img src={capacityIcon} className={style.iconCap}></img>
-                            <h6 className={style.count}>{"X" + capacity}</h6>
-                        </div>
-                        }
-                    </div>
-
-                    <div className={style.type}>
-                        <div className={style.betInfo}>
-                        <h5 
-                        onClick={handleExpanded.bind(this, item)}
-                        className={style.title}
-                        >{title}</h5>
-                        {bet.map(b=>
-                            {
-                                let {place, text, icon} = b
-                                return <div className={style.betContainer}>
-                                    <div className={style.singleBet}>
-                                        <p>{place?<span className={style.place}>{place + ": "} </span>:""}{text} <img className={style.betIcon} src={icon}></img></p> 
-                                        
-                                        </div>
-                                </div>
-                            })}
-
-                            </div>
-                    </div>
-
-                    <div className={style.buttonContainer}>
-                        <BlueButton 
-                        handleClick={handleExpanded.bind(this, item)}
-                        text="Mostrar Precios"/>
-                    </div>
-                </div>
-            })}
+            <h6 style={{margin:0}}>Capacidad</h6>
+            </div>
+            </div>
+        <div className={style.type}>
+        <div className={style.containerTextHeader}>
+            <h6 style={{margin:0}}>Tipo de habitaciones</h6>
+            </div>
+            </div>
     </div>
+    {data.map(item=>
+        {
+            let {capacity, title, bet} = item;
+            return <div className={style.row}>
+                <div className={style.capacity + " " + style.containerIconsCap}>
+                    {capacity<4?
+                    createArrayOfLength(capacity).map(_=>
+                        <img src={capacityIcon} className={style.iconCap}></img>
+                        )
+                    :<div className={style.containerCount}> 
+                        <img src={capacityIcon} className={style.iconCap}></img>
+                        <h6 className={style.count}>{"X" + capacity}</h6>
+                    </div>
+                    }
+                </div>
+
+                <div className={style.type}>
+                    <div className={style.betInfo}>
+                    <h5 
+                    onClick={handleExpanded.bind(this, item)}
+                    className={style.title}
+                    >{title}</h5>
+                    {bet.map(b=>
+                        {
+                            let {place, text, icon} = b
+                            return <div className={style.betContainer}>
+                                <div className={style.singleBet}>
+                                    <p>{place?<span className={style.place}>{place + ": "} </span>:""}{text} <img className={style.betIcon} src={icon}></img></p> 
+                                    
+                                    </div>
+                            </div>
+                        })}
+
+                        </div>
+                </div>
+
+                <div className={style.buttonContainer}>
+                    <BlueButton 
+                    handleClick={handleExpanded.bind(this, item)}
+                    text="Mostrar Precios"/>
+                </div>
+            </div>
+        })}
+</div>
+}
+
+export default ({roomExpanded, handleExpanded})=>
+{
+    return !roomExpanded.expanded?
+    <Rooms
+    roomExpanded={roomExpanded}
+    handleExpanded={handleExpanded}
+    />:
+    <SingleRoom 
+    room = {roomExpanded.room}
+    handleExpanded={handleExpanded}/>
+    
 }

@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+.container
+{
+    width: 95%;
+    height: 95%;
+    background:white;
+    border-radius: 5px;
+    box-shadow: -1px 7px 34px -4px rgba(0,0,0,0.44);
+-webkit-box-shadow: -1px 7px 34px -4px rgba(0,0,0,0.44);
+-moz-box-shadow: -1px 7px 34px -4px rgba(0,0,0,0.44);
+overflow: hidden;
+margin-left: 2.5%;
+margin-top: 1%;
+display: flex;
+position: relative;
+}
+
+.close
+{
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    cursor: pointer;
+}
+
+.close:hover
+{
+    color: $primary;
+}
+
+.containerCarousel
+{
+    height: 70%;
+    width: 60%;
+}
+
+.containerInfo
+{
+    width: 40%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 1rem;
+}
+
+.containerBest
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemBest
+{
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.2rem;
+    font-size: smaller;
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.itemBest:last-of-type
+{
+    margin-right: 0;
+}
+
+.icon
+{
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.3rem;
+}
+
+.twoRows
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
