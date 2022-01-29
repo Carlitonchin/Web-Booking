@@ -20,8 +20,8 @@ position: relative;
 {
 
     position: fixed;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: calc(1% + 0.5rem);
+    right: calc(2.5% + 0.5rem);
     width: 1.3rem;
     height: 1.3rem;
     cursor: pointer;
