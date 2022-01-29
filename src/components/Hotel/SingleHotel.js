@@ -38,6 +38,7 @@ import FinalLinks from './components/FinalLinks';
 import styleScroll from '../../styles/Utils/notScroll.module.scss'
 import SearchHotelsComponent from './SearchHotelsComponent';
 import CarouselHotelImages from './components/CarouselHotelImages';
+import Rooms from './components/Rooms';
 
 const textDescription = `¡Puedes conseguir un descuento Genius en Faraona Grand Hotel! Para ahorrar en este alojamiento, solo tienes que iniciar sesión.
 Alberga un restaurante. El establecimiento Grand está ubicado en el distrito histórico de Miraﬂores, a 100 metros del parque Kennedy, y ofrece habitaciones acogedoras con baño reformado. Se sirve el desayuno. Hay WiFi gratuita.
@@ -218,6 +219,7 @@ export default () => {
   const [cRooms, setRooms] = useState(Number(countRooms))
   const [place, setPlace] = useState("")
   const [imageExpanded, setImageExpanded] = useState(false);
+  const [roomsExpanded, setRoomsExpanded] = useState({expanded:false, room : null})
 
   const [size, setSize] = useState({
     width: undefined,
@@ -244,9 +246,17 @@ useEffect(() =>{
     setImageExpanded(!imageExpanded);
   }
 
+  function handleRoomsExpanded(room)
+  {
+  setRoomsExpanded(
+    {
+      expanded:!roomsExpanded.expanded,
+      room:room
+    })
+  }
   useEffect(() => {
     let html = document.getElementsByTagName("html")[0];
-    if(imageExpanded)
+    if(imageExpanded || roomsExpanded.expanded)
       html.className += " " + styleScroll.notScroll;
 
     else
@@ -339,6 +349,18 @@ useEffect(() =>{
         since={since}
         to={to} />
     </div>
+
+
+{roomsExpanded.expanded?
+<div className={style.allImage}>
+<Rooms 
+roomExpanded={roomsExpanded}
+handleExpanded={handleRoomsExpanded}/>
+</div>
+:<Rooms 
+roomExpanded = {roomsExpanded}
+handleExpanded={handleRoomsExpanded}/>
+}
 
     <BadNew
       icon="/assets/timer.svg"

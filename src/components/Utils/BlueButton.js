@@ -6,11 +6,15 @@ export default ({handleClick, text, link})=>
 
     return  <div className={style.containerBlueButton}>
      {(link)?<Link to={link}>
-     <button type="button" className={"btn btn-primary " + style.blueButton}>
+     <button 
+     onClick={handleClick}
+     type="button" className={"btn btn-primary " + style.blueButton}>
         {text}
     </button>
     </Link>: 
-    <button type="button" className={"btn btn-primary " + style.blueButton}>
+    <button 
+    onClick={handleClick}
+    type="button" className={"btn btn-primary " + style.blueButton}>
     {text}
 </button>
     }
