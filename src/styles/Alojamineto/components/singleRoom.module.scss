@@ -18,9 +18,10 @@ position: relative;
 
 .close
 {
-    position: absolute;
-    top: 0.3rem;
-    right: 0.3rem;
+
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
     width: 1.3rem;
     height: 1.3rem;
     cursor: pointer;
@@ -78,3 +79,5 @@ position: relative;
     display: grid;
     grid-template-columns: repeat(2,1fr);
 }
+
+@import './responsiveComponents/singleRoom.responsive.scss';

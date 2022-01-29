@@ -190,3 +190,18 @@ overflow: hidden;
     text-align: center;
     font-size: 2rem;
 }
+
+.counterContainer
+{
+    display: flex;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    justify-content: center;
+}
+
+.arrowBottom
+{
+    display: none;
+}
+
+@import './allimages.responsive.scss';

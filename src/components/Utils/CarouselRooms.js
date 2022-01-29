@@ -27,6 +27,15 @@ export default ({data})=>
 :<img className={style.svg + " " + style.invisible}></img>}
 
 </div>
+
+<div className={style.counterContainer}>
+{index>0?<img className={style.svg + " " + style.arrowBottom} src={leftArrow} onClick={handleGallery.bind(this, index-1)}></img>
+:<img className={style.svg + " " + style.arrowBottom + " " + style.invisible}></img>}
+
 <h4 className={style.counter}>{(index+1) + "/" + data.length}</h4>
+
+{index<data.length-1?<img className={style.svg + " " + style.arrowBottom} src={rightArrow} onClick={handleGallery.bind(this, index+1)}></img>
+:<img className={style.svg + " " + style.arrowBottom + " " + style.invisible}></img>}
+</div>
 </div>
 }

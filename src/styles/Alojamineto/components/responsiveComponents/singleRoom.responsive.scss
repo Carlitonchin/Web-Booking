@@ -1,0 +1,38 @@
+
+@media (max-width:800px)
+{
+    .container
+    {
+        display: block;
+        overflow: scroll;
+        
+    }
+
+    .containerCarousel
+    {
+        width: 100%;
+    }
+
+    .containerInfo
+    {
+        width: 100%;
+        height: fit-content;
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .containerCarousel
+    {
+        height: 80%;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .twoRows
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
